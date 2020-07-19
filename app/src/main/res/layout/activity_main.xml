@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#CCCCCC">
+
+
+    // Reviews 로고
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="REVIEWS"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="#FFFF00"/>
+
+    // 영화 포스터 자동회전
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="400dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/movie1">
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/movie2">
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/movie3">
+            </ImageView>
+        </LinearLayout>
+    </ViewFlipper>
+
+    // 검색바
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center">
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:text=" Search"
+            android:textSize="28dp"
+            android:background="#FFFFFF" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/search"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+    // 영화평점순위, 영화추천순위, 영화신작
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/button1"
+            android:background="#CCCCCC"/>
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC"
+            android:src="@drawable/button2" />
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC"
+            android:src="@drawable/button3" />
+    </LinearLayout>
+
+    // 영화예매사이트
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cgv"
+            android:background="#CCCCCC" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="5dp">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mega"
+            android:background="#CCCCCC" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:background="#CCCCCC"
+            android:src="@drawable/lotte" />
+    </LinearLayout>
+
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"
+            android:background="#333333"/>
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/social"
+            android:background="#333333"/>
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mypage"
+            android:background="#333333"/>
+    </LinearLayout>
+</LinearLayout>
