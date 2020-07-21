@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    // 프로필, UserName
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uspf" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="공쥬현정"
+        android:textAlignment="center" />
+
+    // 추천한 컨텐츠
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/content"
+        android:scaleType="centerCrop"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    // 작성한 코멘트
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment"
+        android:scaleType="centerCrop"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    // 취향분석
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/taste"
+        android:scaleType="centerCrop"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    // 아이콘
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"
+            android:background="#333333"/>
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/social"
+            android:background="#333333"/>
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mypage"
+            android:background="#333333"/>
+    </LinearLayout>
+
+</LinearLayout>
