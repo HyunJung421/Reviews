@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#CCCCCC">
+    android:background="#FFFFFF">
 
 
     // Reviews 로고
@@ -15,7 +15,7 @@
         android:text="REVIEWS"
         android:textAlignment="center"
         android:textSize="40dp"
-        android:textColor="#FFFF00"/>
+        android:textColor="#000000"/>
 
     // 영화 포스터 자동회전
     <ViewFlipper
@@ -64,12 +64,12 @@
             android:layout_height="match_parent"
             android:text=" Search"
             android:textSize="28dp"
-            android:background="#FFFFFF" />
+            android:background="#90CAF9" />
         <ImageView
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:src="@drawable/search"
-            android:background="#FFFFFF"/>
+            android:src="@drawable/search1"
+            android:background="#90CAF9"/>
     </LinearLayout>
 
     // 영화평점순위, 영화추천순위, 영화신작
@@ -79,21 +79,24 @@
         android:layout_gravity="center"
         android:layout_margin="10dp">
         <ImageButton
+            android:id="@+id/star"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:src="@drawable/button1"
-            android:background="#CCCCCC"/>
+            android:background="#FFFFFF"/>
 
         <ImageButton
+            android:id="@+id/good"
             android:layout_width="133dp"
             android:layout_height="match_parent"
-            android:background="#CCCCCC"
+            android:background="#FFFFFF"
             android:src="@drawable/button2" />
 
         <ImageButton
+            android:id="@+id/new1"
             android:layout_width="133dp"
             android:layout_height="match_parent"
-            android:background="#CCCCCC"
+            android:background="#FFFFFF"
             android:src="@drawable/button3" />
     </LinearLayout>
 
@@ -103,31 +106,34 @@
         android:layout_height="45dp"
         android:layout_marginTop="5dp">
         <ImageButton
+            android:id="@+id/cgv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/cgv"
-            android:background="#CCCCCC" />
+            android:background="#FFFFFF" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_margin="5dp">
         <ImageButton
+            android:id="@+id/mega"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/mega"
-            android:background="#CCCCCC" />
+            android:background="#FFFFFF" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp">
         <ImageButton
+            android:id="@+id/lotte"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:background="#CCCCCC"
+            android:background="#FFFFFF"
             android:src="@drawable/lotte" />
     </LinearLayout>
 
@@ -140,19 +146,21 @@
         android:gravity="center">
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/home"
             android:background="#333333"/>
         <ImageButton
+            android:id="@+id/social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/social"
             android:background="#333333"/>
-
         <ImageButton
+            android:id="@+id/mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
