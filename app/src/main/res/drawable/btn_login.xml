@@ -6,8 +6,8 @@
     shape : 정상 상때일 때의 모양을 정의한다.-->
     <item android:state_enabled="true" >
         <shape>
-            <solid android:color="#0099FF" >
-            // 색을 정의한다.
+            <solid android:color="#90CAF9" >
+            // 색을 정의한다. #0099FF or #90CAF9
             </solid>
 
             <corners android:radius="20dp" >
