@@ -27,11 +27,12 @@
         android:id="@+id/order_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:layout_marginTop="25dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="500dp">
 
         // REVIEW 목록 레이아웃
         <LinearLayout
@@ -264,7 +265,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:drawableLeft="@drawable/drawable_left_image_customise"
-                        android:text="411"
+                        android:text="489"
                         android:textColor="#0000E1"
                         android:textSize="13dp" />
                 </LinearLayout>
@@ -325,7 +326,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:drawableLeft="@drawable/drawable_left_image_customise"
-                        android:text="411"
+                        android:text="366"
                         android:textColor="#0000E1"
                         android:textSize="13dp" />
                 </LinearLayout>
@@ -354,6 +355,7 @@
                     android:layout_centerInParent="true"
                     android:background="#90CAF9" />
             </LinearLayout>
+
             // REVIEW 작성자 정보6
             <LinearLayout
                 android:layout_width="match_parent"
@@ -372,7 +374,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="park신"
+                    android:text="Park신"
                     android:textSize="18dp"
                     android:textColor="#000000"/>
                 // 추천 수
@@ -386,7 +388,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:drawableLeft="@drawable/drawable_left_image_customise"
-                        android:text="411"
+                        android:text="250"
                         android:textColor="#0000E1"
                         android:textSize="13dp" />
                 </LinearLayout>
@@ -403,7 +405,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="35dp"
-                    android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                    android:text="너무 재밌어요~!"
                     android:textSize="16dp"
                     android:textColor="#000000" />
                 // 수평선
