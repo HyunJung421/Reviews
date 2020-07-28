@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    // java파일 : MovieInfoActivity
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,7 +14,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
-        //영화 포스터
+        // 영화 포스터
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +108,7 @@
                 // emulator로 실행했을 때 줄임표 표시가 보임.
             </LinearLayout>
             <Button
-                android:id="@+id/reviewer_more"
+                android:id="@+id/plot_more"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_gravity="right"
@@ -145,7 +147,7 @@
                 android:textStyle="bold"/>
             // 더보기 버튼
             <Button
-                android:id="@+id/reivew_more"
+                android:id="@+id/review_more"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -345,12 +347,13 @@
 
     // 작성하기 버튼
     <Button
+        android:id="@+id/review_write"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
         android:layout_gravity="right"
-        android:background="#90CAF9"
+        android:background="@drawable/btn_blue_round"
         android:text="작성하기"
         android:textStyle="bold"
         style="?android:attr/borderlessButtonStyle"/>
