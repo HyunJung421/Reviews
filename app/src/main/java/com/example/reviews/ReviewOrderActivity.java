@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+// 리뷰 더보기 페이지 java 파일
 public class ReviewOrderActivity extends AppCompatActivity {
 
     @Override

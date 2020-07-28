@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-// 메인페이지 java 파일
-public class MainActivity extends AppCompatActivity {
+// 리뷰작성페이지 java 파일
+public class ReviewWriteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.review_write);
     }
 }
