@@ -11,7 +11,7 @@
                 // 색을 정의한다. #0099FF or #90CAF9
             </solid>
 
-            <corners android:radius="8dp" >
+            <corners android:radius="20dp" >
                 // 모서리를 둥글게 한다.
             </corners>
         </shape>
