@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    // java파일 : MovieInfoActivity
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        // 영화 포스터
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/social_movie1"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        // 영화 정보
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            // 영화 제목
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="극한직업"
+                android:textSize="23dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+            // 상영시간 〮 국가 〮 장르
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="111분 | 한국 | 코미디"
+                android:textSize="15dp"/>
+
+            // 감독
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="감독 "
+                    android:textSize="15dp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="이병헌"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            // 평점
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="평점 "
+                    android:textSize="15dp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4.5 / 5.0"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            // 내용
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="내용 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:text="불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반! 더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 번죄조직의 국내 마약 밀반임"
+                    android:textSize="15dp"/>
+                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                // emulator로 실행했을 때 줄임표 표시가 보임.
+            </LinearLayout>
+            <Button
+                android:id="@+id/plot_more"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:background="#ffffff"
+                android:text="+내용 더보기"
+                android:textColor="#7F7F7F"
+                android:textStyle="bold"
+                style="?android:attr/borderlessButtonStyle"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    // REVIEW 목록 레이아웃
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        // REVIEW 바
+        <RelativeLayout
+            android:layout_width="407dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#90CAF9">
+            //REVIEW
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REVIEW"
+                android:textSize="22dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+            // 더보기 버튼
+            <Button
+                android:id="@+id/review_more"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#90CAF9"
+                android:text="+더보기"
+                android:textColor="#7F7F7F"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        // REVIEW 작성자 정보1
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            // 작성자 이미지
+            <ImageView
+                android:id="@+id/reviewer_image1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/person_image"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle" />
+            // 작성자 이름
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="물물물"
+                android:textSize="18dp"
+                android:textColor="#000000"/>
+            // 추천 수
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="500"
+                    android:textColor="#0000E1"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        // REVIEW 작성 내용
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            // 리뷰 내용
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="35dp"
+                android:text="진짜 뻥안치고 ㅈㄴ 웃겼다"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+            // 수평선
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="407dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:background="#90CAF9" />
+        </LinearLayout>
+
+        // REVIEW 작성자 정보2
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            // 작성자 이미지
+            <ImageView
+                android:id="@+id/reviewer_image2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/person_image"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle" />
+            // 작성자 이름
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="유i인"
+                android:textSize="18dp"
+                android:textColor="#000000"/>
+            // 추천 수
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="485"
+                    android:textColor="#0000E1"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        // REVIEW 작성 내용
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            // 리뷰 내용
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="35dp"
+                android:text="류승룡 드디어 심폐소생술 성공!"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+            // 수평선
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="407dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:background="#90CAF9" />
+        </LinearLayout>
+
+        // REVIEW 작성자 정보3
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            // 작성자 이미지
+            <ImageView
+                android:id="@+id/reviewer_image3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/person_image"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle" />
+            // 작성자 이름
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="깜찍유림"
+                android:textSize="18dp"
+                android:textColor="#000000"/>
+            // 추천 수
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="411"
+                    android:textColor="#0000E1"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        // REVIEW 작성 내용
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            // 리뷰 내용
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="35dp"
+                android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+            // 수평선
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="407dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:background="#90CAF9" />
+        </LinearLayout>
+    </LinearLayout>
+
+    // 작성하기 버튼
+    <Button
+        android:id="@+id/review_write"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="right"
+        android:background="@drawable/btn_blue_round"
+        android:text="작성하기"
+        android:textStyle="bold"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"
+            android:background="#333333"/>
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/social"
+            android:background="#333333"/>
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mypage"
+            android:background="#333333"/>
+    </LinearLayout>
+</LinearLayout>
+
