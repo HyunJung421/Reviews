@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    // 프로필, UserName
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uspf" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="공쥬현정"
+        android:textAlignment="center" />
+
+    // 작성한 코멘트창 나타내기
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment2"
+        android:scaleType="centerCrop"
+        android:layout_margin="10dp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        // 영화 제목
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="겨울왕국2"
+            android:textColor="#A8A6A8"
+            android:textSize="22dp" />
+
+        // 영화 포스터
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:src="@drawable/movie4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            // 별점
+            <RatingBar
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stepSize="0.5" />
+            // 작성한 리뷰
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뮤비 찍자 크리스토프"
+                android:textColor="#000000"
+                android:textSize="22dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"
+            android:background="#333333"/>
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/social"
+            android:background="#333333"/>
+
+        <ImageButton
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mypage"
+            android:background="#333333"/>
+
+    </LinearLayout>
+
+</LinearLayout>
