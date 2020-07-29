@@ -12,6 +12,7 @@
         <activity android:name=".ReviewWriteActivity"/>
         <activity android:name=".ReviewOrderActivity"/>
         <activity android:name=".MovieInfoActivity"/>
+        // 아래 ".MainActivity"에 자신이 보고싶은 xml의 java파일 이름을 넣으면 애뮬레이터 실행 시 볼 수 있다.
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
