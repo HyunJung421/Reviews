@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
+    //java파일 : MyReviewActivity
     // 리뷰 코멘트
     <TextView
         android:layout_width="match_parent"
@@ -12,7 +14,6 @@
         android:gravity="center"
         android:text="리뷰 코멘트"
         android:textSize="28dp"
-        android:textColor="#000000"
         android:textStyle="bold"/>
 
     <ScrollView
@@ -344,19 +345,21 @@
         android:gravity="center">
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/home"
             android:background="#333333"/>
         <ImageButton
+            android:id="@+id/social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/social"
             android:background="#333333"/>
-
         <ImageButton
+            android:id="@+id/mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"

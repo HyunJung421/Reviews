@@ -7,8 +7,9 @@
     android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:paddingTop="15dp"> // 상, 좌, 우 padding 지정
-
+    android:paddingTop="15dp"
+    android:background="#FFFFFF">
+    // java파일 : LoginActivity
     // Reviews 로고
     <TextView
         android:layout_width="match_parent"
@@ -29,17 +30,20 @@
 
     // ID, PW 입력
     <EditText
+        android:id="@+id/user_id"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="ID" />
 
     <EditText
+        android:id="@+id/user_pw"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="PASSWORD" />
 
     // 로그인 버튼
     <Button
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
@@ -49,6 +53,7 @@
 
     // 회원가입 버튼
     <Button
+        android:id="@+id/join"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

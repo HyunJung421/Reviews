@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    // java파일 : MypageActivity
 
     // 프로필, UserName
     <ImageView
@@ -30,6 +33,7 @@
 
     // 작성한 코멘트
     <ImageButton
+        android:id="@+id/my_review"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/comment"
@@ -53,24 +57,25 @@
         android:gravity="center">
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/home"
             android:background="#333333"/>
         <ImageButton
+            android:id="@+id/social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/social"
             android:background="#333333"/>
-
         <ImageButton
+            android:id="@+id/mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/mypage"
             android:background="#333333"/>
     </LinearLayout>
-
 </LinearLayout>

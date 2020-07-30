@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-// 마이페이지 -> 작성한코멘트 목록 페이지 java 파일
-public class MyReviewActivity extends AppCompatActivity {
+// 마이페이지 -> 작성한코멘트 목록 -> 작성한코멘트 상세페이지 java 파일
+public class MyReviewDetailActivity extends AppCompatActivity {
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -18,7 +18,7 @@ public class MyReviewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypage_review);
+        setContentView(R.layout.mypage_review_detail);
 
         // 하단바 home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.home);

@@ -3,13 +3,16 @@ package com.example.reviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-// 마이페이지 -> 작성한코멘트 목록 페이지 java 파일
-public class MyReviewActivity extends AppCompatActivity {
+// 마이페이지 java 파일
+public class MypageActivity extends AppCompatActivity {
 
+    ImageButton btnMyReview;  // 작성한 코멘트 버튼
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
@@ -18,8 +21,17 @@ public class MyReviewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypage_review);
+        setContentView(R.layout.mypage);
 
+        btnMyReview = (ImageButton)findViewById(R.id.my_review);
+        btnMyReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyReviewActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
+        /*
         // 하단바 home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.home);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -45,9 +57,8 @@ public class MyReviewActivity extends AppCompatActivity {
         btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
-                startActivity(intent); // 액티비티 띄우기
+                Toast.makeText(MypageActivity.this, "마이페이지 입니다.", Toast.LENGTH_SHORT).show();
             }
-        });
+        }); */
     }
 }

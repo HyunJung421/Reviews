@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     // java파일 : MovieInfoActivity
 
@@ -350,7 +351,7 @@
         android:id="@+id/review_write"
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
         android:layout_gravity="right"
         android:background="@drawable/btn_blue_round"
@@ -367,19 +368,21 @@
         android:gravity="center">
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/home"
             android:background="#333333"/>
         <ImageButton
+            android:id="@+id/social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/social"
             android:background="#333333"/>
-
         <ImageButton
+            android:id="@+id/mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"

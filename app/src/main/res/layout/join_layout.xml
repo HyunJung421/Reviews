@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
+    // java파일 : JoinActivity
     // 회원가입 페이지
     <LinearLayout
         android:layout_width="match_parent"
@@ -138,19 +140,21 @@
         android:gravity="center">
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/home"
             android:background="#333333"/>
         <ImageButton
+            android:id="@+id/social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/social"
             android:background="#333333"/>
-
         <ImageButton
+            android:id="@+id/mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"

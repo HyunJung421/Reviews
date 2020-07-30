@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-// 마이페이지 -> 작성한코멘트 목록 페이지 java 파일
-public class MyReviewActivity extends AppCompatActivity {
+// 소셜페이지 java 파일
+public class SocialActivity extends AppCompatActivity {
 
+    ImageButton socialMovie1; // 최신 업데이트 첫번째 영화
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
@@ -18,7 +20,17 @@ public class MyReviewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypage_review);
+        setContentView(R.layout.social_layout);
+
+        // 최신 업데이트 첫번째 영화 포스터 등록 및 리스너 구현
+        socialMovie1 = (ImageButton)findViewById(R.id.social_movie1);
+        socialMovie1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
 
         // 하단바 home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.home);
@@ -35,8 +47,7 @@ public class MyReviewActivity extends AppCompatActivity {
         btnSocial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SocialActivity.class);
-                startActivity(intent); // 액티비티 띄우기
+                Toast.makeText(SocialActivity.this, "소셜페이지 입니다.", Toast.LENGTH_SHORT).show();
             }
         });
 

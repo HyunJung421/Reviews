@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    // java파일 : ReviewWriteActivity
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="585dp"
@@ -156,6 +158,7 @@
 
             //작성완료 버튼
             <Button
+                android:id="@+id/write_ok"
                 android:layout_width="372dp"
                 android:layout_height="match_parent"
                 android:background="#90CAF9"
@@ -170,7 +173,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="4dp"
         android:gravity="center">
 
         <ImageButton
