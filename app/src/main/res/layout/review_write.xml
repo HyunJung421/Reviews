@@ -6,35 +6,36 @@
 
     // java파일 : ReviewWriteActivity
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="585dp"
-        android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            // 리 뷰
+            // 리뷰
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="리 뷰"
+                android:text="리뷰"
                 android:textSize="28dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
+
             // 수평선
             <View
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
                 android:background="#D3D3D3" />
         </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         // 프로필, UserName
         <LinearLayout
@@ -96,16 +97,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+
                     android:text="평 점"
                     android:textColor="#000000"
                     android:textSize="18dp" />
                 //별
-                <ImageView
-                    android:layout_width="157dp"
-                    android:layout_height="44dp"
-                    android:layout_marginBottom="3dp"
-                    android:src="@drawable/star1" />
+                <RatingBar
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="0.5"
+                    android:layout_margin="10dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -141,12 +143,11 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
             //리뷰 입력창
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="이곳에 내용을 입력해주세요"
-                android:textSize="17dp"
-                />
+                android:textSize="17dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -165,7 +166,6 @@
                 android:text="작성완료"
                 android:textSize="25dp" />
         </LinearLayout>
-
     </LinearLayout>
 
     // 하단바
@@ -200,5 +200,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-
