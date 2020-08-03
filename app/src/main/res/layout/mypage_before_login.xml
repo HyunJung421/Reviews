@@ -29,7 +29,6 @@
             android:background="#D3D3D3" />
     </LinearLayout>
 
-
     // 로그인 하기 전 user 아이콘
     <ImageView
         android:id="@+id/mypage_before_login_user_icon"

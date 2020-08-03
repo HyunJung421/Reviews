@@ -9,6 +9,30 @@
     android:background="#FFFFFF">
 
     // java파일 : MypageActivity
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        // 마이페이지
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="마이페이지"
+            android:textSize="28dp"
+            android:textStyle="bold"/>
+
+        // 수평선
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:background="#D3D3D3" />
+    </LinearLayout>
 
     // 프로필, UserName
     <ImageView
@@ -23,33 +47,45 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="공쥬현정"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:layout_marginBottom="10dp"/>
 
-    // 추천한 컨텐츠
-    <ImageButton
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mypage_btn_content"
-        android:scaleType="centerCrop"
-        style="?android:attr/borderlessButtonStyle"/>
+        android:layout_height="337dp" >
 
-    // 작성한 코멘트
-    <ImageButton
-        android:id="@+id/mypage_btn_comment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mypage_btn_comment"
-        android:scaleType="centerCrop"
-        style="?android:attr/borderlessButtonStyle"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            // 추천한 컨텐츠
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mypage_btn_content"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle"/>
 
-    // 취향분석
-    <ImageButton
-        android:id="@+id/mypage_btn_taste"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mypage_btn_taste"
-        android:scaleType="centerCrop"
-        style="?android:attr/borderlessButtonStyle"/>
+            // 작성한 코멘트
+            <ImageButton
+                android:id="@+id/mypage_btn_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mypage_btn_comment"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            // 취향분석
+            <ImageButton
+                android:id="@+id/mypage_btn_taste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mypage_btn_taste"
+                android:scaleType="centerCrop"
+                style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </ScrollView>
 
     // 아이콘
     <LinearLayout
