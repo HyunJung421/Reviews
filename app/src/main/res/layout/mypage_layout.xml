@@ -12,11 +12,13 @@
 
     // 프로필, UserName
     <ImageView
+        android:id="@+id/mypage_user_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/uspf" />
+        android:src="@drawable/mypage_user_icon" />
 
     <TextView
+        android:id="@+id/mypage_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -27,24 +29,25 @@
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/content"
+        android:src="@drawable/mypage_btn_content"
         android:scaleType="centerCrop"
         style="?android:attr/borderlessButtonStyle"/>
 
     // 작성한 코멘트
     <ImageButton
-        android:id="@+id/my_review"
+        android:id="@+id/mypage_btn_comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/comment"
+        android:src="@drawable/mypage_btn_comment"
         android:scaleType="centerCrop"
         style="?android:attr/borderlessButtonStyle"/>
 
     // 취향분석
     <ImageButton
+        android:id="@+id/mypage_btn_taste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/taste"
+        android:src="@drawable/mypage_btn_taste"
         android:scaleType="centerCrop"
         style="?android:attr/borderlessButtonStyle"/>
 
@@ -57,25 +60,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 </LinearLayout>

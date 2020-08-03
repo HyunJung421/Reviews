@@ -50,13 +50,14 @@
                 android:weightSum="10" >
 
                 <EditText
-                    android:id="@+id/input_id"
+                    android:id="@+id/join_input_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8" />
 
                 // 중복확인 버튼
                 <Button
+                    android:id="@+id/join_btn_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -75,7 +76,7 @@
                 android:textSize="20dp"/>
 
             <EditText
-                android:id="@+id/input_pw"
+                android:id="@+id/join_input_pw"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -88,7 +89,7 @@
                 android:textSize="20dp"/>
 
             <EditText
-                android:id="@+id/input_pw_submit"
+                android:id="@+id/join_input_pw_submit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -101,7 +102,7 @@
                 android:textSize="20dp"/>
 
             <EditText
-                android:id="@+id/input_name"
+                android:id="@+id/join_input_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -114,12 +115,13 @@
                 android:textSize="20dp"/>
 
             <EditText
-                android:id="@+id/input_phone"
+                android:id="@+id/join_input_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             // 회원가입 버튼
             <Button
+                android:id="@+id/join_btn_join"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -140,25 +142,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 

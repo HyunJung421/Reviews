@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
-
     // Reviews 로고
     <TextView
         android:layout_width="match_parent"
@@ -19,18 +18,18 @@
 
     // 영화 포스터 자동회전
     <ViewFlipper
-        android:id="@+id/viewFlipper1"
+        android:id="@+id/main_viewFlipper"
         android:layout_width="400dp"
         android:layout_height="210dp"
         android:layout_gravity="center"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/movie1">
+                android:src="@drawable/main_view_movie1">
             </ImageView>
         </LinearLayout>
         <LinearLayout
@@ -39,7 +38,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/movie2">
+                android:src="@drawable/main_view_movie2">
             </ImageView>
         </LinearLayout>
         <LinearLayout
@@ -48,7 +47,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/movie3">
+                android:src="@drawable/main_view_movie3">
             </ImageView>
         </LinearLayout>
     </ViewFlipper>
@@ -59,16 +58,16 @@
         android:layout_height="40dp"
         android:layout_gravity="center">
         <EditText
-            android:id="@+id/editSearch"
+            android:id="@+id/main_editSearch"
             android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:text=" Search"
+            android:hint=" Search"
             android:textSize="28dp"
             android:background="#90CAF9" />
         <ImageView
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:src="@drawable/search1"
+            android:src="@drawable/main_icon_search"
             android:background="#90CAF9"/>
     </LinearLayout>
 
@@ -79,25 +78,25 @@
         android:layout_gravity="center"
         android:layout_margin="10dp">
         <ImageButton
-            android:id="@+id/star"
+            android:id="@+id/main_icon_star"
             android:layout_width="133dp"
             android:layout_height="match_parent"
-            android:src="@drawable/button1"
+            android:src="@drawable/main_icon_star"
             android:background="#FFFFFF"/>
 
         <ImageButton
-            android:id="@+id/good"
+            android:id="@+id/main_icon_good"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
-            android:src="@drawable/button2" />
+            android:src="@drawable/main_icon_good" />
 
         <ImageButton
-            android:id="@+id/new1"
+            android:id="@+id/main_icon_new"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
-            android:src="@drawable/button3" />
+            android:src="@drawable/main_icon_new" />
     </LinearLayout>
 
     // 영화예매사이트
@@ -106,35 +105,37 @@
         android:layout_height="45dp"
         android:layout_marginTop="5dp">
         <ImageButton
-            android:id="@+id/cgv"
+            android:id="@+id/main_btn_cgv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/cgv"
+            android:src="@drawable/main_btn_cgv"
             android:background="#FFFFFF" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_margin="5dp">
         <ImageButton
-            android:id="@+id/mega"
+            android:id="@+id/main_btn_mega"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mega"
+            android:src="@drawable/main_btn_mega"
             android:background="#FFFFFF" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="45dp" >
         <ImageButton
-            android:id="@+id/lotte"
+            android:id="@+id/main_btn_lotte"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:background="#FFFFFF"
-            android:src="@drawable/lotte" />
+            android:src="@drawable/main_btn_lotte" />
     </LinearLayout>
 
     // 하단바
@@ -146,25 +147,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 </LinearLayout>

@@ -49,6 +49,7 @@
                 android:layout_gravity="center"
                 android:layout_centerInParent="true"
                 android:background="#90CAF9" />
+
             // REVIEW 작성자 정보1
             <LinearLayout
                 android:layout_width="match_parent"
@@ -429,25 +430,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 </LinearLayout>

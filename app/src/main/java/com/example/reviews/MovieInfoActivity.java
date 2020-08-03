@@ -59,7 +59,7 @@ public class MovieInfoActivity extends AppCompatActivity {
             }
         });
 
-        // 하단바 home 버튼 등록 및 리스너 구현
+        // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.home);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class MovieInfoActivity extends AppCompatActivity {
             }
         });
 
-        // 하단바 social 버튼 등록 및 리스너 구현
+        // 하단바 underbar_social 버튼 등록 및 리스너 구현
         btnSocial = (ImageButton)findViewById(R.id.social);
         btnSocial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +79,7 @@ public class MovieInfoActivity extends AppCompatActivity {
             }
         });
 
-        // 하단바 mypage 버튼 등록 및 리스너 구현
+        // 하단바 underbar_mypage 버튼 등록 및 리스너 구현
         btnMypage = (ImageButton)findViewById(R.id.mypage);
         btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override

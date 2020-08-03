@@ -44,7 +44,7 @@
             <ImageView
                 android:layout_width="77dp"
                 android:layout_height="62dp"
-                android:src="@drawable/uspf" />
+                android:src="@drawable/mypage_user_icon" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -103,6 +103,7 @@
                     android:textSize="18dp" />
                 //별
                 <RatingBar
+                    android:id="@+id/review_write_ratingbar"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -126,8 +127,10 @@
                 android:text="코멘트"
                 android:textColor="#000000"
                 android:textSize="20dp" />
+
             // 사진 추가하는 버튼
             <Button
+                android:id="@+id/review_write_btn_add"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:text="+ 사진추가"
@@ -146,7 +149,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이곳에 내용을 입력해주세요"
+                android:hint="이곳에 내용을 입력해주세요"
                 android:textSize="17dp" />
         </LinearLayout>
 
@@ -159,7 +162,7 @@
 
             //작성완료 버튼
             <Button
-                android:id="@+id/write_ok"
+                android:id="@+id/review_write_btn_ok"
                 android:layout_width="372dp"
                 android:layout_height="match_parent"
                 android:background="#90CAF9"
@@ -177,25 +180,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 

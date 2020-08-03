@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         // 마이페이지
         <TextView
             android:layout_width="match_parent"
@@ -29,9 +30,9 @@
     </LinearLayout>
 
 
-    // 로그인 전 사람 아이콘
+    // 로그인 하기 전 user 아이콘
     <ImageView
-        android:id="@+id/person_image2"
+        android:id="@+id/mypage_before_login_user_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/person_image2"
@@ -44,27 +45,29 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginBottom="10dp">
-    // 로그인 창으로 가는 버튼
-    <Button
-        android:id="@+id/login_go"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="#90CAF9"
-        android:text="로그인"
-        android:textSize="25dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-        // 회원가입 창으로 가는 버튼
+
+        // 로그인 창으로 가는 버튼
         <Button
-            android:id="@+id/join_go"
+            android:id="@+id/mypage_before_login_btn_login"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:background="#CCCCCC"
+            android:background="@drawable/btn_blue_round"
+            android:text="로그인"
+            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        // 회원가입 창으로 가는 버튼
+        <Button
+            android:id="@+id/mypage_before_login_btn_join"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_gray_round"
             android:text="회원가입"
-           android:textSize="25dp"
+            android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
-</LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,7 +75,8 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_marginBottom="95dp">
-        // 어플이름
+
+        // 어플 이름
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -80,14 +84,16 @@
         android:textColor="#003399"
         android:textSize="35dp"
         android:layout_marginBottom="7dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
         // 로그인 후 이용에 달라는 멘트
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:text="로그인 후 영화에 대한 \n 리뷰를 남겨주세요."
+            android:text="로그인 후 영화에 대한\n  리뷰를 남겨주세요."
             android:textColor="#000000"
             android:textSize="23dp"/>
+
     </LinearLayout>
 
     // 하단바
@@ -99,25 +105,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 

@@ -109,7 +109,7 @@
                 // emulator로 실행했을 때 줄임표 표시가 보임.
             </LinearLayout>
             <Button
-                android:id="@+id/plot_more"
+                android:id="@+id/movie_info_btn_plot_more"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_gravity="right"
@@ -148,7 +148,7 @@
                 android:textStyle="bold"/>
             // 더보기 버튼
             <Button
-                android:id="@+id/review_more"
+                android:id="@+id/movie_info_btn_review_more"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -166,7 +166,7 @@
             android:orientation="horizontal">
             // 작성자 이미지
             <ImageView
-                android:id="@+id/reviewer_image1"
+                android:id="@+id/movie_info_reviewer_image1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/person_image"
@@ -228,7 +228,7 @@
             android:orientation="horizontal">
             // 작성자 이미지
             <ImageView
-                android:id="@+id/reviewer_image2"
+                android:id="@+id/movie_info_reviewer_image2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/person_image"
@@ -290,7 +290,7 @@
             android:orientation="horizontal">
             // 작성자 이미지
             <ImageView
-                android:id="@+id/reviewer_image3"
+                android:id="@+id/movie_info_reviewer_image3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/person_image"
@@ -348,7 +348,7 @@
 
     // 작성하기 버튼
     <Button
-        android:id="@+id/review_write"
+        android:id="@+id/moive_info_btn_review_write"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginTop="10dp"
@@ -368,25 +368,25 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/underbar_home"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home"
+            android:src="@drawable/underbar_home"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/social"
+            android:id="@+id/underbar_social"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/social"
+            android:src="@drawable/underbar_social"
             android:background="#333333"/>
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/underbar_mypage"
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/mypage"
+            android:src="@drawable/underbar_mypage"
             android:background="#333333"/>
     </LinearLayout>
 </LinearLayout>
