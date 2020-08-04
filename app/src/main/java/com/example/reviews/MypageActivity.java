@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 // 마이페이지 java 파일
 public class MypageActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class MypageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_layout);
 
-        btnMyReview = (ImageButton)findViewById(R.id.my_review);
+        btnMyReview = (ImageButton)findViewById(R.id.mypage_btn_comment);
         btnMyReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +30,7 @@ public class MypageActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
-        /*
+
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +58,6 @@ public class MypageActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MypageActivity.this, "마이페이지 입니다.", Toast.LENGTH_SHORT).show();
             }
-        }); */
+        });
     }
 }

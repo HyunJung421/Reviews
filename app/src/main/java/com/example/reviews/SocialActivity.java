@@ -33,7 +33,7 @@ public class SocialActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
-        btnHome = (ImageButton)findViewById(R.id.home);
+        btnHome = (ImageButton)findViewById(R.id.underbar_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class SocialActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_social 버튼 등록 및 리스너 구현
-        btnSocial = (ImageButton)findViewById(R.id.social);
+        btnSocial = (ImageButton)findViewById(R.id.underbar_social);
         btnSocial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +52,7 @@ public class SocialActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_mypage 버튼 등록 및 리스너 구현
-        btnMypage = (ImageButton)findViewById(R.id.mypage);
+        btnMypage = (ImageButton)findViewById(R.id.underbar_mypage);
         btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

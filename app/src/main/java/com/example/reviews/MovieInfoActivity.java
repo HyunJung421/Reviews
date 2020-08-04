@@ -30,7 +30,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         plotDialog = new MoviePlotDialog(MovieInfoActivity.this);
 
         // 내용 더보기 버튼 등록 및 리스너 구현
-        btnPlotMore = (Button)findViewById(R.id.plot_more);
+        btnPlotMore = (Button)findViewById(R.id.movie_info_btn_plot_more);
         btnPlotMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +39,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         });
 
         // 더보기 버튼 등록 및 리스너 구현
-        btnReviewMore = (Button)findViewById(R.id.review_more);
+        btnReviewMore = (Button)findViewById(R.id.movie_info_btn_review_more);
         btnReviewMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +50,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         });
 
         // 작성하기 버튼 등록 및 리스너 구현
-        btnReviewWrite = (Button)findViewById(R.id.review_write);
+        btnReviewWrite = (Button)findViewById(R.id.moive_info_btn_review_write);
         btnReviewWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
-        btnHome = (ImageButton)findViewById(R.id.home);
+        btnHome = (ImageButton)findViewById(R.id.underbar_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +70,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_social 버튼 등록 및 리스너 구현
-        btnSocial = (ImageButton)findViewById(R.id.social);
+        btnSocial = (ImageButton)findViewById(R.id.underbar_social);
         btnSocial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +80,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         });
 
         // 하단바 underbar_mypage 버튼 등록 및 리스너 구현
-        btnMypage = (ImageButton)findViewById(R.id.mypage);
+        btnMypage = (ImageButton)findViewById(R.id.underbar_mypage);
         btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

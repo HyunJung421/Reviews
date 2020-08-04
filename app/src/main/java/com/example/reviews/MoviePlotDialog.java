@@ -28,7 +28,7 @@ public class MoviePlotDialog extends Dialog {
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         this.getWindow().setAttributes(params);
 
-        plot_back = (Button)findViewById(R.id.plot_back);
+        plot_back = (Button)findViewById(R.id.movie_plot_btn_plot_back);
         // 돌아가기 버튼 클릭시
         plot_back.setOnClickListener(new View.OnClickListener() {
             @Override

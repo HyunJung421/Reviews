@@ -28,11 +28,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
-        userID = (EditText)findViewById(R.id.user_id);
-        userPW = (EditText)findViewById(R.id.user_pw);
+        userID = (EditText)findViewById(R.id.login_input_id);
+        userPW = (EditText)findViewById(R.id.login_input_pw);
 
         // 로그인 버튼 등록 및 리스너 구현
-        btnLogin = (Button)findViewById(R.id.login);
+        btnLogin = (Button)findViewById(R.id.login_btn_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // 회원가입 버튼 등록 및 리스너 구현
-        btnJoin = (Button)findViewById(R.id.join);
+        btnJoin = (Button)findViewById(R.id.login_btn_join);
         btnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
