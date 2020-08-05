@@ -42,16 +42,7 @@
 
             // 리뷰1
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/my_review_border"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="15dp">
+                style="@style/mypage_review_layout">
 
                 // 내 정보
                 <LinearLayout
@@ -144,16 +135,7 @@
 
             // 리뷰2
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/my_review_border"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="15dp">
+                style="@style/mypage_review_layout">
 
                 // 내 정보
                 <LinearLayout
@@ -246,17 +228,7 @@
 
             // 리뷰3
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/my_review_border"
-                android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="15dp">
+                style="@style/mypage_review_layout">
 
                 // 내 정보
                 <LinearLayout
@@ -347,8 +319,6 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-
-
     </ScrollView>
 
     // 하단바
@@ -360,24 +330,17 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_home"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
+
         <ImageButton
             android:id="@+id/underbar_social"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_social"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
+
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_mypage"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>

@@ -149,25 +149,18 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_home"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
+
         <ImageButton
             android:id="@+id/underbar_social"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_social"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
+
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_mypage"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
     </LinearLayout>
 
 </LinearLayout>

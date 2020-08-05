@@ -41,7 +41,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ViewFlipper
                 android:id="@+id/main_viewFlipper"
@@ -69,7 +69,8 @@
             <TabHost
                 android:id="@+id/tabHost1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -80,7 +81,8 @@
                     <TabWidget
                         android:id="@android:id/tabs"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tabStripEnabled="false" />
 
                     <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
                     <FrameLayout
@@ -94,6 +96,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+                            // 더보기 버튼
+                            <Button
+                                android:id="@+id/more"
+                                android:layout_marginRight="18dp"
+                                style="@style/btn_more" />
 
                             // 영화 포스터
                             <LinearLayout
@@ -104,27 +111,18 @@
 
                                 <ImageButton
                                     android:id="@+id/movie_rating1"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/movie_grade1" />
+                                    android:src="@drawable/movie_grade1"
+                                    style="@style/movie_poster"/>
 
                                 <ImageButton
                                     android:id="@+id/movie_rating2"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie2" />
+                                    android:src="@drawable/social_movie2"
+                                    style="@style/movie_poster"/>
 
                                 <ImageButton
                                     android:id="@+id/movie_rating3"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie3" />
+                                    android:src="@drawable/social_movie3"
+                                    style="@style/movie_poster"/>
                             </LinearLayout>
 
                             // 영화 포스터 제목
@@ -135,31 +133,16 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="극한직업"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title"/>
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="나의 첫번째\n슈퍼스타"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="온워드:\n단 하루의 기적"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -169,6 +152,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+                            // 더보기 버튼
+                            <Button
+                                android:id="@+id/more2"
+                                android:layout_marginRight="18dp"
+                                style="@style/btn_more" />
 
                             // 영화 포스터
                             <LinearLayout
@@ -179,27 +167,18 @@
 
                                 <ImageButton
                                     android:id="@+id/movie_recommend1"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/movie_grade1" />
+                                    android:src="@drawable/movie_grade1"
+                                    style="@style/movie_poster"/>
 
                                 <ImageButton
                                     android:id="@+id/movie_recommend2"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie2" />
+                                    android:src="@drawable/social_movie2"
+                                    style="@style/movie_poster"/>
 
                                 <ImageButton
                                     android:id="@+id/movie_recommend3"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie3" />
+                                    android:src="@drawable/social_movie3"
+                                    style="@style/movie_poster"/>
                             </LinearLayout>
 
                             // 영화 포스터 제목
@@ -208,33 +187,17 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal">
-
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="극한직업"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="나의 첫번째\n슈퍼스타"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="온워드:\n단 하루의 기적"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -250,31 +213,27 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="horizontal">
+                                // 더보기 버튼
+                                <Button
+                                    android:id="@+id/more3"
+                                    android:layout_marginRight="18dp"
+                                    style="@style/btn_more" />
 
                                 // 영화 포스터
                                 <ImageButton
                                     android:id="@+id/movie_new1"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie1" />
+                                    android:src="@drawable/social_movie1"
+                                    style="@style/movie_poster" />
 
                                 <ImageButton
                                     android:id="@+id/movie_new2"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie2" />
+                                    android:src="@drawable/social_movie2"
+                                    style="@style/movie_poster"/>
 
                                 <ImageButton
                                     android:id="@+id/movie_new3"
-                                    style="?android:attr/borderlessButtonStyle"
-                                    android:layout_width="130dp"
-                                    android:layout_height="150dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/social_movie3" />
+                                    android:src="@drawable/social_movie3"
+                                    style="@style/movie_poster"/>
                             </LinearLayout>
 
                             // 영화 포스터 제목
@@ -283,33 +242,17 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal">
-
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="극한직업"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="나의 첫번째\n슈퍼스타"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
 
                                 <TextView
-                                    android:layout_width="130dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="3dp"
-                                    android:gravity="center"
                                     android:text="온워드:\n단 하루의 기적"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp" />
+                                    style="@style/movie_title" />
                             </LinearLayout>
                         </LinearLayout>
                     </FrameLayout>
@@ -385,27 +328,18 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:background="#333333"
-            android:scaleType="fitCenter"
-            android:src="@drawable/underbar_home" />
+            android:src="@drawable/underbar_home"
+            style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_social"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:background="#333333"
-            android:scaleType="fitCenter"
-            android:src="@drawable/underbar_social" />
+            android:src="@drawable/underbar_social"
+            style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:background="#333333"
-            android:scaleType="fitCenter"
-            android:src="@drawable/underbar_mypage" />
+            android:src="@drawable/underbar_mypage"
+            style="@style/under_bar"/>
     </LinearLayout>
 
 </LinearLayout>

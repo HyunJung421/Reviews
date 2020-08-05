@@ -55,14 +55,7 @@
             // 최신 업데이트 더보기 버튼
             <Button
                 android:id="@+id/update_more"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:background="#ffffff"
-                android:text="+더보기"
-                android:textColor="#7F7F7F"
-                android:textStyle="bold"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="@style/btn_more"/>
         </LinearLayout>
 
         // 영화 포스터
@@ -70,29 +63,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageButton
                 android:id="@+id/social_movie1"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
                 android:src="@drawable/social_movie1"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
+                style="@style/movie_poster" />
+
             <ImageButton
                 android:id="@+id/social_movie2"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
                 android:src="@drawable/social_movie2"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
+                style="@style/movie_poster" />
 
             <ImageButton
                 android:id="@+id/social_movie3"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/social_movie3" />
+                android:src="@drawable/social_movie3"
+                style="@style/movie_poster"/>
         </LinearLayout>
 
         // 영화 포스터 제목
@@ -102,29 +86,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_marginTop="3dp"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="극한직업"
-                android:textSize="13dp"
-                android:textColor="#000000"/>
+                style="@style/movie_title"/>
             <TextView
-                android:layout_marginTop="3dp"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="나의 첫번째\n슈퍼스타"
-                android:textSize="13dp"
-                android:textColor="#000000"/>
+                style="@style/movie_title"/>
             <TextView
-                android:layout_marginTop="3dp"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="온워드:\n단 하루의 기적"
-                android:textSize="13dp"
-                android:textColor="#000000"/>
+                style="@style/movie_title"/>
         </LinearLayout>
 
         // 인기 Reviewer
@@ -299,31 +268,23 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="15dp"
         android:gravity="center">
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_home"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
+
         <ImageButton
             android:id="@+id/underbar_social"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_social"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
             android:src="@drawable/underbar_mypage"
-            android:background="#333333"/>
+            style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>
 
