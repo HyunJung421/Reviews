@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="clip_horizontal"
+        android:orientation="horizontal">
+        // 창 닫기 버튼
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/x_button" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            // 리뷰
+            <LinearLayout
+                style="@style/mypage_review_layout">
+
+                // 내 정보
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    // 프로필 이미지
+                    <ImageView
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="64dp"
+                        android:layout_height="59dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/person_image" />
+                    // 이름
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="새콤달콤"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+                    // 평점
+                    <TextView
+                        android:layout_width="63dp"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/star_left_image_customise"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="4.0"
+                        android:textSize="18dp" />
+                    // 추천수
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:layout_marginRight="10dp">
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:drawableLeft="@drawable/drawable_left_image_customise"
+                            android:text="500"
+                            android:textColor="#0000E1"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+                //영화제목
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="극한직업"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+                // 상영시간 〮 국가 〮 장르
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="111분 | 한국 | 코미디"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    // 첨부사진1
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/mypage_user_icon" />
+                    // 첨부사진2
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/social_movie2" />
+                    // 첨부사진3
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/social_movie3" />
+                </LinearLayout>
+                // 내용
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="일단 진선규님께 박수갈채도 부족함 진짜 연기를 다양하게 잘하셔서 놀랐어요.오랜만에 부담없이 진짜 코미디 영화를 본거 같아서 즐거웠어요.ㅎㅎ\n조조로 할인받고 봤는데 할인안받고 봐도 좋을것같네요. 밤새다 할거없이 봤는데 웃겨서 힘빠짐"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="작성일자: 2020.08.15"
+                    android:textColor="#000000"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>
