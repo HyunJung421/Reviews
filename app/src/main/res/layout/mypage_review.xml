@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="리뷰 코멘트"
+        android:text="작성한 코멘트"
         android:textSize="28dp"
         android:textStyle="bold"/>
 

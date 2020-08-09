@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         ts3.setIndicator("영화신작");
         tabHost1.addTab(ts3);
 
+
+
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);
         btnHome.setOnClickListener(new View.OnClickListener() {

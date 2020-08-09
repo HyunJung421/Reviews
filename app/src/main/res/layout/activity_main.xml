@@ -207,19 +207,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+                            // 더보기 버튼
+                            <Button
+                                android:id="@+id/more3"
+                                android:layout_marginRight="18dp"
+                                style="@style/btn_more" />
 
+                            // 영화 포스터
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="horizontal">
-                                // 더보기 버튼
-                                <Button
-                                    android:id="@+id/more3"
-                                    android:layout_marginRight="18dp"
-                                    style="@style/btn_more" />
-
-                                // 영화 포스터
                                 <ImageButton
                                     android:id="@+id/movie_new1"
                                     android:src="@drawable/social_movie1"
@@ -263,13 +262,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:text="영화예매사이트"
                     android:textColor="#000000"
                     android:textStyle="bold" />
