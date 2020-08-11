@@ -102,7 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                        android:text="@string/comment"
                         android:textColor="#000000"
                         android:textSize="17dp" />
                 </LinearLayout>

@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="일단 진선규님께 박수갈채도 부족함 진짜 연기를 다양하게 잘하셔서 놀랐어요.오랜만에 부담없이 진짜 코미디 영화를 본거 같아서 즐거웠어요.ㅎㅎ\n조조로 할인받고 봤는데 할인안받고 봐도 좋을것같네요. 밤새다 할거없이 봤는데 웃겨서 힘빠짐"
+                    android:text="@string/comment"
                     android:textColor="#000000"
                     android:textSize="16dp"
                     android:layout_marginTop="10dp"
