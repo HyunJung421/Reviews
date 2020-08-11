@@ -46,19 +46,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
         // 내 정보
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
             // 내 이미지
             <ImageView
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/person_image" />
 
@@ -69,34 +69,44 @@
                 android:gravity="center"
                 android:text="깜찍유림"
                 android:textColor="#000000"
-                android:textSize="15dp" />
+                android:textSize="17dp" />
 
             // 내가 부여한 평점
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/star_left_image_customise"
-                android:layout_marginLeft="220dp"
+                android:layout_marginLeft="210dp"
                 android:gravity="center_vertical"
                 android:text=" 4.0"
-                android:textSize="15dp" />
+                android:textColor="#000000"
+                android:textSize="17dp" />
         </LinearLayout>
 
         // 리뷰 내용
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
-            android:paddingRight="5dp"
+            android:paddingRight="10dp"
             android:orientation="vertical">
-            // 리뷰글
-            <TextView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
-                android:textColor="#000000"
-                android:textSize="17dp" />
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    // 리뷰글
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </ScrollView>
 
             // 사진첨부
             <TextView
@@ -105,73 +115,70 @@
                 android:layout_marginTop="15dp"
                 android:text="사진첨부"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="14dp" />
 
             // 수평선
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
-                android:background="#D3D3D3" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="2dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_attach_border">
                 //영화 포스터
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/social_movie1" />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/social_movie1" />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/social_movie1" />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="5dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/social_movie1" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            style="@style/image_attach"
+                            android:src="@drawable/social_movie1" />
+                        <ImageView
+                            style="@style/image_attach"
+                            android:src="@drawable/social_movie1" />
+                        <ImageView
+                            style="@style/image_attach"
+                            android:src="@drawable/social_movie1" />
+                        <ImageView
+                            style="@style/image_attach"
+                            android:src="@drawable/social_movie1" />
+                        <ImageView
+                            style="@style/image_attach"
+                            android:src="@drawable/social_movie1" />
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
+        </LinearLayout>
 
-            // 수평선
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
-                android:background="#D3D3D3" />
-            <LinearLayout
-                android:layout_width="match_parent"
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+            // 추천 수
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2020년 08월 10일"
-                    android:textColor="#000000"/>
-                // 추천 수
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
-                    android:layout_marginLeft="210dp"
-                    android:text=" 17"
-                    android:textColor="#7C7979"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
+                android:drawableLeft="@drawable/unlike_left_image_customise"
+                android:text=" 17"
+                android:textColor="#7C7979"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="220dp"
+                android:text="2020년 08월 10일"
+                android:textColor="#000000"/>
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TextView 속성에는 이미지 크기 조절을 위한 속성이 없기 때문에
+         TextView에 넣을 이미지 크기 조절을 위한 xml -->
+    <item
+        android:drawable="@drawable/clip"
+        android:width="20dp"
+        android:height="20dp"/>
+</layer-list>

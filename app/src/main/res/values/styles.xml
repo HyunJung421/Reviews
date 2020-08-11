@@ -59,4 +59,11 @@
         <item name="android:paddingBottom">15dp</item>
         <item name="android:background">@drawable/my_review_border</item>
     </style>
+
+    <style name="image_attach">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
 </resources>

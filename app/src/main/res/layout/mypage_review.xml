@@ -42,6 +42,7 @@
 
             // 리뷰1
             <LinearLayout
+                android:id="@+id/my_review1"
                 style="@style/mypage_review_layout">
 
                 // 내 정보
@@ -65,6 +66,14 @@
                         android:text="깜찍유림"
                         android:textColor="#000000"
                         android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="170dp"
+                        android:drawableLeft="@drawable/clip_left_image_customise"
+                        android:gravity="center_vertical"
+                        android:text=" 첨부이미지"
+                        android:textSize="15dp"/>
                 </LinearLayout>
 
                 // 내가 작성한 리뷰
@@ -75,6 +84,7 @@
 
                     //영화 포스터
                     <ImageView
+                        android:id="@+id/movie_poster"
                         android:layout_width="100dp"
                         android:layout_height="130dp"
                         android:scaleType="fitXY"
