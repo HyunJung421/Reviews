@@ -61,6 +61,7 @@
             android:orientation="vertical" >
             // 추천한 컨텐츠
             <ImageButton
+                android:id="@+id/mypage_btn_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mypage_btn_content"
