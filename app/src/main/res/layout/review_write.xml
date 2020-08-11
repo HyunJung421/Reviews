@@ -65,7 +65,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/social_movie1"
+                    android:id="@+id/review_write_movie_poster"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="130dp"
                     android:layout_height="150dp"
@@ -147,6 +147,7 @@
             android:paddingRight="15dp">
             //리뷰 입력창
             <EditText
+                android:id="@+id/review_write_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="이곳에 내용을 입력해주세요"
