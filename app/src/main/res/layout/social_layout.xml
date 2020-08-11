@@ -43,6 +43,7 @@
             android:orientation="vertical">
             // 최신 업데이트 박스
             <TextView
+                android:id="@+id/update_box"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:background="#90CAF9"
@@ -106,7 +107,7 @@
 
             // 인기 Reviewer 박스
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/reviewer_box"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:background="#90CAF9"
