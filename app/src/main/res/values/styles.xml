@@ -66,4 +66,12 @@
         <item name="android:layout_marginRight">5dp</item>
         <item name="android:scaleType">fitXY</item>
     </style>
+
+    <!-- 아이콘 크키 -->
+    <style name="people_icon"
+        parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
 </resources>

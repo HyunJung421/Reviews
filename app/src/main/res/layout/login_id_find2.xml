@@ -2,30 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#FFFFFF">
+    // 아이디 찾기
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="아이디 찾기"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        // 마이페이지
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="마이페이지"
-            android:textSize="28dp"
-            android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:layout_marginTop="2dp">
 
         // 수평선
         <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
             android:background="#D3D3D3" />
     </LinearLayout>
 
@@ -35,16 +34,43 @@
         android:layout_width="match_parent"
         android:layout_height="124dp"
         android:layout_gravity="center"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="65dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/login_icon_64px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        // 어플 이름
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Reviews"
+            android:textColor="#003399"
+            android:textSize="35dp"
+            android:layout_marginBottom="7dp"
+            android:textStyle="bold" />
+
+        // 아이디 표시
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원님의 아이디는 loveu19 입니다."
+            android:textColor="#000000"
+            android:textSize="23dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="165dp"
+        android:layout_marginTop="20dp">
 
         // 로그인 창으로 가는 버튼
         <Button
@@ -58,44 +84,17 @@
             android:layout_marginRight="20dp"
             style="?android:attr/borderlessButtonStyle" />
 
-        // 회원가입 창으로 가는 버튼
+        // 비밀번호 찾기 창으로 가는버튼
         <Button
             android:id="@+id/mypage_before_login_btn_join"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:background="@drawable/btn_gray_round"
-            android:text="회원가입"
+            android:text="비밀번호 찾기"
             android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             style="?android:attr/borderlessButtonStyle" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:layout_marginBottom="95dp">
-
-        // 어플 이름
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Reviews"
-        android:textColor="#003399"
-        android:textSize="35dp"
-        android:layout_marginBottom="7dp"
-        android:textStyle="bold" />
-
-        // 로그인 후 이용에 달라는 멘트
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="로그인 후 영화에 대한\n  리뷰를 남겨주세요."
-            android:textColor="#000000"
-            android:textSize="23dp"/>
-
     </LinearLayout>
 
     // 하단바
@@ -121,5 +120,5 @@
             android:src="@drawable/underbar_mypage"
             style="@style/under_bar"/>
     </LinearLayout>
-
 </LinearLayout>
+
