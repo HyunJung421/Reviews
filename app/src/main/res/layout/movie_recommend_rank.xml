@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        // 영화평점순위
+        // 영화추천순위
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
