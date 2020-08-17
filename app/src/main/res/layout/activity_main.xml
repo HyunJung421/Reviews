@@ -133,7 +133,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:text="극한직업"
+                                    android:text="강철비2"
                                     style="@style/movie_title"/>
 
                                 <TextView
