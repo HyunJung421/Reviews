@@ -9,8 +9,8 @@ import java.util.Map;
 
 public class LoginRequest extends StringRequest {
 
-    // 서버 URL 설정 ( PHP 파일 연동)
-    final static private String URL = "ec2-3-34-44-58.ap-northeast-2.compute.amazonaws.com/Login.php";
+    // 서버 URL 설정 (PHP 파일 연동)
+    final static private String URL = "http://3.34.44.58/Login.php";
     private Map<String, String> map;
 
     public LoginRequest(String userID, String userPassword, Response.Listener<String> listener) {
@@ -23,6 +23,6 @@ public class LoginRequest extends StringRequest {
 
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
-        return super.getParams();
+        return map;
     }
 }
