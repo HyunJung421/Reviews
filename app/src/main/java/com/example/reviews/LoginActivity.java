@@ -1,5 +1,6 @@
 package com.example.reviews;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -24,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // 아이디, 비밀번호 입력텍스트
     private EditText login_input_id, login_input_pw;
+    private AlertDialog dialog;
 
     // 로그인, 회원가입 버튼
     private Button btnLogin, btnJoin;
@@ -69,7 +71,11 @@ public class LoginActivity extends AppCompatActivity {
                                     intent.putExtra("userPass", userPass);
                                     startActivity(intent);
                                 } else { // 로그인에 실패한 경우
-                                    Toast.makeText(getApplicationContext(), "로그인에  실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                                    dialog = builder.setMessage("아이디나 비밀번호가 일치하지 않습니다.")
+                                            .setPositiveButton("확인", null)
+                                            .create();
+                                    dialog.show();;
                                     return;
                                 }
                             } catch (JSONException e) {

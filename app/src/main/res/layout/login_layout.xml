@@ -33,12 +33,15 @@
         android:id="@+id/login_input_id"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:singleLine="true"
         android:hint="ID" />
 
     <EditText
         android:id="@+id/login_input_pw"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:singleLine="true"
         android:hint="PASSWORD" />
 
     // 로그인 버튼

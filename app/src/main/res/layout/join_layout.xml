@@ -56,16 +56,15 @@
 
                 <EditText
                     android:id="@+id/join_input_id"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8" />
+                    android:singleLine="true"/>
 
                 // 중복확인 버튼
                 <Button
                     android:id="@+id/join_btn_check"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:text="중복확인"
                     android:textStyle="bold"
                     android:background="@drawable/btn_blue_round"
@@ -84,7 +83,9 @@
             <EditText
                 android:id="@+id/join_input_pw"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:inputType="textPassword"/>
 
             // 비밀번호 확인
             <TextView
@@ -97,7 +98,9 @@
             <EditText
                 android:id="@+id/join_input_pw_submit"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:inputType="textPassword"/>
 
             // 이름
             <TextView
@@ -110,7 +113,8 @@
             <EditText
                 android:id="@+id/join_input_name"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:singleLine="true"/>
 
             // 휴대폰 번호
             <TextView
@@ -118,12 +122,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="휴대폰 번호"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/join_input_phone"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:singleLine="true" />
 
             // 회원가입 버튼
             <Button
@@ -139,28 +144,4 @@
 
         </LinearLayout>
     </LinearLayout>
-    // 하단바
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#333333"
-        android:layout_marginTop="40dp"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/underbar_home"
-            android:src="@drawable/underbar_home"
-            style="@style/under_bar"/>
-
-        <ImageButton
-            android:id="@+id/underbar_social"
-            android:src="@drawable/underbar_social"
-            style="@style/under_bar"/>
-
-        <ImageButton
-            android:id="@+id/underbar_mypage"
-            android:src="@drawable/underbar_mypage"
-            style="@style/under_bar"/>
-    </LinearLayout>
-
 </LinearLayout>
