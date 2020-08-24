@@ -82,6 +82,7 @@
 
         // 아이디 찾기 버튼
         <Button
+            android:id="@+id/login_btn_findid"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:text="아이디 찾기"
@@ -97,6 +98,7 @@
 
         // 비밀번호 찾기 버튼
         <Button
+            android:id="@+id/login_btn_findpw"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:text="비밀번호 찾기"

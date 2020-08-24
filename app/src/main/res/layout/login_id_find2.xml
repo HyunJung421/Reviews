@@ -86,7 +86,7 @@
 
         // 비밀번호 찾기 창으로 가는버튼
         <Button
-            android:id="@+id/mypage_before_login_btn_join"
+            android:id="@+id/mypage_before_login_btn_findpw"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:background="@drawable/btn_gray_round"

@@ -12,15 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        // 영화 제목
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="극한직업"
-            android:textSize="23dp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:gravity="clip_horizontal"
+            android:orientation="horizontal">
+            // 영화 제목
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="극한직업"
+                android:textSize="30dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+            // 창 닫기 버튼
+            <ImageButton
+                android:id="@+id/window_close_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/x_button"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
 
         // 수평선
         <View
@@ -41,22 +57,4 @@
             android:textSize="15dp"/>
     </LinearLayout>
 
-    // 돌아가기 버튼
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:paddingRight="15dp"
-        android:gravity="right"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/movie_plot_btn_plot_back"
-            android:layout_width="90dp"
-            android:layout_height="40dp"
-            android:background="@drawable/btn_blue_round"
-            android:text="돌아가기"
-            android:textStyle="bold"/>
-    </LinearLayout>
 </LinearLayout>
