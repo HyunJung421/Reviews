@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    //검색창
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="588dp"
+        android:orientation="vertical">
+        //검색공간
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="535dp" >
+            //검색기록
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+            </ListView>
+        </ScrollView>
+    </LinearLayout>
+
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/underbar_home"
+            android:src="@drawable/underbar_home"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_social"
+            android:src="@drawable/underbar_social"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_mypage"
+            android:src="@drawable/underbar_mypage"
+            style="@style/under_bar"/>
+    </LinearLayout>
+</LinearLayout>

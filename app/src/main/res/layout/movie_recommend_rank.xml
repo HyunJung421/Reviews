@@ -167,6 +167,7 @@
                         style="@style/movie_title"/>
                 </LinearLayout>
             </LinearLayout>
+
             // 수평선
             <View
                 android:layout_marginTop="5dp"
@@ -212,6 +213,7 @@
                             style="@style/movie_title"/>
                     </LinearLayout>
                 </LinearLayout>
+
                 // 수평선
                 <View
                     android:layout_marginTop="5dp"
