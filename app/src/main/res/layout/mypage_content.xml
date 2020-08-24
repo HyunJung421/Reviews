@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#FFFFFF">
 
-    //java파일 : MyReviewActivity
-    // 리뷰 코멘트
+    // 추천한 컨텐츠
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="작성한 코멘트"
+        android:text="추천한 컨텐츠"
         android:textSize="28dp"
         android:textStyle="bold"/>
 
@@ -40,17 +39,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            // 리뷰1
+            //컨텐츠1
             <LinearLayout
-                android:id="@+id/my_review1"
-                style="@style/mypage_review_layout">
-
+                style="@style/mypage_content_layout">
                 // 내 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     // 내 이미지
                     <ImageView
                         style="?android:attr/borderlessButtonStyle"
@@ -63,20 +59,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="깜찍유림"
+                        android:text="공쥬현정"
                         android:textColor="#000000"
                         android:textSize="15dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="170dp"
                         android:drawableLeft="@drawable/clip_left_image_customise"
                         android:gravity="center_vertical"
-                        android:text=" 첨부이미지"
-                        android:textSize="15dp"/>
+                        android:text=" 작성한 코멘트"
+                        android:textSize="13dp"/>
                 </LinearLayout>
 
-                // 내가 작성한 리뷰
+                // 추천한 컨텐츠 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -84,7 +81,6 @@
 
                     //영화 포스터
                     <ImageView
-                        android:id="@+id/movie_poster"
                         android:layout_width="100dp"
                         android:layout_height="130dp"
                         android:scaleType="fitXY"
@@ -95,7 +91,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_gravity="center" >
 
                         // 영화 제목
                         <TextView
@@ -121,38 +118,28 @@
                             android:text=" 4.5"
                             android:textSize="13dp" />
 
-                        // 내용
+                        // 추천 수
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
-                            android:textColor="#000000"
-                            android:textSize="14dp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/unlike_left_image_customise"
+                            android:text=" 9,857"
+                            android:textColor="#7C7979"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-                // 추천 수
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
-                    android:text=" 17"
-                    android:textColor="#7C7979"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
-            // 리뷰2
+            //컨텐츠2
             <LinearLayout
-                style="@style/mypage_review_layout">
-
+                style="@style/mypage_content_layout">
                 // 내 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     // 내 이미지
                     <ImageView
                         style="?android:attr/borderlessButtonStyle"
@@ -165,45 +152,59 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="깜찍유림"
+                        android:text="공쥬현정"
                         android:textColor="#000000"
                         android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="170dp"
+                        android:drawableLeft="@drawable/clip_left_image_customise"
+                        android:gravity="center_vertical"
+                        android:text=" 작성한 코멘트"
+                        android:textSize="13dp"/>
                 </LinearLayout>
-
-                // 내가 작성한 리뷰
+                // 추천한 컨텐츠 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     //영화 포스터
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="130dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/social_movie3" />
+                        android:src="@drawable/movie_search3" />
 
                     // 영화 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_gravity="center" >
 
                         // 영화 제목
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="온워드: 단 하루의 기적"
+                            android:text="어벤져스"
                             android:textColor="#000000"
                             android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=":인피니티 워"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
 
                         // 상영시간 〮 국가 〮 장르
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="102분 | 미국 | 판타지, 모험"
+                            android:text="149분 | 미국 | 액션, SF"
                             android:textSize="13dp" />
 
                         // 평점
@@ -211,41 +212,31 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:drawableLeft="@drawable/star_left_image_customise"
-                            android:text=" 4.0"
+                            android:text=" 5.0"
                             android:textSize="13dp" />
 
-                        // 내용
+                        // 추천 수
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:text="이걸 보고 누가 울어;;....흐어엉헝헝ㅠㅠ"
-                            android:textColor="#000000"
-                            android:textSize="14dp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/unlike_left_image_customise"
+                            android:text=" 20,825"
+                            android:textColor="#7C7979"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-                // 추천 수
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
-                    android:text=" 30"
-                    android:textColor="#7C7979"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
-            // 리뷰3
+            //컨텐츠3
             <LinearLayout
-                style="@style/mypage_review_layout">
-
+                style="@style/mypage_content_layout">
                 // 내 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     // 내 이미지
                     <ImageView
                         style="?android:attr/borderlessButtonStyle"
@@ -258,45 +249,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="깜찍유림"
+                        android:text="공쥬현정"
                         android:textColor="#000000"
                         android:textSize="15dp" />
                 </LinearLayout>
-
-                // 내가 작성한 리뷰
+                // 추천한 컨텐츠 정보
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     //영화 포스터
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="130dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/social_movie2" />
+                        android:src="@drawable/movie_search4" />
 
                     // 영화 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_gravity="center" >
 
                         // 영화 제목
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="나의 첫번째 슈퍼스타"
+                            android:text="어벤져스"
                             android:textColor="#000000"
                             android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=":엔드게임"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
 
                         // 상영시간 〮 국가 〮 장르
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="113분 | 미국 | 코미디, 드라마"
+                            android:text="181분 | 미국 | 액션, SF"
                             android:textSize="13dp" />
 
                         // 평점
@@ -304,29 +301,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:drawableLeft="@drawable/star_left_image_customise"
-                            android:text=" 4.2"
+                            android:text=" 5.0"
                             android:textSize="13dp" />
 
-                        // 내용
+                        // 추천 수
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:text="러닝타임 내내 귀호강했던 영화!"
-                            android:textColor="#000000"
-                            android:textSize="14dp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/unlike_left_image_customise"
+                            android:text=" 24,210"
+                            android:textColor="#7C7979"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-                // 추천 수
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
-                    android:text=" 11"
-                    android:textColor="#7C7979"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

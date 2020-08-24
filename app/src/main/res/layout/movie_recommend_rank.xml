@@ -93,7 +93,7 @@
             // 추천 수
             <TextView
                 android:drawableLeft="@drawable/unlike_left_image_customise"
-                android:text="추천 9,857"
+                android:text="9,857"
                 android:textColor="#7C7979"
                 android:textSize="13dp"
                 android:textStyle="bold"
@@ -102,7 +102,7 @@
             // 추천 수
             <TextView
                 android:drawableLeft="@drawable/unlike_left_image_customise"
-                android:text="추천 8,572"
+                android:text="8,572"
                 android:textColor="#7C7979"
                 android:textSize="13dp"
                 android:textStyle="bold"
@@ -111,7 +111,7 @@
             // 추천 수
             <TextView
                 android:drawableLeft="@drawable/unlike_left_image_customise"
-                android:text="추천 8,572"
+                android:text="8,572"
                 android:textColor="#7C7979"
                 android:textSize="13dp"
                 android:textStyle="bold"
@@ -160,7 +160,7 @@
                     //영화 추천 수
                     <TextView
                         android:drawableLeft="@drawable/unlike_left_image_customise"
-                        android:text="추천 7,851"
+                        android:text="7,851"
                         android:textColor="#7C7979"
                         android:textSize="20dp"
                         android:textStyle="bold"
@@ -206,7 +206,7 @@
                         //영화 추천 수
                         <TextView
                             android:drawableLeft="@drawable/unlike_left_image_customise"
-                            android:text="추천 6,985"
+                            android:text="6,985"
                             android:textColor="#7C7979"
                             android:textSize="20dp"
                             android:textStyle="bold"
@@ -252,7 +252,7 @@
                             //영화 추천 수
                             <TextView
                                 android:drawableLeft="@drawable/unlike_left_image_customise"
-                                android:text="추천 5,444"
+                                android:text="5,444"
                                 android:textColor="#7C7979"
                                 android:textSize="20dp"
                                 android:textStyle="bold"
