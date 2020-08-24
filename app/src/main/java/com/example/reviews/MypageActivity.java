@@ -27,6 +27,7 @@ public class MypageActivity extends AppCompatActivity {
         // 사용자 로그인 여부에 따른 마이페이지 출력
         GlobalVariable user = (GlobalVariable) getApplication();
         validate = user.getData();
+
         if(validate == null) { // 전역변수에 로그인한 사용자 id 값이 비어있는 경우 mypage_before_login.xml 출력
             Intent intent = new Intent(getApplicationContext(), MypageBeforeLogin.class);
             startActivity(intent);

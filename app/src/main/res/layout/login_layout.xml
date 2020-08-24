@@ -44,6 +44,14 @@
         android:singleLine="true"
         android:hint="PASSWORD" />
 
+    // 자동 로그인 체크박스
+    <CheckBox
+        android:id="@+id/login_auto_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="자동 로그인" />
+
     // 로그인 버튼
     <Button
         android:id="@+id/login_btn_login"
