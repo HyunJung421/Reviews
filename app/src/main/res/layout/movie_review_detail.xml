@@ -9,13 +9,17 @@
         android:layout_height="wrap_content"
         android:gravity="clip_horizontal"
         android:orientation="horizontal">
+
         // 창 닫기 버튼
-        <ImageView
+        <ImageButton
+            android:id="@+id/window_close_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/x_button" />
+            android:src="@drawable/x_button"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"/>
 
     </RelativeLayout>
 
