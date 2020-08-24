@@ -29,464 +29,488 @@
             android:background="#D3D3D3" />
     </LinearLayout>
 
-        // NEW
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="NEW"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:textColor="#FFFF00"
-            android:textStyle="bold"
-            android:layout_marginBottom="7dp"/>
-
-    <LinearLayout
+    // NEW
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_newlist1"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_newlist1"
-            android:layout_gravity="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_gravity="center">
-
-        // 영화 제목
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="국제수사"
-            android:textSize="23dp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-        // 상영시간 〮 국가 〮 장르
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="106분 | 한국 | 액션"
-            android:textSize="15dp"/>
-
-        // 감독
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="감독 "
-                android:textSize="15dp"
-                android:textColor="#000000"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="김봉한"
-                android:textSize="15dp"/>
-        </LinearLayout>
-        // 평점
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="평점 "
-                android:textSize="15dp"
-                android:textColor="#000000"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="4.7 / 5.0"
-                android:textSize="15dp"/>
-        </LinearLayout>
-
-        // 내용
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="내용 "
-                android:textSize="15dp"
-                android:textColor="#000000" />
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="match_parent"
-                android:maxLines="4"
-                android:ellipsize="end"
-                android:text="대한민국 촌구석 형사, 글로벌 범죄에 휘말렸다!"
-                android:textSize="15dp"/>
-
-            <Button
-                android:id="@+id/movie_info_btn_plot_more1"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:background="#ffffff"
-                android:text="더보기"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-            // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
-            // emulator로 실행했을 때 줄임표 표시가 보임.
-        </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-        // 수평선
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:background="#D3D3D3"
-            android:layout_marginBottom="7dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_newlist2"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_newlist2"
-            android:layout_gravity="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_gravity="center">
-
-        // 영화 제목
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="인셉션"
-            android:textSize="23dp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-        // 상영시간 〮 국가 〮 장르
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="147분 | 미국 | 스릴러"
-           android:textSize="15dp"/>
-
-        // 감독
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="감독 "
-                android:textSize="15dp"
-                android:textColor="#000000"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="크리스토퍼 놀란"
-                android:textSize="15dp"/>
-        </LinearLayout>
-        // 평점
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="평점 "
-                android:textSize="15dp"
-                android:textColor="#000000"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="4.9 / 5.0"
-                android:textSize="15dp"/>
-        </LinearLayout>
-
-        // 내용
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="내용 "
-                android:textSize="15dp"
-                android:textColor="#000000" />
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="match_parent"
-                android:maxLines="4"
-                android:ellipsize="end"
-                android:text="타인의 꿈에 들어가 생각을 훔치는 특수 보안요원 코브."
-                android:textSize="15dp"/>
-
-            <Button
-                android:id="@+id/movie_info_btn_plot_more3"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:background="#ffffff"
-                android:text="더보기"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-            // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
-            // emulator로 실행했을 때 줄임표 표시가 보임.
-        </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-        // 수평선
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:background="#D3D3D3"
-            android:layout_marginBottom="7dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_newlist3"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_newlist3"
-            android:layout_gravity="center"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center">
-
-            // 영화 제목
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="남매의 여름밤"
-                android:textSize="23dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-            // 상영시간 〮 국가 〮 장르
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="104분 | 한국 | 드리마"
-                android:textSize="15dp"/>
-
-            // 감독
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="감독 "
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="크리스토퍼 놀란"
-                    android:textSize="15dp"/>
-            </LinearLayout>
-            // 평점
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="평점 "
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="4.5 / 5.0"
-                    android:textSize="15dp"/>
-            </LinearLayout>
-
-            // 내용
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="내용 "
-                    android:textSize="15dp"
-                    android:textColor="#000000" />
-                <TextView
-                    android:layout_width="190dp"
-                    android:layout_height="match_parent"
-                    android:maxLines="4"
-                    android:ellipsize="end"
-                    android:text="방학 동안, 아빠와 함께 할아버지 집에서 지내게 된 남매 옥주와 동주"
-                    android:textSize="15dp"/>
-
-                <Button
-                    android:id="@+id/movie_info_btn_plot_more2"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:background="#ffffff"
-                    android:text="더보기"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
-                // emulator로 실행했을 때 줄임표 표시가 보임.
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    // 수평선
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="5dp"
-        android:background="#D3D3D3"
+        android:layout_height="35dp"
+        android:text="NEW"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#FFFF00"
+        android:textStyle="bold"
         android:layout_marginBottom="7dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_newlist4"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_newlist4"
-            android:layout_gravity="center"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="490dp" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center">
-
-            // 영화 제목
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="시크릿 가든"
-                android:textSize="23dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-            // 상영시간 〮 국가 〮 장르
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="104분 | 한국 | 드리마"
-                android:textSize="15dp"/>
-
-            // 감독
+            android:orientation="vertical" >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="감독 "
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="마크 먼든"
-                    android:textSize="15dp"/>
+                android:orientation="horizontal" >
+                //영화 포스터
+                <ImageButton
+                    android:id="@+id/movie_newlist1"
+                    style="@style/movie_poster"
+                    android:layout_width="109dp"
+                    android:layout_height="127dp"
+                    android:src="@drawable/movie_newlist1"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center">
+
+                    // 영화 제목
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="국제수사"
+                        android:textSize="23dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                    // 상영시간 〮 국가 〮 장르
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="106분 | 한국 | 액션"
+                        android:textSize="15dp"/>
+
+                    // 감독
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="감독 "
+                            android:textSize="15dp"
+                            android:textColor="#000000"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="김봉한"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                    // 평점
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="평점 "
+                            android:textSize="15dp"
+                            android:textColor="#000000"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="4.7 / 5.0"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    // 내용
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="내용 "
+                            android:textSize="15dp"
+                            android:textColor="#000000" />
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="match_parent"
+                            android:maxLines="4"
+                            android:ellipsize="end"
+                            android:text="대한민국 촌구석 형사, 글로벌 범죄에 휘말렸다!"
+                            android:textSize="15dp"/>
+
+                        <Button
+                            android:id="@+id/movie_info_btn_plot_more1"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="#ffffff"
+                            android:text="더보기"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                        // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                        // emulator로 실행했을 때 줄임표 표시가 보임.
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-            // 평점
+
+            // 수평선
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:background="#D3D3D3"
+                android:layout_marginBottom="7dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="평점 "
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="4.6 / 5.0"
-                    android:textSize="15dp"/>
-            </LinearLayout>
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    //영화 포스터
+                    <ImageButton
+                        android:id="@+id/movie_newlist2"
+                        style="@style/movie_poster"
+                        android:layout_width="109dp"
+                        android:layout_height="127dp"
+                        android:src="@drawable/movie_newlist2"
+                        android:layout_gravity="center"/>
 
-            // 내용
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="내용 "
-                    android:textSize="15dp"
-                    android:textColor="#000000" />
-                <TextView
-                    android:layout_width="190dp"
-                    android:layout_height="match_parent"
-                    android:maxLines="4"
-                    android:ellipsize="end"
-                    android:text="방한 순간 부모를 잃고 혼자가 되어 이모부 '아치볼드'(콜린 퍼스)의 대저택에 보내진"
-                    android:textSize="15dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center">
 
-                <Button
-                    android:id="@+id/movie_info_btn_plot_more4"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:background="#ffffff"
-                    android:text="더보기"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
-                // emulator로 실행했을 때 줄임표 표시가 보임.
+                        // 영화 제목
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="인셉션"
+                            android:textSize="23dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+                        // 상영시간 〮 국가 〮 장르
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="147분 | 미국 | 스릴러"
+                            android:textSize="15dp"/>
+
+                        // 감독
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="감독 "
+                                android:textSize="15dp"
+                                android:textColor="#000000"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="크리스토퍼 놀란"
+                                android:textSize="15dp"/>
+                        </LinearLayout>
+                        // 평점
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="평점 "
+                                android:textSize="15dp"
+                                android:textColor="#000000"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="4.9 / 5.0"
+                                android:textSize="15dp"/>
+                        </LinearLayout>
+
+                        // 내용
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="내용 "
+                                android:textSize="15dp"
+                                android:textColor="#000000" />
+                            <TextView
+                                android:layout_width="190dp"
+                                android:layout_height="match_parent"
+                                android:maxLines="4"
+                                android:ellipsize="end"
+                                android:text="타인의 꿈에 들어가 생각을 훔치는 특수 보안요원 코브."
+                                android:textSize="15dp"/>
+
+                            <Button
+                                android:id="@+id/movie_info_btn_plot_more3"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:background="#ffffff"
+                                android:text="더보기"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                            // emulator로 실행했을 때 줄임표 표시가 보임.
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                // 수평선
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:background="#D3D3D3"
+                    android:layout_marginBottom="7dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        //영화 포스터
+                        <ImageButton
+                            android:id="@+id/movie_newlist3"
+                            style="@style/movie_poster"
+                            android:layout_width="109dp"
+                            android:layout_height="127dp"
+                            android:src="@drawable/movie_newlist3"
+                            android:layout_gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center">
+
+                            // 영화 제목
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="남매의 여름밤"
+                                android:textSize="23dp"
+                                android:textColor="#000000"
+                                android:textStyle="bold"/>
+                            // 상영시간 〮 국가 〮 장르
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="104분 | 한국 | 드리마"
+                                android:textSize="15dp"/>
+
+                            // 감독
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="감독 "
+                                    android:textSize="15dp"
+                                    android:textColor="#000000"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="크리스토퍼 놀란"
+                                    android:textSize="15dp"/>
+                            </LinearLayout>
+                            // 평점
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="평점 "
+                                    android:textSize="15dp"
+                                    android:textColor="#000000"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="4.5 / 5.0"
+                                    android:textSize="15dp"/>
+                            </LinearLayout>
+
+                            // 내용
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="내용 "
+                                    android:textSize="15dp"
+                                    android:textColor="#000000" />
+                                <TextView
+                                    android:layout_width="190dp"
+                                    android:layout_height="match_parent"
+                                    android:maxLines="4"
+                                    android:ellipsize="end"
+                                    android:text="방학 동안, 아빠와 함께 할아버지 집에서 지내게 된 남매 옥주와 동주"
+                                    android:textSize="15dp"/>
+
+                                <Button
+                                    android:id="@+id/movie_info_btn_plot_more2"
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="25dp"
+                                    android:background="#ffffff"
+                                    android:text="더보기"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                                // emulator로 실행했을 때 줄임표 표시가 보임.
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    // 수평선
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:background="#D3D3D3"
+                        android:layout_marginBottom="7dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            //영화 포스터
+                            <ImageButton
+                                android:id="@+id/movie_newlist4"
+                                style="@style/movie_poster"
+                                android:layout_width="109dp"
+                                android:layout_height="127dp"
+                                android:src="@drawable/movie_newlist4"
+                                android:layout_gravity="center"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center">
+
+                                // 영화 제목
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="시크릿 가든"
+                                    android:textSize="23dp"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold"/>
+                                // 상영시간 〮 국가 〮 장르
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="104분 | 한국 | 드리마"
+                                    android:textSize="15dp"/>
+
+                                // 감독
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="감독 "
+                                        android:textSize="15dp"
+                                        android:textColor="#000000"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="마크 먼든"
+                                        android:textSize="15dp"/>
+                                </LinearLayout>
+                                // 평점
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="평점 "
+                                        android:textSize="15dp"
+                                        android:textColor="#000000"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="4.6 / 5.0"
+                                        android:textSize="15dp"/>
+                                </LinearLayout>
+
+                                // 내용
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="내용 "
+                                        android:textSize="15dp"
+                                        android:textColor="#000000" />
+                                    <TextView
+                                        android:layout_width="190dp"
+                                        android:layout_height="match_parent"
+                                        android:maxLines="4"
+                                        android:ellipsize="end"
+                                        android:text="방한 순간 부모를 잃고 혼자가 되어 이모부 '아치볼드'(콜린 퍼스)의 대저택에 보내진"
+                                        android:textSize="15dp"/>
+
+                                    <Button
+                                        android:id="@+id/movie_info_btn_plot_more4"
+                                        style="?android:attr/borderlessButtonStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:background="#ffffff"
+                                        android:text="더보기"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                    // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                                    // emulator로 실행했을 때 줄임표 표시가 보임.
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
     // 하단바
     <LinearLayout

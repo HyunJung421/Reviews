@@ -104,7 +104,6 @@
                 android:textColor="#666666"
                 style="@style/movie_title"/>
         </LinearLayout>
-
     </LinearLayout>
     // 수평선
     <View
@@ -115,119 +114,134 @@
         android:layout_centerInParent="true"
         android:background="#D3D3D3" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_grade1"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_grade1"/>
+        android:layout_height="292dp" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            //영화 이름
-            <TextView
-                android:text="4 강철비2"
-                style="@style/movie_title"
-                android:textSize="20dp"
-                android:layout_width="209dp"
-                android:gravity="fill"/>
-            // 영화 평점
-            <TextView
-                style="@style/movie_title"
-                android:text="평점 ★4.2"
-                android:textColor="#666666"
-                android:textSize="20dp"/>
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                //영화 포스터
+                <ImageButton
+                    android:id="@+id/movie_grade1"
+                    style="@style/movie_poster"
+                    android:layout_width="109dp"
+                    android:layout_height="127dp"
+                    android:src="@drawable/movie_grade1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    //영화 이름
+                    <TextView
+                        android:text="4 강철비2"
+                        style="@style/movie_title"
+                        android:textSize="20dp"
+                        android:layout_width="209dp"
+                        android:gravity="fill"/>
+                    // 영화 평점
+                    <TextView
+                        style="@style/movie_title"
+                        android:text="평점 ★4.2"
+                        android:textColor="#666666"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            // 수평선
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:background="#D3D3D3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    //영화 포스터
+                    <ImageButton
+                        android:id="@+id/movie_grade2"
+                        style="@style/movie_poster"
+                        android:layout_width="109dp"
+                        android:layout_height="127dp"
+                        android:src="@drawable/movie_grade2"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        //영화 이름
+                        <TextView
+                            style="@style/movie_title"
+                            android:layout_width="209dp"
+                            android:text="5 다만 악에서 구하소서"
+                            android:textSize="20dp"
+                            android:gravity="fill"/>
+                        // 영화 평점
+                        <TextView
+                            style="@style/movie_title"
+                            android:text="평점 ★4.1"
+                            android:textColor="#666666"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            // 수평선
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:background="#D3D3D3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    //영화 포스터
+                    <ImageButton
+                        android:id="@+id/movie_grade3"
+                        style="@style/movie_poster"
+                        android:layout_width="109dp"
+                        android:layout_height="127dp"
+                        android:src="@drawable/movie_grade3"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        //영화 이름
+                        <TextView
+                            style="@style/movie_title"
+                            android:layout_width="209dp"
+                            android:text="6 오케이 마담"
+                            android:textSize="20dp"
+                            android:gravity="fill"/>
+                        // 영화 평점
+                        <TextView
+                            style="@style/movie_title"
+                            android:text="평점 ★4.0"
+                            android:textColor="#666666"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
-    // 수평선
-    <View
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_centerInParent="true"
-        android:background="#D3D3D3" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_grade2"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_grade2"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            //영화 이름
-            <TextView
-                style="@style/movie_title"
-                android:layout_width="209dp"
-                android:text="5 다만 악에서 구하소서"
-                android:textSize="20dp"
-                android:gravity="fill"/>
-            // 영화 평점
-            <TextView
-                style="@style/movie_title"
-                android:text="평점 ★4.1"
-                android:textColor="#666666"
-                android:textSize="20dp"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    // 수평선
-    <View
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_centerInParent="true"
-        android:background="#D3D3D3" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        //영화 포스터
-        <ImageButton
-            android:id="@+id/movie_grade3"
-            style="@style/movie_poster"
-            android:layout_width="109dp"
-            android:layout_height="127dp"
-            android:src="@drawable/movie_grade3"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            //영화 이름
-            <TextView
-                style="@style/movie_title"
-                android:layout_width="209dp"
-                android:text="6 오케이 마담"
-                android:textSize="20dp"
-                android:gravity="fill"/>
-            // 영화 평점
-            <TextView
-                style="@style/movie_title"
-                android:text="평점 ★4.0"
-                android:textColor="#666666"
-                android:textSize="20dp"/>
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
     // 하단바
     <LinearLayout
