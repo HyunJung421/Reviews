@@ -3,6 +3,7 @@ package com.example.reviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 public class MypageActivity extends AppCompatActivity {
 
     String validate; // 사용자 로그인 여부
+    ImageButton btnMyContent; // 추천한 컨텐츠 버튼
     ImageButton btnMyReview;  // 작성한 코멘트 버튼
 
     // 하단바 버튼
@@ -33,6 +35,15 @@ public class MypageActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else { // 전역변수에 로그인한 사용자 id 값이 있는 경우 mypage_layout.xml 출력
+            btnMyContent = (ImageButton)findViewById(R.id.mypage_btn_content);
+            btnMyContent.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), MyContentActivity.class);
+                    startActivity(intent);
+                }
+            });
+
             btnMyReview = (ImageButton)findViewById(R.id.mypage_btn_comment);
             btnMyReview.setOnClickListener(new View.OnClickListener() {
                 @Override
