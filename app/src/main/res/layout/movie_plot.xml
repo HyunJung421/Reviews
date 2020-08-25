@@ -19,6 +19,7 @@
             android:orientation="horizontal">
             // 영화 제목
             <TextView
+                android:id="@+id/movie_plot_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -49,6 +50,7 @@
 
         // 영화 줄거리
         <TextView
+            android:id="@+id/movie_plot_plot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"

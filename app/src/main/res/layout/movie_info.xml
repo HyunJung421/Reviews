@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <ImageView
+                android:id="@+id/movie_info_poster"
                 android:layout_width="150dp"
                 android:layout_height="200dp"
                 android:src="@drawable/social_movie1"
@@ -36,18 +37,48 @@
 
             // 영화 제목
             <TextView
+                android:id="@+id/movie_info_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="극한직업"
                 android:textSize="23dp"
                 android:textColor="#000000"
                 android:textStyle="bold"/>
+
             // 상영시간 〮 국가 〮 장르
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="111분 | 한국 | 코미디"
-                android:textSize="15dp"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/movie_info_running_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="분 | "
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/movie_info_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한국"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/movie_info_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="코미디"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             // 감독
             <LinearLayout
@@ -62,6 +93,7 @@
                     android:textColor="#000000"
                     />
                 <TextView
+                    android:id="@+id/movie_info_director"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="이병헌"
@@ -78,13 +110,20 @@
                     android:layout_height="match_parent"
                     android:text="평점 "
                     android:textSize="15dp"
-                    android:textColor="#000000"
-                    />
+                    android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/movie_info_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4.5"
+                    android:textSize="15dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="4.5 / 5.0"
-                    android:textSize="15dp"/>
+                    android:text=" / 5.0"
+                    android:textSize="15dp" />
+
             </LinearLayout>
 
             // 내용
@@ -99,6 +138,7 @@
                     android:textSize="15dp"
                     android:textColor="#000000" />
                 <TextView
+                    android:id="@+id/movie_info_plot"
                     android:layout_width="190dp"
                     android:layout_height="match_parent"
                     android:maxLines="4"
@@ -383,4 +423,3 @@
             style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>
-
