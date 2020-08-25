@@ -13,7 +13,7 @@ public class JoinRequest extends StringRequest {
     final static private String URL = "http://3.34.44.58/Join.php";
     private Map<String, String> map;
 
-    public JoinRequest(String userID, String userPassword, String userName, int userNumber, Response.Listener<String> listener) {
+    public JoinRequest(String userID, String userPassword, String userName, String userNumber, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();

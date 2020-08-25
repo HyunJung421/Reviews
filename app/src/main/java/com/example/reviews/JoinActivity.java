@@ -151,7 +151,7 @@ public class JoinActivity extends AppCompatActivity {
                     String userID = join_input_id.getText().toString();
                     String userPass = join_input_pw.getText().toString();
                     String userName = join_input_name.getText().toString();
-                    int userNumber = Integer.parseInt(join_input_phone.getText().toString());
+                    String userNumber = join_input_phone.getText().toString();
 
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
