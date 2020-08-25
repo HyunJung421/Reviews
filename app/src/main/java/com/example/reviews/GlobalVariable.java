@@ -11,6 +11,7 @@ public class GlobalVariable extends Application {
         super.onCreate();
     }
 
+    // app 종료 시 가장 마지막에 실행 “데이터 삭제 및 해제 담당”
     public void onTerminate() {
         super.onTerminate();
     }
@@ -24,4 +25,6 @@ public class GlobalVariable extends Application {
     public String getData() {
         return user;
     }
+
+    public void deleteData() { this.user = ""; }
 }

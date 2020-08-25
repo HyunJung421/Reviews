@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
         else {  // 자동로그인이 아닐 경우
             login_input_id = (EditText)findViewById(R.id.login_input_id);
             login_input_pw = (EditText)findViewById(R.id.login_input_pw);
-            login_auto_ch = (CheckBox)findViewById(R.id.login_auto_check);
+            login_auto_ch = (CheckBox)findViewById(R.id.login_check_auto);
 
             // 로그인 버튼 등록 및 리스너 구현
             btnLogin = (Button)findViewById(R.id.login_btn_login);
