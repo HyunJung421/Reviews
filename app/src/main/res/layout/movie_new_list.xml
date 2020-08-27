@@ -75,12 +75,52 @@
                         android:textSize="23dp"
                         android:textColor="#000000"
                         android:textStyle="bold"/>
-                    // 상영시간 〮 국가 〮 장르
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="106분 | 한국 | 액션"
-                        android:textSize="15dp"/>
+                    // 상영년도 〮 상영시간 〮 국가 〮 장르
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/movie_info_year1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020"
+                            android:textSize="15dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textSize="15dp" />
+                        <TextView
+                            android:id="@+id/movie_info_running_time1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="106"
+                            android:textSize="15dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="분 | "
+                            android:textSize="15dp" />
+                        <TextView
+                            android:id="@+id/movie_info_country1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="한국"
+                            android:textSize="15dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textSize="15dp" />
+                        <TextView
+                            android:id="@+id/movie_info_genre1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="액션"
+                            android:textSize="15dp" />
+                    </LinearLayout>
 
                     // 감독
                     <LinearLayout
@@ -193,12 +233,52 @@
                             android:textSize="23dp"
                             android:textColor="#000000"
                             android:textStyle="bold"/>
-                        // 상영시간 〮 국가 〮 장르
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="147분 | 미국 | 스릴러"
-                            android:textSize="15dp"/>
+                        // 상영년도 〮 상영시간 〮 국가 〮 장르
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/movie_info_year2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2020"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" | "
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/movie_info_running_time2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="147"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="분 | "
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/movie_info_country2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="미국"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" | "
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/movie_info_genre2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="스릴러"
+                                android:textSize="15dp" />
+                        </LinearLayout>
 
                         // 감독
                         <LinearLayout
@@ -311,12 +391,52 @@
                                 android:textSize="23dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
-                            // 상영시간 〮 국가 〮 장르
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="104분 | 한국 | 드리마"
-                                android:textSize="15dp"/>
+                            // 상영년도 〮 상영시간 〮 국가 〮 장르
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/movie_info_year3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2020"
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" | "
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:id="@+id/movie_info_running_time3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="104"
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="분 | "
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:id="@+id/movie_info_country3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="한국"
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" | "
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:id="@+id/movie_info_genre3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="드라마"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
 
                             // 감독
                             <LinearLayout
@@ -429,12 +549,52 @@
                                     android:textSize="23dp"
                                     android:textColor="#000000"
                                     android:textStyle="bold"/>
-                                // 상영시간 〮 국가 〮 장르
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="104분 | 한국 | 드리마"
-                                    android:textSize="15dp"/>
+                                // 상영년도 〮 상영시간 〮 국가 〮 장르
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/movie_info_year4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2020"
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" | "
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:id="@+id/movie_info_running_time4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="104"
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="분 | "
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:id="@+id/movie_info_country4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="영국"
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" | "
+                                        android:textSize="15dp" />
+                                    <TextView
+                                        android:id="@+id/movie_info_genre4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="판타지"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
 
                                 // 감독
                                 <LinearLayout

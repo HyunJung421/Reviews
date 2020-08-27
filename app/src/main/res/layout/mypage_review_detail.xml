@@ -25,14 +25,54 @@
             android:textSize="21dp"
             android:textStyle="bold" />
 
-        // 상영시간 〮 국가 〮 장르
-        <TextView
+        // 상영년도 〮 상영시간 〮 국가 〮 장르
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:text="111분 | 한국 | 코미디"
-            android:textSize="17dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/movie_info_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" | "
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/movie_info_running_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분 | "
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/movie_info_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한국"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" | "
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/movie_info_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="코미디"
+                android:textSize="18dp" />
+        </LinearLayout>
     </LinearLayout>
 
     // 수평선
