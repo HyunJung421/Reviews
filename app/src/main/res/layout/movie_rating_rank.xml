@@ -141,15 +141,16 @@
                     <TextView
                         android:text="4 강철비2"
                         style="@style/movie_title"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:layout_width="209dp"
                         android:gravity="fill"/>
                     // 영화 평점
                     <TextView
                         style="@style/movie_title"
-                        android:text="평점 ★4.2"
+                        android:text="    평점 ★4.2"
                         android:textColor="#666666"
-                        android:textSize="20dp"/>
+                        android:textSize="15dp"
+                        android:gravity="fill"/>
                 </LinearLayout>
             </LinearLayout>
             // 수평선
@@ -185,14 +186,14 @@
                             style="@style/movie_title"
                             android:layout_width="209dp"
                             android:text="5 다만 악에서 구하소서"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:gravity="fill"/>
-                        // 영화 평점
                         <TextView
                             style="@style/movie_title"
-                            android:text="평점 ★4.1"
+                            android:text="    평점 ★4.1"
                             android:textColor="#666666"
-                            android:textSize="20dp"/>
+                            android:textSize="15dp"
+                            android:gravity="fill"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -229,14 +230,15 @@
                             style="@style/movie_title"
                             android:layout_width="209dp"
                             android:text="6 오케이 마담"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:gravity="fill"/>
                         // 영화 평점
                         <TextView
                             style="@style/movie_title"
-                            android:text="평점 ★4.0"
+                            android:text="    평점 ★4.0"
                             android:textColor="#666666"
-                            android:textSize="20dp"/>
+                            android:textSize="15dp"
+                            android:gravity="fill"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
