@@ -16,11 +16,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
             android:gravity="center"
             android:text="REVIEWS"
             android:textAlignment="center"
-
             android:textSize="28dp" />
 
         <ImageView
@@ -98,7 +96,7 @@
                             android:orientation="vertical">
                             // 더보기 버튼
                             <Button
-                                android:id="@+id/more"
+                                android:id="@+id/more1"
                                 android:layout_marginRight="18dp"
                                 style="@style/btn_more" />
 

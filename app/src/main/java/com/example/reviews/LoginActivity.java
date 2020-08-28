@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private AlertDialog dialog;
 
     // 로그인, 회원가입 버튼
-    private Button btnLogin, btnJoin;
+    private Button btnLogin, btnJoin, btnFindId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                             dialog = builder.setMessage("아이디나 비밀번호가 일치하지 않습니다.")
                                     .setPositiveButton("확인", null)
                                     .create();
-                            dialog.show();;
+                            dialog.show();
                             return;
                         }
                     } catch (JSONException e) {
@@ -157,6 +157,15 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                    startActivity(intent); // 액티비티 띄우기
+                }
+            });
+
+            btnFindId = (Button)findViewById(R.id.login_btn_findid);
+            btnFindId.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), LoginIdFindActivity.class);
                     startActivity(intent); // 액티비티 띄우기
                 }
             });
