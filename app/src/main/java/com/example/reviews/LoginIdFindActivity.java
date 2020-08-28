@@ -21,39 +21,45 @@ import java.util.Random;
 // ID찾기 java 파일
 public class LoginIdFindActivity extends AppCompatActivity {
 
-    private EditText login_input_name, login_input_phone;
-    private Button auth_number_btn;
-    private AlertDialog dialog;
+    private EditText login_input_name, login_input_phone, login_input_randomnum;
+    private Button auth_number_btn, auth_number_again_btn, auth_number_confirm;
+    private AlertDialog dialog;  // 알림창
+    private String authNumber;  // 인증번호
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_id_find);
 
+        // 이름, 휴대폰 번호 입력칸
         login_input_name = (EditText)findViewById(R.id.login_input_name);
         login_input_phone = (EditText)findViewById(R.id.login_input_phone);
 
+        // 인증번호 버튼 등록 및 리스너 구현
         auth_number_btn = (Button)findViewById(R.id.find_btn_randomnum);
         auth_number_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 이름, 휴대폰 번호 데이터
                 String name = login_input_name.getText().toString();
                 String phone = login_input_phone.getText().toString();
 
-                int min = 100000;
-                int max = 999999;
-                int random = new Random().nextInt((max-min)+1) + min;
-                String sms = "[Reviews ID 본인확인] 인증번호[" + random + "]를 입력해주세요.";
+                String authNumber;
+                setAuthNumber(); // 인증번호 생성
+                authNumber = getAuthNumber();  // 인증번호 받기
 
-                if (name.equals("")) {
+                String sms = "[Reviews ID 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";  // 보내질 문자내용
+
+                if (name.equals("")) {  // 이름 입력 여부
                     Toast.makeText(LoginIdFindActivity.this, "이름을 입력하세요.", Toast.LENGTH_SHORT).show();
                     login_input_name.requestFocus();
-                } else if (phone.equals("")) {
+                } else if (phone.equals("")) {  // 휴대폰 번호 입력 여부
                     Toast.makeText(LoginIdFindActivity.this, "휴대폰 번호를 입력하세요.", Toast.LENGTH_SHORT).show();
                     login_input_phone.requestFocus();
                 } else {
                     PendingIntent sentIntent = PendingIntent.getBroadcast(LoginIdFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
 
+                    // 전송여부 확인
                     registerReceiver(new BroadcastReceiver() {
                         @Override
                         public void onReceive(Context context, Intent intent) {
@@ -61,7 +67,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
                                 case Activity.RESULT_OK:
                                     // 전송 성공
                                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginIdFindActivity.this);
-                                    dialog = builder.setMessage("인증번호가 발송되었습니다.\n 문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.")
+                                    dialog = builder.setMessage("인증번호가 발송되었습니다.\n문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.\n")
                                             .setPositiveButton("확인", null)
                                             .create();
                                     dialog.show();
@@ -87,5 +93,76 @@ public class LoginIdFindActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // 재전송 버튼 등록 및 리스너 구현
+        auth_number_again_btn = (Button)findViewById(R.id.find_btn_randomnum_again);
+        auth_number_again_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 이름, 휴대폰 번호 데이터
+                String name = login_input_name.getText().toString();
+                String phone = login_input_phone.getText().toString();
+
+                String authNumber;
+                setAuthNumber(); // 인증번호 생성
+                authNumber = getAuthNumber();  // 인증번호 받기
+
+                String sms = "[Reviews ID 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";
+
+                PendingIntent sentIntent = PendingIntent.getBroadcast(LoginIdFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
+
+                registerReceiver(new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        switch(getResultCode()){
+                            case Activity.RESULT_OK:
+                                // 전송 성공
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginIdFindActivity.this);
+                                dialog = builder.setMessage("인증번호가 발송되었습니다.\n문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.\n")
+                                        .setPositiveButton("확인", null)
+                                        .create();
+                                dialog.show();
+                                break;
+                            case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
+                                // 전송 실패
+                                Toast.makeText(LoginIdFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                    }
+                }, new IntentFilter("SMS_SENT_ACTION"));
+
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phone, null, sms, sentIntent, null);
+            }
+        });
+
+        // 인증번호 입력칸
+        login_input_randomnum = (EditText)findViewById(R.id.login_input_randomnum);
+
+        // 인증번호 입력후 확인버튼 등록 및 리스너 구현
+        auth_number_confirm = (Button)findViewById(R.id.login_btn_confirm);
+        auth_number_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String inputAuthNumber = login_input_randomnum.getText().toString();
+                if(inputAuthNumber.equals(getAuthNumber())){
+                    Toast.makeText(LoginIdFindActivity.this, "인증 확인!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    // 인증번호 생성
+    public void setAuthNumber() {
+        // 인증번호 100000-999999사이의 숫자로 랜덤 생성
+        int min = 100000;
+        int max = 999999;
+        int random = new Random().nextInt((max-min)+1) + min;
+        this.authNumber = String.valueOf(random);
+    }
+
+    // 인증번호 가져오기
+    public String getAuthNumber() {
+        return this.authNumber;
     }
 }
