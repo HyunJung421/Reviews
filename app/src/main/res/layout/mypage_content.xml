@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
+    //java파일 : MyContentActivity
     // 추천한 컨텐츠
     <TextView
         android:layout_width="match_parent"
@@ -41,6 +42,7 @@
 
             //컨텐츠1
             <LinearLayout
+                android:id="@+id/my_content1"
                 style="@style/mypage_content_layout">
                 // 내 정보
                 <LinearLayout
@@ -64,6 +66,7 @@
                         android:textSize="15dp" />
 
                     <TextView
+                        android:id="@+id/my_reviews"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="170dp"
@@ -81,6 +84,7 @@
 
                     //영화 포스터
                     <ImageView
+                        android:id="@+id/movie_poster"
                         android:layout_width="100dp"
                         android:layout_height="130dp"
                         android:scaleType="fitXY"
@@ -103,11 +107,12 @@
                             android:textSize="18dp"
                             android:textStyle="bold" />
 
-                        // 상영시간 〮 국가 〮 장르
+                        // 상영년도 〮상영시간 〮 국가 〮 장르
                         <TextView
+                            android:id="@+id/content_movie1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="111분 | 한국 | 코미디"
+                            android:text="2019 | 111분 | 한국 | 코미디"
                             android:textSize="13dp" />
 
                         // 평점
@@ -200,11 +205,11 @@
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
-                        // 상영시간 〮 국가 〮 장르
+                        // 상영년도 〮상영시간 〮 국가 〮 장르
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="149분 | 미국 | 액션, SF"
+                            android:text="2018 | 149분 | 미국 | 액션, SF"
                             android:textSize="13dp" />
 
                         // 평점
@@ -289,11 +294,11 @@
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
-                        // 상영시간 〮 국가 〮 장르
+                        // 상영년도 〮상영시간 〮 국가 〮 장르
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="181분 | 미국 | 액션, SF"
+                            android:text="2019 | 181분 | 미국 | 액션, SF"
                             android:textSize="13dp" />
 
                         // 평점
