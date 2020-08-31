@@ -15,10 +15,10 @@ public class LoginPwShowActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_id_find2);
+        setContentView(R.layout.login_password_find2);
 
         // 로그인 하는 xml로 이동하기
-        btnlogin = (Button)findViewById(R.id.mypage_before_login_btn_login);
+        btnlogin = (Button) findViewById(R.id.mypage_before_login_btn_login);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,4 +26,5 @@ public class LoginPwShowActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 }
