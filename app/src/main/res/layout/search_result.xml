@@ -29,7 +29,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/magnifier" />
+            android:src="@drawable/main_icon_search" />
     </LinearLayout>
 
     //영화 검색결과
