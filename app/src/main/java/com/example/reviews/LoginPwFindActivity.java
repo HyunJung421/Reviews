@@ -19,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 //PW찾기 java 파일
-public class LoginpwFindActivity extends AppCompatActivity {
+public class LoginPwFindActivity extends AppCompatActivity {
 
     private EditText login_input_id, login_input_name, login_input_phone, login_input_randomnum;
     private Button auth_number_btn, auth_number_again_btn, auth_number_confirm;
@@ -52,13 +52,13 @@ public class LoginpwFindActivity extends AppCompatActivity {
                 String sms = "[Reviews ID 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";  // 보내질 문자내용
 
                 if (name.equals("")) {  // 이름 입력 여부
-                    Toast.makeText(LoginpwFindActivity.this, "이름을 입력하세요.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginPwFindActivity.this, "이름을 입력하세요.", Toast.LENGTH_SHORT).show();
                     login_input_name.requestFocus();
                 } else if (phone.equals("")) {  // 휴대폰 번호 입력 여부
-                    Toast.makeText(LoginpwFindActivity.this, "휴대폰 번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginPwFindActivity.this, "휴대폰 번호를 입력하세요.", Toast.LENGTH_SHORT).show();
                     login_input_phone.requestFocus();
                 } else {
-                    PendingIntent sentIntent = PendingIntent.getBroadcast(LoginpwFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
+                    PendingIntent sentIntent = PendingIntent.getBroadcast(LoginPwFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
 
                     // 전송여부 확인
                     registerReceiver(new BroadcastReceiver() {
@@ -67,7 +67,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
                             switch(getResultCode()){
                                 case Activity.RESULT_OK:
                                     // 전송 성공
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginpwFindActivity.this);
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginPwFindActivity.this);
                                     dialog = builder.setMessage("인증번호가 발송되었습니다.\n문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.\n")
                                             .setPositiveButton("확인", null)
                                             .create();
@@ -75,7 +75,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
                                     break;
                                 case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
                                     // 전송 실패
-                                    Toast.makeText(LoginpwFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginPwFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
                                     break;
                             }
                         }
@@ -111,7 +111,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
 
                 String sms = "[Reviews ID 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";
 
-                PendingIntent sentIntent = PendingIntent.getBroadcast(LoginpwFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
+                PendingIntent sentIntent = PendingIntent.getBroadcast(LoginPwFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
 
                 registerReceiver(new BroadcastReceiver() {
                     @Override
@@ -119,7 +119,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
                         switch(getResultCode()){
                             case Activity.RESULT_OK:
                                 // 전송 성공
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginpwFindActivity.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginPwFindActivity.this);
                                 dialog = builder.setMessage("인증번호가 발송되었습니다.\n문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.\n")
                                         .setPositiveButton("확인", null)
                                         .create();
@@ -127,7 +127,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
                                 break;
                             case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
                                 // 전송 실패
-                                Toast.makeText(LoginpwFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginPwFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
                                 break;
                         }
                     }
@@ -147,7 +147,7 @@ public class LoginpwFindActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String inputAuthNumber = login_input_randomnum.getText().toString();
                 if(inputAuthNumber.equals(getAuthNumber())){
-                    Toast.makeText(LoginpwFindActivity.this, "인증 확인!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginPwFindActivity.this, "인증 확인!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
