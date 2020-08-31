@@ -24,6 +24,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginIdFindActivity"/>
+        <activity android:name=".LoginIdShowActivity"/>
+        <activity android:name=".LoginPwFindActivity"/>
+        <activity android:name=".LoginPwShowActivity"/>
         <activity android:name=".JoinActivity"/>
         <activity android:name=".SocialActivity"/>
         <activity android:name=".MypageActivity"/>
