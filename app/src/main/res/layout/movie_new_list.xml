@@ -69,6 +69,7 @@
 
                     // 영화 제목
                     <TextView
+                        android:id="@+id/movie_info_title1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="국제수사"
@@ -135,6 +136,7 @@
                             android:textColor="#000000"
                             />
                         <TextView
+                            android:id="@+id/movie_info_director1"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="김봉한"
@@ -153,10 +155,17 @@
                             android:textColor="#000000"
                             />
                         <TextView
+                            android:id="@+id/movie_info_rating1"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="4.7 / 5.0"
-                            android:textSize="15dp"/>
+                            android:text="4.5"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text=" / 5.0"
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     // 내용
@@ -171,6 +180,7 @@
                             android:textSize="15dp"
                             android:textColor="#000000" />
                         <TextView
+                            android:id="@+id/movie_info_plot1"
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
                             android:maxLines="4"
@@ -227,6 +237,7 @@
 
                         // 영화 제목
                         <TextView
+                            android:id="@+id/movie_info_title2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="인셉션"
@@ -293,6 +304,7 @@
                                 android:textColor="#000000"
                                 />
                             <TextView
+                                android:id="@+id/movie_info_director2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="크리스토퍼 놀란"
@@ -311,10 +323,17 @@
                                 android:textColor="#000000"
                                 />
                             <TextView
+                                android:id="@+id/movie_info_rating2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="4.9 / 5.0"
-                                android:textSize="15dp"/>
+                                android:text="4.5"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" / 5.0"
+                                android:textSize="15dp" />
                         </LinearLayout>
 
                         // 내용
@@ -329,6 +348,7 @@
                                 android:textSize="15dp"
                                 android:textColor="#000000" />
                             <TextView
+                                android:id="@+id/movie_info_plot2"
                                 android:layout_width="190dp"
                                 android:layout_height="match_parent"
                                 android:maxLines="4"
@@ -337,7 +357,7 @@
                                 android:textSize="15dp"/>
 
                             <Button
-                                android:id="@+id/movie_info_btn_plot_more3"
+                                android:id="@+id/movie_info_btn_plot_more2"
                                 style="?android:attr/borderlessButtonStyle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="25dp"
@@ -385,6 +405,7 @@
 
                             // 영화 제목
                             <TextView
+                                android:id="@+id/movie_info_title3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="남매의 여름밤"
@@ -450,11 +471,13 @@
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     />
+
                                 <TextView
+                                    android:id="@+id/movie_info_director3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:text="크리스토퍼 놀란"
-                                    android:textSize="15dp"/>
+                                    android:text="윤단비"
+                                    android:textSize="15dp" />
                             </LinearLayout>
                             // 평점
                             <LinearLayout
@@ -469,10 +492,17 @@
                                     android:textColor="#000000"
                                     />
                                 <TextView
+                                    android:id="@+id/movie_info_rating3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:text="4.5 / 5.0"
-                                    android:textSize="15dp"/>
+                                    android:text="4.5"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text=" / 5.0"
+                                    android:textSize="15dp" />
                             </LinearLayout>
 
                             // 내용
@@ -487,6 +517,7 @@
                                     android:textSize="15dp"
                                     android:textColor="#000000" />
                                 <TextView
+                                    android:id="@+id/movie_info_plot3"
                                     android:layout_width="190dp"
                                     android:layout_height="match_parent"
                                     android:maxLines="4"
@@ -495,7 +526,7 @@
                                     android:textSize="15dp"/>
 
                                 <Button
-                                    android:id="@+id/movie_info_btn_plot_more2"
+                                    android:id="@+id/movie_info_btn_plot_more3"
                                     style="?android:attr/borderlessButtonStyle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="25dp"
@@ -543,6 +574,7 @@
 
                                 // 영화 제목
                                 <TextView
+                                    android:id="@+id/movie_info_title4"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:text="시크릿 가든"
@@ -609,6 +641,7 @@
                                         android:textColor="#000000"
                                         />
                                     <TextView
+                                        android:id="@+id/movie_info_director4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:text="마크 먼든"
@@ -624,13 +657,19 @@
                                         android:layout_height="match_parent"
                                         android:text="평점 "
                                         android:textSize="15dp"
-                                        android:textColor="#000000"
-                                        />
+                                        android:textColor="#000000" />
+                                    <TextView
+                                        android:id="@+id/movie_info_rating4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="4.5"
+                                        android:textSize="15dp" />
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:text="4.6 / 5.0"
-                                        android:textSize="15dp"/>
+                                        android:text=" / 5.0"
+                                        android:textSize="15dp" />
                                 </LinearLayout>
 
                                 // 내용
@@ -645,6 +684,7 @@
                                         android:textSize="15dp"
                                         android:textColor="#000000" />
                                     <TextView
+                                        android:id="@+id/movie_info_plot4"
                                         android:layout_width="190dp"
                                         android:layout_height="match_parent"
                                         android:maxLines="4"

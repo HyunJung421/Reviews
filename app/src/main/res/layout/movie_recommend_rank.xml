@@ -75,12 +75,15 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/movie_info_title1"
                 android:text="1 극한직업"
                 style="@style/movie_title"/>
             <TextView
+                android:id="@+id/movie_info_title2"
                 android:text="2 나의 첫번째 슈퍼스타"
                 style="@style/movie_title"/>
             <TextView
+                android:id="@+id/movie_info_title3"
                 android:text="3 온워드"
                 style="@style/movie_title"/>
         </LinearLayout>
@@ -101,6 +104,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/unlike_left_image_customise" />
                 <TextView
+                    android:id="@+id/number_recommendation1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="  9,857" />
@@ -117,6 +121,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/unlike_left_image_customise" />
             <TextView
+                android:id="@+id/number_recommendation2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  8,578" />
@@ -132,6 +137,7 @@
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/unlike_left_image_customise" />
                 <TextView
+                    android:id="@+id/number_recommendation3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="  7,999" />
@@ -173,6 +179,7 @@
                     android:layout_gravity="center">
                     //영화 이름
                     <TextView
+                        android:id="@+id/movie_info_title4"
                         android:text="4 강철비2"
                         style="@style/movie_title"
                         android:textSize="18dp"
@@ -189,6 +196,7 @@
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/unlike_left_image_customise" />
                         <TextView
+                            android:id="@+id/number_recommendation4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  6,589" />
@@ -226,6 +234,7 @@
                         android:layout_gravity="center">
                         //영화 이름
                         <TextView
+                            android:id="@+id/movie_info_title5"
                             style="@style/movie_title"
                             android:layout_width="209dp"
                             android:text="5 다만 악에서 구하소서"
@@ -242,6 +251,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:src="@drawable/unlike_left_image_customise" />
                             <TextView
+                                android:id="@+id/number_recommendation5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="  5,576" />
@@ -279,6 +289,7 @@
                             android:layout_gravity="center">
                             //영화 이름
                             <TextView
+                                android:id="@+id/movie_info_title6"
                                 style="@style/movie_title"
                                 android:layout_width="209dp"
                                 android:text="6 오케이 마담"
@@ -295,6 +306,7 @@
                                     android:layout_gravity="center_vertical"
                                     android:src="@drawable/unlike_left_image_customise" />
                                 <TextView
+                                    android:id="@+id/number_recommendation6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="  5,759" />
