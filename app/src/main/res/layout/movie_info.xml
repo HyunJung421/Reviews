@@ -52,7 +52,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/movie_info_year"
+                    android:id="@+id/movie_info_year1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019"
@@ -63,7 +63,7 @@
                     android:text=" | "
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/movie_info_running_time"
+                    android:id="@+id/movie_info_running_time1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="111"
@@ -74,7 +74,7 @@
                     android:text="분 | "
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/movie_info_country"
+                    android:id="@+id/movie_info_country1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="한국"
@@ -85,7 +85,7 @@
                     android:text=" | "
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/movie_info_genre"
+                    android:id="@+id/movie_info_genre1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="코미디"
@@ -105,7 +105,7 @@
                     android:textColor="#000000"
                     />
                 <TextView
-                    android:id="@+id/movie_info_director"
+                    android:id="@+id/movie_info_director1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="이병헌"
@@ -124,7 +124,7 @@
                     android:textSize="15dp"
                     android:textColor="#000000" />
                 <TextView
-                    android:id="@+id/movie_info_rating"
+                    android:id="@+id/movie_info_rating1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="4.5"
