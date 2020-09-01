@@ -22,16 +22,15 @@
             android:textSize="28dp" />
 
         <ImageView
+            android:id="@+id/search_magnifier"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:src="@drawable/main_icon_search" />
-
     </RelativeLayout>
 
     // 영화 포스터 자동회전
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="540dp">

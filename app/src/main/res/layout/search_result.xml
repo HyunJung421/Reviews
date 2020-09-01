@@ -12,6 +12,7 @@
         android:orientation="horizontal">
         //검색창
         <Button
+            android:id="@+id/search_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="340dp"
             android:layout_height="50dp"
@@ -24,6 +25,7 @@
 
         //검색클릭
         <ImageView
+            android:id="@+id/search_magnifier"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -75,7 +77,7 @@
                         android:orientation="horizontal" >
 
                         <TextView
-                            android:id="@+id/movie_info_year1"
+                            android:id="@+id/movie_info_year5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2012"
@@ -86,7 +88,7 @@
                             android:text=" | "
                             android:textSize="15dp" />
                         <TextView
-                            android:id="@+id/movie_info_running_time1"
+                            android:id="@+id/movie_info_running_time5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="142"
@@ -97,7 +99,7 @@
                             android:text="분 | "
                             android:textSize="15dp" />
                         <TextView
-                            android:id="@+id/movie_info_country1"
+                            android:id="@+id/movie_info_country5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="미국"
@@ -108,7 +110,7 @@
                             android:text=" | "
                             android:textSize="15dp" />
                         <TextView
-                            android:id="@+id/movie_info_genre1"
+                            android:id="@+id/movie_info_genre5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="액션"
@@ -207,7 +209,7 @@
                             android:orientation="horizontal" >
 
                             <TextView
-                                android:id="@+id/movie_info_year2"
+                                android:id="@+id/movie_info_year6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2015"
@@ -218,7 +220,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_running_time2"
+                                android:id="@+id/movie_info_running_time6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="136"
@@ -229,7 +231,7 @@
                                 android:text="분 | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_country2"
+                                android:id="@+id/movie_info_country6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="미국"
@@ -240,7 +242,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_genre2"
+                                android:id="@+id/movie_info_genre6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="액션"
@@ -340,7 +342,7 @@
                             android:orientation="horizontal" >
 
                             <TextView
-                                android:id="@+id/movie_info_year3"
+                                android:id="@+id/movie_info_year7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2018"
@@ -351,7 +353,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_running_time3"
+                                android:id="@+id/movie_info_running_time7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="129"
@@ -362,7 +364,7 @@
                                 android:text="분 | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_country3"
+                                android:id="@+id/movie_info_country7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="미국"
@@ -373,7 +375,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_genre3"
+                                android:id="@+id/movie_info_genre7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="액션"
@@ -473,7 +475,7 @@
                             android:orientation="horizontal" >
 
                             <TextView
-                                android:id="@+id/movie_info_year4"
+                                android:id="@+id/movie_info_year8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2019"
@@ -484,7 +486,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_running_time4"
+                                android:id="@+id/movie_info_running_time8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="137"
@@ -495,7 +497,7 @@
                                 android:text="분 | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_country4"
+                                android:id="@+id/movie_info_country8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="미국"
@@ -506,7 +508,7 @@
                                 android:text=" | "
                                 android:textSize="15dp" />
                             <TextView
-                                android:id="@+id/movie_info_genre4"
+                                android:id="@+id/movie_info_genre8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="액션"
