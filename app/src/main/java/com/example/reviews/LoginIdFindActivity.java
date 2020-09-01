@@ -32,6 +32,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
     private Button auth_number_btn, auth_number_again_btn, auth_number_confirm;
     private AlertDialog dialog;  // 알림창
     private String authNumber;  // 인증번호
+    private String userID; // 인증완료시 id 넘기기 위한 변수
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +72,8 @@ public class LoginIdFindActivity extends AppCompatActivity {
                                 JSONObject jsonObject = new JSONObject(response);
                                 boolean success = jsonObject.getBoolean("success");
                                 if (success) { // 등록된 회원일 경우
-                                    final String userID = jsonObject.getString("userID");
-
+                                    userID = jsonObject.getString("userID");
+                                    Toast.makeText(LoginIdFindActivity.this, userID, Toast.LENGTH_SHORT).show();
                                     // 인증번호 전송
                                     sendAuthNumber(name, phone, authNumber, sms);
 
@@ -127,8 +128,13 @@ public class LoginIdFindActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String inputAuthNumber = login_input_randomnum.getText().toString();
-                if(inputAuthNumber.equals(getAuthNumber())){
-                    Toast.makeText(LoginIdFindActivity.this, "인증 확인!", Toast.LENGTH_SHORT).show();
+                if(inputAuthNumber.equals(getAuthNumber())){  // 인증번호가 일치할 경우
+                    Toast.makeText(LoginIdFindActivity.this, "인증 완료!", Toast.LENGTH_SHORT).show();
+
+                    // userID와 함께 LoginShowActivity 페이지로 이동
+                    Intent intent = new Intent(LoginIdFindActivity.this, LoginIdShowActivity.class);
+                    intent.putExtra("userID", userID); // userID 전송
+                    startActivity(intent);
                 }
             }
         });
