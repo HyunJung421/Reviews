@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
             <LinearLayout
+                android:id="@+id/search_movie1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -165,6 +166,7 @@
                 android:layout_centerInParent="true"
                 android:background="#D3D3D3" />
             <LinearLayout
+                android:id="@+id/search_movie2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -298,6 +300,7 @@
                 android:layout_centerInParent="true"
                 android:background="#D3D3D3" />
             <LinearLayout
+                android:id="@+id/search_movie3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -431,6 +434,7 @@
                 android:layout_centerInParent="true"
                 android:background="#D3D3D3" />
             <LinearLayout
+                android:id="@+id/search_movie4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
