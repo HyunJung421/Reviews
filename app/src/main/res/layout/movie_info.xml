@@ -226,6 +226,7 @@
                 style="?android:attr/borderlessButtonStyle" />
             // 작성자 이름
             <TextView
+                android:id="@+id/reviewer_id1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -239,6 +240,7 @@
                 android:gravity="center|right"
                 android:layout_marginRight="10dp">
                 <TextView
+                    android:id="@+id/reviewer_recommend1"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -256,6 +258,7 @@
             android:orientation="vertical">
             // 리뷰 내용
             <TextView
+                android:id="@+id/reviewer_story1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -288,6 +291,7 @@
                 style="?android:attr/borderlessButtonStyle" />
             // 작성자 이름
             <TextView
+                android:id="@+id/reviewer_id2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -301,6 +305,7 @@
                 android:gravity="center|right"
                 android:layout_marginRight="10dp">
                 <TextView
+                    android:id="@+id/reviewer_recommend2"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -318,6 +323,7 @@
             android:orientation="vertical">
             // 리뷰 내용
             <TextView
+                android:id="@+id/reviewer_story2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -350,6 +356,7 @@
                 style="?android:attr/borderlessButtonStyle" />
             // 작성자 이름
             <TextView
+                android:id="@+id/reviewer_id3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -363,6 +370,7 @@
                 android:gravity="center|right"
                 android:layout_marginRight="10dp">
                 <TextView
+                    android:id="@+id/reviewer_recommend3"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -380,6 +388,7 @@
             android:orientation="vertical">
             // 리뷰 내용
             <TextView
+                android:id="@+id/reviewer_story3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"

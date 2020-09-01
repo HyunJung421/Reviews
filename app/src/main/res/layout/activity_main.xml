@@ -49,16 +49,19 @@
                 android:layout_margin="10dp">
 
                 <ImageView
+                    android:id="@+id/main_movie1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/main_view_movie1" />
 
                 <ImageView
+                    android:id="@+id/main_movie2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/main_view_movie2" />
 
                 <ImageView
+                    android:id="@+id/main_movie3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/main_view_movie3" />
@@ -131,14 +134,17 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/movie_rating_title1"
                                     android:text="강철비2"
                                     style="@style/movie_title"/>
 
                                 <TextView
+                                    android:id="@+id/movie_rating_title2"
                                     android:text="나의 첫번째\n슈퍼스타"
                                     style="@style/movie_title" />
 
                                 <TextView
+                                    android:id="@+id/movie_rating_title3"
                                     android:text="온워드:\n단 하루의 기적"
                                     style="@style/movie_title" />
                             </LinearLayout>
@@ -186,14 +192,17 @@
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal">
                                 <TextView
+                                    android:id="@+id/movie_recommend_title1"
                                     android:text="극한직업"
                                     style="@style/movie_title" />
 
                                 <TextView
+                                    android:id="@+id/movie_recommend_title2"
                                     android:text="나의 첫번째\n슈퍼스타"
                                     style="@style/movie_title" />
 
                                 <TextView
+                                    android:id="@+id/movie_recommend_title3"
                                     android:text="온워드:\n단 하루의 기적"
                                     style="@style/movie_title" />
                             </LinearLayout>
@@ -240,14 +249,17 @@
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal">
                                 <TextView
+                                    android:id="@+id/movie_newlist_title1"
                                     android:text="극한직업"
                                     style="@style/movie_title" />
 
                                 <TextView
+                                    android:id="@+id/movie_newlist_title2"
                                     android:text="나의 첫번째\n슈퍼스타"
                                     style="@style/movie_title" />
 
                                 <TextView
+                                    android:id="@+id/movie_newlist_title3"
                                     android:text="온워드:\n단 하루의 기적"
                                     style="@style/movie_title" />
                             </LinearLayout>
