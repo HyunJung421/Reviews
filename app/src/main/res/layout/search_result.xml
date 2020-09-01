@@ -37,7 +37,7 @@
     //영화 검색결과
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="593dp"
         android:layout_marginTop="18dp" >
         <LinearLayout
             android:layout_width="match_parent"

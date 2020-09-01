@@ -33,7 +33,7 @@
     // 영화 포스터 자동회전
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="540dp">
+        android:layout_height="652dp">
 
         <LinearLayout
             android:layout_width="match_parent"

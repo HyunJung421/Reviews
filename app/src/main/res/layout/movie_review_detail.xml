@@ -25,7 +25,7 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="652dp"
             android:orientation="vertical">
 
             // 리뷰
@@ -182,4 +182,26 @@
 
             </LinearLayout>
         </LinearLayout>
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/underbar_home"
+            android:src="@drawable/underbar_home"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_social"
+            android:src="@drawable/underbar_social"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_mypage"
+            android:src="@drawable/underbar_mypage"
+            style="@style/under_bar"/>
+    </LinearLayout>
 </LinearLayout>

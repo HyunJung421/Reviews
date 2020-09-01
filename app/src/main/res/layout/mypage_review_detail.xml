@@ -84,7 +84,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="655dp"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
@@ -220,5 +220,26 @@
                 android:textColor="#000000"/>
         </LinearLayout>
     </LinearLayout>
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:gravity="center">
 
+        <ImageButton
+            android:id="@+id/underbar_home"
+            android:src="@drawable/underbar_home"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_social"
+            android:src="@drawable/underbar_social"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_mypage"
+            android:src="@drawable/underbar_mypage"
+            style="@style/under_bar"/>
+    </LinearLayout>
 </LinearLayout>

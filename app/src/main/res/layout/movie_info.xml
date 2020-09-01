@@ -425,7 +425,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="113dp"
         android:gravity="center">
 
         <ImageButton

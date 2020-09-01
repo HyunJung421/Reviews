@@ -15,7 +15,7 @@
             android:hint="Search" />
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="535dp" >
+            android:layout_height="650dp" >
             //검색기록
             <ListView
                 android:layout_width="match_parent"

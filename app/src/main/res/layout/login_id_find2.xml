@@ -27,7 +27,6 @@
             android:layout_centerInParent="true"
             android:background="#D3D3D3" />
     </LinearLayout>
-
     // 로그인 하기 전 user 아이콘
     <ImageView
         android:id="@+id/mypage_before_login_user_icon"
@@ -124,6 +123,7 @@
 
     // 하단바
     <LinearLayout
+        android:layout_marginTop="112dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"

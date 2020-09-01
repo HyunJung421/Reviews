@@ -49,7 +49,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="609dp">
 
         // REVIEW 목록 레이아웃
         <LinearLayout

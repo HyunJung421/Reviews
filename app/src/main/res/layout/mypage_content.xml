@@ -33,7 +33,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="540dp">
+        android:layout_height="650dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                         android:drawableLeft="@drawable/clip_left_image_customise"
                         android:gravity="center_vertical"
                         android:text=" 작성한 코멘트"
-                        android:textSize="13dp"/>
+                        android:textSize="12dp" />
                 </LinearLayout>
 
                 // 추천한 컨텐츠 정보
@@ -206,7 +206,7 @@
                         android:drawableLeft="@drawable/clip_left_image_customise"
                         android:gravity="center_vertical"
                         android:text=" 작성한 코멘트"
-                        android:textSize="13dp"/>
+                        android:textSize="12dp"/>
                 </LinearLayout>
                 // 추천한 컨텐츠 정보
                 <LinearLayout

@@ -155,10 +155,10 @@
 
     // 하단바
     <LinearLayout
+        android:layout_marginTop="173dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="62dp"
         android:gravity="center">
 
         <ImageButton
