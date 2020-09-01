@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 // 마이페이지 -> 추천한콘텐츠 목록 페이지 java 파일
 public class MyContentActivity extends AppCompatActivity {
-    // 추천한컨텐츠의 콘텐츠
     LinearLayout myContent1;
 
     // 영화 포스터

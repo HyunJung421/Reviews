@@ -61,12 +61,13 @@ public class MypageActivity extends AppCompatActivity {
                 }
             });
 
+            // 내가 추천한 컨텐츠 버튼 등록 및 리스너 구현
             btnMyContent = (ImageButton)findViewById(R.id.mypage_btn_content);
             btnMyContent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), MyContentActivity.class);
-                    startActivity(intent);
+                    startActivity(intent); // 액티비티 띄우기
                 }
             });
 
