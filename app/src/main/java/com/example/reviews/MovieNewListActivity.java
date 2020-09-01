@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 // 영화 신작 xml에 대한 java 파일
 public class MovieNewListActivity extends AppCompatActivity {
 
-    ImageButton new_movie1,new_movie2,new_movie3,new_movie4;
+    ImageButton newMovie1,newMovie2,newMovie3,newMovie4;
     Button movie_plot_more1,movie_plot_more2,movie_plot_more3,movie_plot_more4;
 
     @Override
@@ -20,8 +20,8 @@ public class MovieNewListActivity extends AppCompatActivity {
         setContentView(R.layout.movie_new_list);
 
         // 첫번째 영화 포스터 등록 및 리스너 구현
-        new_movie1 = (ImageButton) findViewById(R.id.movie_newlist1);
-        new_movie1.setOnClickListener(new View.OnClickListener() {
+        newMovie1 = (ImageButton) findViewById(R.id.movie_newlist1);
+        newMovie1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
@@ -38,8 +38,8 @@ public class MovieNewListActivity extends AppCompatActivity {
             }
         });
         // 두번째 영화 포스터 등록 및 리스너 구현
-        new_movie2 = (ImageButton) findViewById(R.id.movie_newlist2);
-        new_movie2.setOnClickListener(new View.OnClickListener() {
+        newMovie2 = (ImageButton) findViewById(R.id.movie_newlist2);
+        newMovie2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
@@ -56,8 +56,8 @@ public class MovieNewListActivity extends AppCompatActivity {
             }
         });
         // 세번째 영화 포스터 등록 및 리스너 구현
-        new_movie3 = (ImageButton) findViewById(R.id.movie_newlist3);
-        new_movie3.setOnClickListener(new View.OnClickListener() {
+        newMovie3 = (ImageButton) findViewById(R.id.movie_newlist3);
+        newMovie3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
@@ -74,8 +74,8 @@ public class MovieNewListActivity extends AppCompatActivity {
             }
         });
         // 네번째 영화 포스터 등록 및 리스너 구현
-        new_movie4 = (ImageButton) findViewById(R.id.movie_newlist4);
-        new_movie4.setOnClickListener(new View.OnClickListener() {
+        newMovie4 = (ImageButton) findViewById(R.id.movie_newlist4);
+        newMovie4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
