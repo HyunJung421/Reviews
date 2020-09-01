@@ -17,8 +17,8 @@ public class LoginFindRequest extends StringRequest {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
-        map.put("userID", userName);
-        map.put("userPassword", userNumber);
+        map.put("userName", userName);
+        map.put("userNumber", userNumber);
     }
 
     @Override
