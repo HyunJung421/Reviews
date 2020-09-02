@@ -56,7 +56,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
                 setAuthNumber(); // 인증번호 생성
                 authNumber = getAuthNumber();  // 인증번호 저장
 
-                final String sms = "[Reviews ID 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";  // 보내질 문자내용
+                final String sms = "[Reviews 본인확인] 인증번호[" + authNumber + "]를 입력해주세요.";  // 보내질 문자내용
 
                 if (name.equals("")) {  // 이름 입력 여부
                     Toast.makeText(LoginIdFindActivity.this, "이름을 입력하세요.", Toast.LENGTH_SHORT).show();
@@ -73,7 +73,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
                                 boolean success = jsonObject.getBoolean("success");
                                 if (success) { // 등록된 회원일 경우
                                     userID = jsonObject.getString("userID");
-                                    Toast.makeText(LoginIdFindActivity.this, userID, Toast.LENGTH_SHORT).show();
+
                                     // 인증번호 전송
                                     sendAuthNumber(name, phone, authNumber, sms);
 
@@ -90,11 +90,9 @@ public class LoginIdFindActivity extends AppCompatActivity {
                             }
                         }
                     };
-                    LoginFindRequest loginFindRequest = new LoginFindRequest(name, phone, responseListener);
+                    LoginIdFindRequest loginIdFindRequest = new LoginIdFindRequest(name, phone, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(LoginIdFindActivity.this);
-                    queue.add(loginFindRequest);
-
-
+                    queue.add(loginIdFindRequest);
                 }
             }
         });
@@ -131,10 +129,13 @@ public class LoginIdFindActivity extends AppCompatActivity {
                 if(inputAuthNumber.equals(getAuthNumber())){  // 인증번호가 일치할 경우
                     Toast.makeText(LoginIdFindActivity.this, "인증 완료!", Toast.LENGTH_SHORT).show();
 
-                    // userID와 함께 LoginShowActivity 페이지로 이동
+                    // userID와 함께 LoginIdShowActivity 페이지로 이동
                     Intent intent = new Intent(LoginIdFindActivity.this, LoginIdShowActivity.class);
                     intent.putExtra("userID", userID); // userID 전송
                     startActivity(intent);
+                } else {  // 인증번호가 일치하지 않을 경우
+                    Toast.makeText(LoginIdFindActivity.this, "인증번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                    return;
                 }
             }
         });

@@ -7,16 +7,17 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginFindRequest extends StringRequest {
+public class LoginPwFindRequest extends StringRequest {
 
     // 서버 URL 설정 (PHP 파일 연동)
-    final static private String URL = "http://3.34.44.58/IdFind.php";
+    final static private String URL = "http://3.34.44.58/PwFind.php";
     private Map<String, String> map;
 
-    public LoginFindRequest(String userName, String userNumber, Response.Listener<String> listener) {
+    public LoginPwFindRequest(String userID, String userName, String userNumber, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
+        map.put("userID", userID);
         map.put("userName", userName);
         map.put("userNumber", userNumber);
     }

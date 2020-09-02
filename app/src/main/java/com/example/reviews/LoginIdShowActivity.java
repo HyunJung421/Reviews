@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginIdShowActivity extends AppCompatActivity {
 
     Button btnlogin, btnfindpw;
-    TextView showUseId;
+    TextView showUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class LoginIdShowActivity extends AppCompatActivity {
         String userID = intent.getExtras().getString("userID");
 
         // 전달받은 userID 출력
-        showUseId = (TextView)findViewById(R.id.display_user_id);
-        showUseId.setText(userID);
+        showUserId = (TextView)findViewById(R.id.display_user_id);
+        showUserId.setText(userID);
 
         // 로그인 하는 xml로 이동하기
         btnlogin = (Button)findViewById(R.id.mypage_before_login_btn_login);

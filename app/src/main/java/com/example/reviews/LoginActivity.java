@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private AlertDialog dialog;
 
     // 로그인, 회원가입 버튼
-    private Button btnLogin, btnJoin, btnFindId;
+    private Button btnLogin, btnJoin, btnFindId, btnFindPw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -166,6 +166,15 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), LoginIdFindActivity.class);
+                    startActivity(intent); // 액티비티 띄우기
+                }
+            });
+
+            btnFindPw = (Button)findViewById(R.id.login_btn_findpw);
+            btnFindPw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), LoginPwFindActivity.class);
                     startActivity(intent); // 액티비티 띄우기
                 }
             });
