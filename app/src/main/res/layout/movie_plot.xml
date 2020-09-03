@@ -24,14 +24,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="극한직업"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textColor="#000000"
                 android:textStyle="bold"/>
             // 창 닫기 버튼
             <ImageButton
                 android:id="@+id/window_close_btn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/x_button"
@@ -55,6 +55,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
             android:text="@string/movie_plot"
             android:textSize="15dp"/>
     </LinearLayout>
