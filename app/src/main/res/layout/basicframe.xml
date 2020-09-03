@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    // 아이콘
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#333333"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/underbar_home"
+            android:src="@drawable/underbar_home"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_social"
+            android:src="@drawable/underbar_social"
+            style="@style/under_bar"/>
+
+        <ImageButton
+            android:id="@+id/underbar_mypage"
+            android:src="@drawable/underbar_mypage"
+            style="@style/under_bar"/>
+    </LinearLayout>
+</LinearLayout>
