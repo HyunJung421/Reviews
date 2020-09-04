@@ -7,325 +7,332 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-        // Reviews 로고
-        <TextView
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="REVIEWS"
-            android:textAlignment="center"
-            android:textSize="28dp" />
-
-        <ImageView
-            android:id="@+id/search_magnifier"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/main_icon_search" />
-    </RelativeLayout>
-
-    // 영화 포스터 자동회전
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="652dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ViewFlipper
-                android:id="@+id/main_viewFlipper"
-                android:layout_width="400dp"
-                android:layout_height="210dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp">
-
-                <ImageView
-                    android:id="@+id/main_movie1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/main_view_movie1" />
-
-                <ImageView
-                    android:id="@+id/main_movie2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/main_view_movie2" />
-
-                <ImageView
-                    android:id="@+id/main_movie3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/main_view_movie3" />
-            </ViewFlipper>
-
-            <TabHost
-                android:id="@+id/tabHost1"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            // Reviews 로고
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="REVIEWS"
+                android:textAlignment="center"
+                android:textSize="28dp" />
 
+            <ImageView
+                android:id="@+id/search_magnifier"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/main_icon_search" />
+        </RelativeLayout>
+
+        // 영화 포스터 자동회전
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="652dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ViewFlipper
+                    android:id="@+id/main_viewFlipper"
+                    android:layout_width="400dp"
+                    android:layout_height="210dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:id="@+id/main_movie1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/main_view_movie1" />
+
+                    <ImageView
+                        android:id="@+id/main_movie2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/main_view_movie2" />
+
+                    <ImageView
+                        android:id="@+id/main_movie3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/main_view_movie3" />
+                </ViewFlipper>
+
+                <TabHost
+                    android:id="@+id/tabHost1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tabStripEnabled="false" />
+
+                        <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- 영화평점순위 페이지 -->
+                            <LinearLayout
+                                android:id="@+id/content1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                // 더보기 버튼
+                                <Button
+                                    android:id="@+id/more1"
+                                    android:layout_marginRight="18dp"
+                                    style="@style/btn_more" />
+
+                                // 영화 포스터
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/movie_rating1"
+                                        android:src="@drawable/movie_grade1"
+                                        style="@style/movie_poster"/>
+
+                                    <ImageButton
+                                        android:id="@+id/movie_rating2"
+                                        android:src="@drawable/social_movie2"
+                                        style="@style/movie_poster"/>
+
+                                    <ImageButton
+                                        android:id="@+id/movie_rating3"
+                                        android:src="@drawable/social_movie3"
+                                        style="@style/movie_poster"/>
+                                </LinearLayout>
+
+                                // 영화 포스터 제목
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/movie_rating_title1"
+                                        android:text="강철비2"
+                                        style="@style/movie_title"/>
+
+                                    <TextView
+                                        android:id="@+id/movie_rating_title2"
+                                        android:text="나의 첫번째\n슈퍼스타"
+                                        style="@style/movie_title" />
+
+                                    <TextView
+                                        android:id="@+id/movie_rating_title3"
+                                        android:text="온워드:\n단 하루의 기적"
+                                        style="@style/movie_title" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--영화추천순위 페이지-->
+                            <LinearLayout
+                                android:id="@+id/content2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                // 더보기 버튼
+                                <Button
+                                    android:id="@+id/more2"
+                                    android:layout_marginRight="18dp"
+                                    style="@style/btn_more" />
+
+                                // 영화 포스터
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/movie_recommend1"
+                                        android:src="@drawable/movie_grade1"
+                                        style="@style/movie_poster"/>
+
+                                    <ImageButton
+                                        android:id="@+id/movie_recommend2"
+                                        android:src="@drawable/social_movie2"
+                                        style="@style/movie_poster"/>
+
+                                    <ImageButton
+                                        android:id="@+id/movie_recommend3"
+                                        android:src="@drawable/social_movie3"
+                                        style="@style/movie_poster"/>
+                                </LinearLayout>
+
+                                // 영화 포스터 제목
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/movie_recommend_title1"
+                                        android:text="강철비2"
+                                        style="@style/movie_title" />
+
+                                    <TextView
+                                        android:id="@+id/movie_recommend_title2"
+                                        android:text="나의 첫번째\n슈퍼스타"
+                                        style="@style/movie_title" />
+
+                                    <TextView
+                                        android:id="@+id/movie_recommend_title3"
+                                        android:text="온워드:\n단 하루의 기적"
+                                        style="@style/movie_title" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- 영화신작 페이지 -->
+                            <LinearLayout
+                                android:id="@+id/content3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                // 더보기 버튼
+                                <Button
+                                    android:id="@+id/more3"
+                                    android:layout_marginRight="18dp"
+                                    style="@style/btn_more" />
+
+                                // 영화 포스터
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+                                    <ImageButton
+                                        android:id="@+id/movie_new1"
+                                        android:src="@drawable/social_movie1"
+                                        style="@style/movie_poster" />
+
+                                    <ImageButton
+                                        android:id="@+id/movie_new2"
+                                        android:src="@drawable/social_movie2"
+                                        style="@style/movie_poster"/>
+
+                                    <ImageButton
+                                        android:id="@+id/movie_new3"
+                                        android:src="@drawable/social_movie3"
+                                        style="@style/movie_poster"/>
+                                </LinearLayout>
+
+                                // 영화 포스터 제목
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/movie_newlist_title1"
+                                        android:text="극한직업"
+                                        style="@style/movie_title" />
+
+                                    <TextView
+                                        android:id="@+id/movie_newlist_title2"
+                                        android:text="나의 첫번째\n슈퍼스타"
+                                        style="@style/movie_title" />
+
+                                    <TextView
+                                        android:id="@+id/movie_newlist_title3"
+                                        android:text="온워드:\n단 하루의 기적"
+                                        style="@style/movie_title" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+
+                // 영화예매사이트
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
-                    <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
-                    <TabWidget
-                        android:id="@android:id/tabs"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tabStripEnabled="false" />
+                        android:layout_marginLeft="15dp"
+                        android:text="영화예매사이트"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
 
-                    <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
-                    <FrameLayout
-                        android:id="@android:id/tabcontent"
+                    // 수평선
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <!-- 영화평점순위 페이지 -->
-                        <LinearLayout
-                            android:id="@+id/content1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            // 더보기 버튼
-                            <Button
-                                android:id="@+id/more1"
-                                android:layout_marginRight="18dp"
-                                style="@style/btn_more" />
-
-                            // 영화 포스터
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="horizontal">
-
-                                <ImageButton
-                                    android:id="@+id/movie_rating1"
-                                    android:src="@drawable/movie_grade1"
-                                    style="@style/movie_poster"/>
-
-                                <ImageButton
-                                    android:id="@+id/movie_rating2"
-                                    android:src="@drawable/social_movie2"
-                                    style="@style/movie_poster"/>
-
-                                <ImageButton
-                                    android:id="@+id/movie_rating3"
-                                    android:src="@drawable/social_movie3"
-                                    style="@style/movie_poster"/>
-                            </LinearLayout>
-
-                            // 영화 포스터 제목
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/movie_rating_title1"
-                                    android:text="강철비2"
-                                    style="@style/movie_title"/>
-
-                                <TextView
-                                    android:id="@+id/movie_rating_title2"
-                                    android:text="나의 첫번째\n슈퍼스타"
-                                    style="@style/movie_title" />
-
-                                <TextView
-                                    android:id="@+id/movie_rating_title3"
-                                    android:text="온워드:\n단 하루의 기적"
-                                    style="@style/movie_title" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <!--영화추천순위 페이지-->
-                        <LinearLayout
-                            android:id="@+id/content2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            // 더보기 버튼
-                            <Button
-                                android:id="@+id/more2"
-                                android:layout_marginRight="18dp"
-                                style="@style/btn_more" />
-
-                            // 영화 포스터
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="horizontal">
-
-                                <ImageButton
-                                    android:id="@+id/movie_recommend1"
-                                    android:src="@drawable/movie_grade1"
-                                    style="@style/movie_poster"/>
-
-                                <ImageButton
-                                    android:id="@+id/movie_recommend2"
-                                    android:src="@drawable/social_movie2"
-                                    style="@style/movie_poster"/>
-
-                                <ImageButton
-                                    android:id="@+id/movie_recommend3"
-                                    android:src="@drawable/social_movie3"
-                                    style="@style/movie_poster"/>
-                            </LinearLayout>
-
-                            // 영화 포스터 제목
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:id="@+id/movie_recommend_title1"
-                                    android:text="강철비2"
-                                    style="@style/movie_title" />
-
-                                <TextView
-                                    android:id="@+id/movie_recommend_title2"
-                                    android:text="나의 첫번째\n슈퍼스타"
-                                    style="@style/movie_title" />
-
-                                <TextView
-                                    android:id="@+id/movie_recommend_title3"
-                                    android:text="온워드:\n단 하루의 기적"
-                                    style="@style/movie_title" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <!-- 영화신작 페이지 -->
-                        <LinearLayout
-                            android:id="@+id/content3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            // 더보기 버튼
-                            <Button
-                                android:id="@+id/more3"
-                                android:layout_marginRight="18dp"
-                                style="@style/btn_more" />
-
-                            // 영화 포스터
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="horizontal">
-                                <ImageButton
-                                    android:id="@+id/movie_new1"
-                                    android:src="@drawable/social_movie1"
-                                    style="@style/movie_poster" />
-
-                                <ImageButton
-                                    android:id="@+id/movie_new2"
-                                    android:src="@drawable/social_movie2"
-                                    style="@style/movie_poster"/>
-
-                                <ImageButton
-                                    android:id="@+id/movie_new3"
-                                    android:src="@drawable/social_movie3"
-                                    style="@style/movie_poster"/>
-                            </LinearLayout>
-
-                            // 영화 포스터 제목
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:id="@+id/movie_newlist_title1"
-                                    android:text="극한직업"
-                                    style="@style/movie_title" />
-
-                                <TextView
-                                    android:id="@+id/movie_newlist_title2"
-                                    android:text="나의 첫번째\n슈퍼스타"
-                                    style="@style/movie_title" />
-
-                                <TextView
-                                    android:id="@+id/movie_newlist_title3"
-                                    android:text="온워드:\n단 하루의 기적"
-                                    style="@style/movie_title" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </FrameLayout>
+                        android:layout_height="2dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:background="#D3D3D3" />
                 </LinearLayout>
-            </TabHost>
 
-            // 영화예매사이트
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="영화예매사이트"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                // 수평선
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"
                     android:layout_marginTop="5dp"
-                    android:background="#D3D3D3" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/main_btn_cgv"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_btn_cgv" />
+
+                    <ImageButton
+                        android:id="@+id/main_btn_mega"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="18dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_btn_mega" />
+
+                    <ImageButton
+                        android:id="@+id/main_btn_lotte"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_btn_lotte" />
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/main_btn_cgv"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#FFFFFF"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/main_btn_cgv" />
-
-                <ImageButton
-                    android:id="@+id/main_btn_mega"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="18dp"
-                    android:background="#FFFFFF"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/main_btn_mega" />
-
-                <ImageButton
-                    android:id="@+id/main_btn_lotte"
-                    android:layout_width="100dp"
-                    android:layout_height="35dp"
-                    android:background="#FFFFFF"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/main_btn_lotte" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 
     // 하단바
     <LinearLayout
@@ -349,5 +356,4 @@
             android:src="@drawable/underbar_mypage"
             style="@style/under_bar"/>
     </LinearLayout>
-
 </LinearLayout>

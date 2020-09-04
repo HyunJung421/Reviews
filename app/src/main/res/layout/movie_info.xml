@@ -5,427 +5,431 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
-    // java파일 : MovieInfoActivity
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
+        android:layout_height="703dp"
+        android:orientation="vertical" >
 
-        // 영화 포스터
+        // java파일 : MovieInfoActivity
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-                android:id="@+id/movie_info_poster"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:src="@drawable/social_movie1"
-                android:scaleType="fitXY"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            // 영화 포스터
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/movie_info_poster"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/social_movie1"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+            // 영화 정보
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                // 영화 제목
+                <TextView
+                    android:id="@+id/movie_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="극한직업"
+                    android:textSize="23dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                // 상영년도 〮 상영시간 〮 국가 〮 장르
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/movie_info_year1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2019"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="15dp" />
+                    <TextView
+                        android:id="@+id/movie_info_running_time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="111"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="분 | "
+                        android:textSize="15dp" />
+                    <TextView
+                        android:id="@+id/movie_info_country1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="한국"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="15dp" />
+                    <TextView
+                        android:id="@+id/movie_info_genre1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="코미디"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                // 감독
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="감독 "
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                        />
+                    <TextView
+                        android:id="@+id/movie_info_director1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="이병헌"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+                // 평점
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="평점 "
+                        android:textSize="15dp"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:id="@+id/movie_info_rating1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="4.5"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" / 5.0"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                // 내용
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="내용 "
+                        android:textSize="15dp"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:id="@+id/movie_info_plot"
+                        android:layout_width="190dp"
+                        android:layout_height="match_parent"
+                        android:maxLines="4"
+                        android:ellipsize="end"
+                        android:text="불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반! 더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 번죄조직의 국내 마약 밀반임"
+                        android:textSize="15dp"/>
+                    // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                    // emulator로 실행했을 때 줄임표 표시가 보임.
+                </LinearLayout>
+                <Button
+                    android:id="@+id/movie_info_btn_plot_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:background="#ffffff"
+                    android:text="+내용 더보기"
+                    android:textColor="#7F7F7F"
+                    android:textStyle="bold"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+
+            </LinearLayout>
         </LinearLayout>
 
-        // 영화 정보
+        // REVIEW 목록 레이아웃
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="10dp">
+            android:layout_marginTop="20dp">
 
-            // 영화 제목
-            <TextView
-                android:id="@+id/movie_info_title"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="극한직업"
-                android:textSize="23dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-
-            // 상영년도 〮 상영시간 〮 국가 〮 장르
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
+            // REVIEW 바
+            <RelativeLayout
+                android:layout_width="407dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="#90CAF9">
+                //REVIEW
                 <TextView
-                    android:id="@+id/movie_info_year1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2019"
-                    android:textSize="15dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" | "
-                    android:textSize="15dp" />
-                <TextView
-                    android:id="@+id/movie_info_running_time1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="111"
-                    android:textSize="15dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="분 | "
-                    android:textSize="15dp" />
-                <TextView
-                    android:id="@+id/movie_info_country1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="한국"
-                    android:textSize="15dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" | "
-                    android:textSize="15dp" />
-                <TextView
-                    android:id="@+id/movie_info_genre1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="코미디"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-            // 감독
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="감독 "
-                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:text="REVIEW"
+                    android:textSize="22dp"
                     android:textColor="#000000"
-                    />
-                <TextView
-                    android:id="@+id/movie_info_director1"
+                    android:textStyle="bold"/>
+                // 더보기 버튼
+                <Button
+                    android:id="@+id/movie_info_btn_review_more"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="이병헌"
-                    android:textSize="15dp"/>
-            </LinearLayout>
+                    android:layout_alignParentRight="true"
+                    android:background="#90CAF9"
+                    android:text="+더보기"
+                    android:textColor="#7F7F7F"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
-            // 평점
+            // REVIEW 작성자 정보1
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                // 작성자 이미지
+                <ImageView
+                    android:id="@+id/movie_info_reviewer_image1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                // 작성자 이름
                 <TextView
+                    android:id="@+id/reviewer_id1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="평점 "
-                    android:textSize="15dp"
-                    android:textColor="#000000" />
-                <TextView
-                    android:id="@+id/movie_info_rating1"
-                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:text="물물물"
+                    android:textSize="18dp"
+                    android:textColor="#000000"/>
+                // 추천 수
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="4.5"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text=" / 5.0"
-                    android:textSize="15dp" />
-
+                    android:gravity="center|right"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:id="@+id/reviewer_recommend1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/drawable_left_image_customise"
+                        android:text="500"
+                        android:textColor="#0000E1"
+                        android:textSize="13dp" />
+                </LinearLayout>
             </LinearLayout>
 
-            // 내용
+            // REVIEW 작성 내용
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                // 리뷰 내용
+                <TextView
+                    android:id="@+id/reviewer_story1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="35dp"
+                    android:text="진짜 뻥안치고 ㅈㄴ 웃겼다"
+                    android:textSize="16dp"
+                    android:textColor="#000000" />
+                // 수평선
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="407dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="#90CAF9" />
+            </LinearLayout>
+
+            // REVIEW 작성자 정보2
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                // 작성자 이미지
+                <ImageView
+                    android:id="@+id/movie_info_reviewer_image2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                // 작성자 이름
                 <TextView
+                    android:id="@+id/reviewer_id2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="내용 "
-                    android:textSize="15dp"
-                    android:textColor="#000000" />
-                <TextView
-                    android:id="@+id/movie_info_plot"
-                    android:layout_width="190dp"
+                    android:gravity="center"
+                    android:text="유i인"
+                    android:textSize="18dp"
+                    android:textColor="#000000"/>
+                // 추천 수
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:maxLines="4"
-                    android:ellipsize="end"
-                    android:text="불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반! 더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 번죄조직의 국내 마약 밀반임"
-                    android:textSize="15dp"/>
-                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
-                // emulator로 실행했을 때 줄임표 표시가 보임.
+                    android:gravity="center|right"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:id="@+id/reviewer_recommend2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/drawable_left_image_customise"
+                        android:text="485"
+                        android:textColor="#0000E1"
+                        android:textSize="13dp" />
+                </LinearLayout>
             </LinearLayout>
-            <Button
-                android:id="@+id/movie_info_btn_plot_more"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_gravity="right"
-                android:background="#ffffff"
-                android:text="+내용 더보기"
-                android:textColor="#7F7F7F"
-                android:textStyle="bold"
-                style="?android:attr/borderlessButtonStyle"/>
 
+            // REVIEW 작성 내용
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                // 리뷰 내용
+                <TextView
+                    android:id="@+id/reviewer_story2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="35dp"
+                    android:text="류승룡 드디어 심폐소생술 성공!"
+                    android:textSize="16dp"
+                    android:textColor="#000000" />
+                // 수평선
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="407dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="#90CAF9" />
+            </LinearLayout>
 
+            // REVIEW 작성자 정보3
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                // 작성자 이미지
+                <ImageView
+                    android:id="@+id/movie_info_reviewer_image3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                // 작성자 이름
+                <TextView
+                    android:id="@+id/reviewer_id3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="깜찍유림"
+                    android:textSize="18dp"
+                    android:textColor="#000000"/>
+                // 추천 수
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:id="@+id/reviewer_recommend3"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/drawable_left_image_customise"
+                        android:text="411"
+                        android:textColor="#0000E1"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            // REVIEW 작성 내용
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                // 리뷰 내용
+                <TextView
+                    android:id="@+id/reviewer_story3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="35dp"
+                    android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                    android:textSize="16dp"
+                    android:textColor="#000000" />
+                // 수평선
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="407dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="#90CAF9" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    // REVIEW 목록 레이아웃
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp">
-
-        // REVIEW 바
-        <RelativeLayout
-            android:layout_width="407dp"
+        // 작성하기 버튼
+        <Button
+            android:id="@+id/moive_info_btn_review_write"
+            android:layout_width="80dp"
             android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:background="#90CAF9">
-            //REVIEW
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="REVIEW"
-                android:textSize="22dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-            // 더보기 버튼
-            <Button
-                android:id="@+id/movie_info_btn_review_more"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:background="#90CAF9"
-                android:text="+더보기"
-                android:textColor="#7F7F7F"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        // REVIEW 작성자 정보1
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            // 작성자 이미지
-            <ImageView
-                android:id="@+id/movie_info_reviewer_image1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            // 작성자 이름
-            <TextView
-                android:id="@+id/reviewer_id1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="물물물"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
-            // 추천 수
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|right"
-                android:layout_marginRight="10dp">
-                <TextView
-                    android:id="@+id/reviewer_recommend1"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:drawableLeft="@drawable/drawable_left_image_customise"
-                    android:text="500"
-                    android:textColor="#0000E1"
-                    android:textSize="13dp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        // REVIEW 작성 내용
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            // 리뷰 내용
-            <TextView
-                android:id="@+id/reviewer_story1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="35dp"
-                android:text="진짜 뻥안치고 ㅈㄴ 웃겼다"
-                android:textSize="16dp"
-                android:textColor="#000000" />
-            // 수평선
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="407dp"
-                android:layout_height="2dp"
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
-                android:background="#90CAF9" />
-        </LinearLayout>
-
-        // REVIEW 작성자 정보2
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            // 작성자 이미지
-            <ImageView
-                android:id="@+id/movie_info_reviewer_image2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            // 작성자 이름
-            <TextView
-                android:id="@+id/reviewer_id2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="유i인"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
-            // 추천 수
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|right"
-                android:layout_marginRight="10dp">
-                <TextView
-                    android:id="@+id/reviewer_recommend2"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:drawableLeft="@drawable/drawable_left_image_customise"
-                    android:text="485"
-                    android:textColor="#0000E1"
-                    android:textSize="13dp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        // REVIEW 작성 내용
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            // 리뷰 내용
-            <TextView
-                android:id="@+id/reviewer_story2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="35dp"
-                android:text="류승룡 드디어 심폐소생술 성공!"
-                android:textSize="16dp"
-                android:textColor="#000000" />
-            // 수평선
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="407dp"
-                android:layout_height="2dp"
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
-                android:background="#90CAF9" />
-        </LinearLayout>
-
-        // REVIEW 작성자 정보3
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            // 작성자 이미지
-            <ImageView
-                android:id="@+id/movie_info_reviewer_image3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            // 작성자 이름
-            <TextView
-                android:id="@+id/reviewer_id3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="깜찍유림"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
-            // 추천 수
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|right"
-                android:layout_marginRight="10dp">
-                <TextView
-                    android:id="@+id/reviewer_recommend3"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:drawableLeft="@drawable/drawable_left_image_customise"
-                    android:text="411"
-                    android:textColor="#0000E1"
-                    android:textSize="13dp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        // REVIEW 작성 내용
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            // 리뷰 내용
-            <TextView
-                android:id="@+id/reviewer_story3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="35dp"
-                android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
-                android:textSize="16dp"
-                android:textColor="#000000" />
-            // 수평선
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="407dp"
-                android:layout_height="2dp"
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
-                android:background="#90CAF9" />
-        </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:background="@drawable/btn_blue_round"
+            android:text="작성하기"
+            android:textStyle="bold"
+            style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
-
-    // 작성하기 버튼
-    <Button
-        android:id="@+id/moive_info_btn_review_write"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="5dp"
-        android:layout_gravity="right"
-        android:background="@drawable/btn_blue_round"
-        android:text="작성하기"
-        android:textStyle="bold"
-        style="?android:attr/borderlessButtonStyle"/>
 
     // 하단바
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="113dp"
         android:gravity="center">
 
         <ImageButton

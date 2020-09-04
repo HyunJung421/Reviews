@@ -4,28 +4,32 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="clip_horizontal"
-        android:orientation="horizontal">
-
-        // 창 닫기 버튼
-        <ImageButton
-            android:id="@+id/window_close_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/x_button"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"/>
-
-    </RelativeLayout>
-
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="652dp"
+            android:layout_height="wrap_content"
+            android:gravity="clip_horizontal"
+            android:orientation="horizontal">
+
+            // 창 닫기 버튼
+            <ImageButton
+                android:id="@+id/window_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/x_button"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="655dp"
             android:orientation="vertical">
 
             // 리뷰
@@ -78,6 +82,7 @@
                             android:textSize="13dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -179,9 +184,10 @@
                     android:textSize="13dp"
                     android:textStyle="bold"
                     android:layout_marginBottom="5dp"/>
-
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+
     // 하단바
     <LinearLayout
         android:layout_width="match_parent"

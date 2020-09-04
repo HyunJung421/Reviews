@@ -6,58 +6,63 @@
     android:paddingTop="10dp"
     android:background="#FFFFFF">
 
-    // java파일 : MoviePlotActivity
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RelativeLayout
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+
+        // java파일 : MoviePlotActivity
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="clip_horizontal"
-            android:orientation="horizontal">
-            // 영화 제목
-            <TextView
-                android:id="@+id/movie_plot_title"
+            android:orientation="vertical">
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="clip_horizontal"
+                android:orientation="horizontal">
+                // 영화 제목
+                <TextView
+                    android:id="@+id/movie_plot_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="극한직업"
+                    android:textSize="25dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                // 창 닫기 버튼
+                <ImageButton
+                    android:id="@+id/window_close_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/x_button"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+
+            // 수평선
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#D3D3D3" />
+
+            // 영화 줄거리
+            <TextView
+                android:id="@+id/movie_plot_plot"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
                 android:layout_marginLeft="15dp"
-                android:text="극한직업"
-                android:textSize="25dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-            // 창 닫기 버튼
-            <ImageButton
-                android:id="@+id/window_close_btn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/x_button"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"/>
-        </RelativeLayout>
-
-        // 수평선
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:background="#D3D3D3" />
-
-        // 영화 줄거리
-        <TextView
-            android:id="@+id/movie_plot_plot"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/movie_plot"
-            android:textSize="15dp"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/movie_plot"
+                android:textSize="15dp"/>
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

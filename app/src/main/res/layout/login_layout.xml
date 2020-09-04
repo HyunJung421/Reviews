@@ -9,6 +9,7 @@
     android:paddingRight="15dp"
     android:paddingTop="15dp"
     android:background="#FFFFFF">
+
     // java파일 : LoginActivity
     // Reviews 로고
     <TextView

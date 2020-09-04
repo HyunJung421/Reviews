@@ -8,270 +8,276 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        // 소셜
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="소 셜"
-            android:textSize="28dp"
-            android:textStyle="bold"/>
+        android:layout_height="703dp"
+        android:orientation="vertical" >
 
-        // 수평선
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_centerInParent="true"
-            android:background="#D3D3D3" />
-    </LinearLayout>
-
-    // 소셜 페이지
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="617dp"
-        android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            // 최신 업데이트 박스
+            // 소셜
             <TextView
-                android:id="@+id/update_box"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#90CAF9"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="최신 업데이트"
-                android:textColor="#000000"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:text="소 셜"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
 
-            // 최신 업데이트 더보기 버튼
-            <Button
-                android:id="@+id/update_more"
-                style="@style/btn_more"/>
-        </LinearLayout>
-
-        // 영화 포스터
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/social_movie1"
-                android:src="@drawable/social_movie1"
-                style="@style/movie_poster" />
-
-            <ImageButton
-                android:id="@+id/social_movie2"
-                android:src="@drawable/social_movie2"
-                style="@style/movie_poster" />
-
-            <ImageButton
-                android:id="@+id/social_movie3"
-                android:src="@drawable/social_movie3"
-                style="@style/movie_poster"/>
-        </LinearLayout>
-
-        // 영화 포스터 제목
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/movie_info_title1"
-                android:text="극한직업"
-                style="@style/movie_title"/>
-            <TextView
-                android:id="@+id/movie_info_title2"
-                android:text="나의 첫번째\n슈퍼스타"
-                style="@style/movie_title"/>
-            <TextView
-                android:id="@+id/movie_info_title3"
-                android:text="온워드:\n단 하루의 기적"
-                style="@style/movie_title"/>
-        </LinearLayout>
-
-        // 인기 Reviewer
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp">
-
-            // 인기 Reviewer 박스
-            <TextView
-                android:id="@+id/reviewer_box"
+            // 수평선
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#90CAF9"
-                android:gravity="center"
-                android:text="인기 Reviewer"
-                android:textColor="#000000"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:background="#D3D3D3" />
         </LinearLayout>
 
-        // 인기 Reviewer 이미지
+        // 소셜 페이지
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/social_reviewer1"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            <ImageButton
-                android:id="@+id/social_reviewer2"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            <ImageButton
-                android:id="@+id/social_reviewer3"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-            <ImageButton
-                android:id="@+id/social_reviewer4"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/person_image"
-                android:scaleType="centerCrop"
-                style="?android:attr/borderlessButtonStyle" />
-        </LinearLayout>
-
-        // 인기 Reviewer 닉네임
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/social_reviewer_name1"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:text="공쥬현정"
-                android:textSize="15dp"
-                android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/social_reviewer_name2"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:text="깜찍유림"
-                android:textSize="15dp"
-                android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/social_reviewer_name3"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:gravity="center"
-                android:text="왕자은빈"
-                android:textSize="15dp"
-                android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/social_reviewer_name4"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Binbeam"
-                android:textSize="15dp"
-                android:textColor="#000000"/>
-        </LinearLayout>
-
-        // 인기 Reviewer 좋아요 수
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/number_recommendation1"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="45dp"
-                android:gravity="center"
-                android:drawableLeft="@drawable/drawable_left_image_customise"
-                android:text="27"
-                android:textColor="#0000E1"
-                android:textSize="13dp" />
-
-            <TextView
-                android:id="@+id/number_recommendation2"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="45dp"
-                android:gravity="center"
-                android:drawableLeft="@drawable/drawable_left_image_customise"
-                android:text="24"
-                android:textSize="13dp"
-                android:textColor="#0000E1"/>
-
-            <TextView
-                android:id="@+id/number_recommendation3"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="45dp"
-                android:gravity="center"
-                android:drawableLeft="@drawable/drawable_left_image_customise"
-                android:text="17"
-                android:textSize="13dp"
-                android:textColor="#0000E1"/>
-
-            <TextView
-                android:id="@+id/number_recommendation4"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:drawableLeft="@drawable/drawable_left_image_customise"
-                android:text="15"
-                android:textSize="13dp"
-                android:textColor="#0000E1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="617dp"
             android:orientation="vertical"
-            android:layout_marginTop="5dp">
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                // 최신 업데이트 박스
+                <TextView
+                    android:id="@+id/update_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#90CAF9"
+                    android:gravity="center"
+                    android:text="최신 업데이트"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-            // 정렬방식 텍스트
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_gravity="right"
-                android:background="#ffffff"
-                android:text="* 누적 추천수 기준"
-                android:textSize="13dp"
-                android:textColor="#7F7F7F"
-                style="?android:attr/borderlessButtonStyle"/>
+                // 최신 업데이트 더보기 버튼
+                <Button
+                    android:id="@+id/update_more"
+                    style="@style/btn_more"/>
+            </LinearLayout>
+
+            // 영화 포스터
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/social_movie1"
+                    android:src="@drawable/social_movie1"
+                    style="@style/movie_poster" />
+
+                <ImageButton
+                    android:id="@+id/social_movie2"
+                    android:src="@drawable/social_movie2"
+                    style="@style/movie_poster" />
+
+                <ImageButton
+                    android:id="@+id/social_movie3"
+                    android:src="@drawable/social_movie3"
+                    style="@style/movie_poster"/>
+            </LinearLayout>
+
+            // 영화 포스터 제목
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/movie_info_title1"
+                    android:text="극한직업"
+                    style="@style/movie_title"/>
+                <TextView
+                    android:id="@+id/movie_info_title2"
+                    android:text="나의 첫번째\n슈퍼스타"
+                    style="@style/movie_title"/>
+                <TextView
+                    android:id="@+id/movie_info_title3"
+                    android:text="온워드:\n단 하루의 기적"
+                    style="@style/movie_title"/>
+            </LinearLayout>
+
+            // 인기 Reviewer
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp">
+
+                // 인기 Reviewer 박스
+                <TextView
+                    android:id="@+id/reviewer_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#90CAF9"
+                    android:gravity="center"
+                    android:text="인기 Reviewer"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            // 인기 Reviewer 이미지
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/social_reviewer1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                <ImageButton
+                    android:id="@+id/social_reviewer2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                <ImageButton
+                    android:id="@+id/social_reviewer3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+                <ImageButton
+                    android:id="@+id/social_reviewer4"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/person_image"
+                    android:scaleType="centerCrop"
+                    style="?android:attr/borderlessButtonStyle" />
+            </LinearLayout>
+
+            // 인기 Reviewer 닉네임
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/social_reviewer_name1"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="공쥬현정"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/social_reviewer_name2"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="깜찍유림"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/social_reviewer_name3"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="왕자은빈"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/social_reviewer_name4"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Binbeam"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            // 인기 Reviewer 좋아요 수
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/number_recommendation1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="27"
+                    android:textColor="#0000E1"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/number_recommendation2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="24"
+                    android:textSize="13dp"
+                    android:textColor="#0000E1"/>
+
+                <TextView
+                    android:id="@+id/number_recommendation3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="17"
+                    android:textSize="13dp"
+                    android:textColor="#0000E1"/>
+
+                <TextView
+                    android:id="@+id/number_recommendation4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
+                    android:text="15"
+                    android:textSize="13dp"
+                    android:textColor="#0000E1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+
+                // 정렬방식 텍스트
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:background="#ffffff"
+                    android:text="* 누적 추천수 기준"
+                    android:textSize="13dp"
+                    android:textColor="#7F7F7F"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -280,7 +286,6 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="15dp"
         android:gravity="center">
 
         <ImageButton

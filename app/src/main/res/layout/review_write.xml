@@ -4,8 +4,12 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    // java파일 : ReviewWriteActivity
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="703dp"
+        android:orientation="vertical" >
 
+        // java파일 : ReviewWriteActivity
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -14,15 +18,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="리 뷰"
+                android:text="리 뷰 작 성"
                 android:textSize="28dp"
                 android:textStyle="bold"/>
 
             // 수평선
             <View
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -30,183 +34,184 @@
                 android:background="#D3D3D3" />
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="628dp"
-        android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
-
-        // 프로필, UserName
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="77dp"
-                android:layout_height="62dp"
-                android:src="@drawable/mypage_user_icon" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="공쥬현정"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_height="628dp"
+            android:orientation="vertical"
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
-            // 영화 포스터
+
+            // 프로필, UserName
             <LinearLayout
-                android:layout_width="130dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/review_write_movie_poster"
-                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="77dp"
+                    android:layout_height="62dp"
+                    android:src="@drawable/mypage_user_icon" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="공쥬현정"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                // 영화 포스터
+                <LinearLayout
                     android:layout_width="130dp"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/social_movie1" />
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/review_write_movie_poster"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/social_movie1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    //영화이름
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="극한직업"
+                        android:textColor="#000000"
+                        android:textSize="27dp" />
+                    // 상영년도 〮 상영시간 〮 국가 〮 장르
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/movie_info_year1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2019"
+                            android:textSize="18dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textSize="18dp" />
+                        <TextView
+                            android:id="@+id/movie_info_running_time1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="111"
+                            android:textSize="18dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="분 | "
+                            android:textSize="18dp" />
+                        <TextView
+                            android:id="@+id/movie_info_country1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="한국"
+                            android:textSize="18dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textSize="18dp" />
+                        <TextView
+                            android:id="@+id/movie_info_genre1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="코미디"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+                    //평점
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="평 점"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:layout_marginTop="5dp"/>
+                    //별
+                    <RatingBar
+                        android:id="@+id/review_write_ratingbar"
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stepSize="0.1"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                //영화이름
+                android:layout_margin="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                //코멘트
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="극한직업"
+                    android:layout_marginRight="190dp"
+                    android:gravity="center"
+                    android:text="코멘트"
                     android:textColor="#000000"
-                    android:textSize="27dp" />
-                // 상영년도 〮 상영시간 〮 국가 〮 장르
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:textSize="20dp" />
 
-                    <TextView
-                        android:id="@+id/movie_info_year1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2019"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" | "
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/movie_info_running_time1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="111"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="분 | "
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/movie_info_country1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="한국"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" | "
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/movie_info_genre1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="코미디"
-                        android:textSize="18dp" />
-                </LinearLayout>
-                //평점
-                <TextView
-                    android:layout_width="wrap_content"
+                // 사진 추가하는 버튼
+                <Button
+                    android:id="@+id/review_write_btn_add"
+                    android:layout_width="102dp"
                     android:layout_height="wrap_content"
-                    android:text="평 점"
-                    android:textColor="#000000"
-                    android:textSize="18dp"
-                    android:layout_marginTop="5dp"/>
-                //별
-                <RatingBar
-                    android:id="@+id/review_write_ratingbar"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:stepSize="0.1"
-                    android:layout_marginTop="3dp"/>
+                    android:text="+ 사진추가"
+                    android:textSize="15dp" />
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-            //코멘트
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="190dp"
+            <LinearLayout
+                android:layout_width="369dp"
+                android:layout_height="170dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/comment_border"
                 android:gravity="center"
-                android:text="코멘트"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                //리뷰 입력창
+                <EditText
+                    android:id="@+id/review_write_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="이곳에 내용을 입력해주세요"
+                    android:textSize="17dp" />
+            </LinearLayout>
 
-            // 사진 추가하는 버튼
-            <Button
-                android:id="@+id/review_write_btn_add"
-                android:layout_width="102dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+ 사진추가"
-                android:textSize="15dp" />
-        </LinearLayout>
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
 
-        <LinearLayout
-            android:layout_width="369dp"
-            android:layout_height="170dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/comment_border"
-            android:gravity="center"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-            //리뷰 입력창
-            <EditText
-                android:id="@+id/review_write_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="이곳에 내용을 입력해주세요"
-                android:textSize="17dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical"
-            android:paddingLeft="5dp">
-
-            //작성완료 버튼
-            <Button
-                android:id="@+id/review_write_btn_ok"
-                android:layout_width="372dp"
-                android:layout_height="match_parent"
-                android:background="#90CAF9"
-                android:text="작성완료"
-                android:textSize="25dp" />
+                //작성완료 버튼
+                <Button
+                    android:id="@+id/review_write_btn_ok"
+                    android:layout_width="372dp"
+                    android:layout_height="match_parent"
+                    android:background="#90CAF9"
+                    android:text="작성완료"
+                    android:textSize="25dp" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -215,7 +220,6 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
-        android:layout_marginTop="4dp"
         android:gravity="center">
 
         <ImageButton
@@ -233,5 +237,4 @@
             android:src="@drawable/underbar_mypage"
             style="@style/under_bar"/>
     </LinearLayout>
-
 </LinearLayout>

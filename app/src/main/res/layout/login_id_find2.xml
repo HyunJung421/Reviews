@@ -3,127 +3,132 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        // 아이디 찾기 xml 2
-        <TextView
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="아이디 찾기"
-            android:textSize="28dp"
-            android:textStyle="bold"/>
+            android:orientation="vertical">
 
-        // 수평선
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
+            // 아이디 찾기 xml 2
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="아이디 찾기"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
+
+            // 수평선
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:background="#D3D3D3" />
+        </LinearLayout>
+        // 로그인 하기 전 user 아이콘
+        <ImageView
+            android:id="@+id/mypage_before_login_user_icon"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_centerInParent="true"
-            android:background="#D3D3D3" />
-    </LinearLayout>
-    // 로그인 하기 전 user 아이콘
-    <ImageView
-        android:id="@+id/mypage_before_login_user_icon"
-        android:layout_width="match_parent"
-        android:layout_height="124dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="85dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/login_icon_64px" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
-
-        // 어플 이름
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Reviews"
-            android:textColor="#003399"
-            android:textSize="35dp"
-            android:layout_marginBottom="7dp"
-            android:textStyle="bold" />
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="85dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/login_icon_64px" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            // 아이디 표시(회원님의 아이디는)
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="회원님의 아이디는 "
-                android:textColor="#000000"
-                android:textSize="23dp"
-                android:layout_marginTop="5dp"/>
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-            // 아이디 표시
+            // 어플 이름
             <TextView
-                android:id="@+id/display_user_id"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="loveu19"
-                android:textColor="#000000"
-                android:textSize="23dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_height="40dp"
+                android:text="Reviews"
+                android:textColor="#003399"
+                android:textSize="35dp"
+                android:layout_marginBottom="7dp"
+                android:textStyle="bold" />
 
-            // 아이디 표시(입니다)
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 입니다."
-                android:textColor="#000000"
-                android:textSize="23dp"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal">
+                // 아이디 표시(회원님의 아이디는)
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="회원님의 아이디는 "
+                    android:textColor="#000000"
+                    android:textSize="23dp"
+                    android:layout_marginTop="5dp"/>
+
+                // 아이디 표시
+                <TextView
+                    android:id="@+id/display_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="loveu19"
+                    android:textColor="#000000"
+                    android:textSize="23dp"
+                    android:layout_marginTop="5dp"/>
+
+                // 아이디 표시(입니다)
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 입니다."
+                    android:textColor="#000000"
+                    android:textSize="23dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="127dp"
+            android:layout_marginTop="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="127dp"
-        android:layout_marginTop="20dp">
+            // 로그인 창으로 가는 버튼
+            <Button
+                android:id="@+id/mypage_before_login_btn_login"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_blue_round"
+                android:text="로그인"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                style="?android:attr/borderlessButtonStyle" />
 
-        // 로그인 창으로 가는 버튼
-        <Button
-            android:id="@+id/mypage_before_login_btn_login"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:background="@drawable/btn_blue_round"
-            android:text="로그인"
-            android:textSize="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            style="?android:attr/borderlessButtonStyle" />
-
-        // 비밀번호 찾기 창으로 가는버튼
-        <Button
-            android:id="@+id/mypage_before_login_btn_findpw"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:background="@drawable/btn_gray_round"
-            android:text="비밀번호 찾기"
-            android:textSize="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            style="?android:attr/borderlessButtonStyle" />
+            // 비밀번호 찾기 창으로 가는버튼
+            <Button
+                android:id="@+id/mypage_before_login_btn_findpw"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_gray_round"
+                android:text="비밀번호 찾기"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                style="?android:attr/borderlessButtonStyle" />
+        </LinearLayout>
     </LinearLayout>
 
     // 하단바
     <LinearLayout
-        android:layout_marginTop="112dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#333333"
