@@ -7,9 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 // 영화상세페이지 java 파일
 public class MovieInfoActivity extends AppCompatActivity {
+
+    // 영화 정보
+    ImageView mPoster;
+    TextView mTitle;
+    TextView mYear;
+    TextView mRunningTime;
+    TextView mCountry;
+    TextView mGenre;
+    TextView mDirector;
+    TextView mRating;
+    TextView mPlot;
 
     Button btnPlotMore;    // 영화 내용 더보기 버튼
     Button btnReviewMore;  // 영화 리뷰 더보기 버튼
@@ -25,6 +40,17 @@ public class MovieInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_info);
+
+        mPoster = (ImageView)findViewById(R.id.movie_info_poster);
+        mTitle = (TextView)findViewById(R.id.movie_info_title);
+        mYear = (TextView)findViewById(R.id.movie_info_year1);
+        mRunningTime = (TextView)findViewById(R.id.movie_info_running_time1);
+        mCountry = (TextView)findViewById(R.id.movie_info_country1);
+        mGenre = (TextView)findViewById(R.id.movie_info_genre1);
+        mDirector = (TextView)findViewById(R.id.movie_info_director1);
+        mRating = (TextView)findViewById(R.id.movie_info_rating1);
+        mPlot = (TextView)findViewById(R.id.movie_info_plot);
+
 
         // 다이얼로그 객체
         plotDialog = new MoviePlotDialog(MovieInfoActivity.this);
