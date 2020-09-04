@@ -11,12 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 // 영화 내용 더보기 다이얼로그 java 파일
 public class MoviePlotDialog extends Dialog {
 
     // 창닫기 버튼
     private ImageButton plot_back;
+    TextView mTitle;
+    TextView mPlot;
 
     public MoviePlotDialog(@NonNull Context context) {
         super(context);
@@ -28,6 +31,9 @@ public class MoviePlotDialog extends Dialog {
         params.width = WindowManager.LayoutParams.MATCH_PARENT;
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         this.getWindow().setAttributes(params);
+
+        mTitle = (TextView)findViewById(R.id.movie_plot_title);
+        mPlot = (TextView)findViewById(R.id.movie_plot_plot);
 
         plot_back = (ImageButton)findViewById(R.id.window_close_btn);
         // 창닫기 버튼 클릭시
