@@ -132,7 +132,7 @@
 
             <LinearLayout
                 android:layout_width="369dp"
-                android:layout_height="341dp"
+                android:layout_height="382dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/comment_border"
                 android:gravity="center"
