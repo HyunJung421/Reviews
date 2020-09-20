@@ -17,8 +17,8 @@ public class MypageActivity extends AppCompatActivity {
     String validate; // 사용자 로그인 여부
 
     Button btnLogout; // 로그아웃 버튼
-    ImageButton btnMyContent; // 추천한 컨텐츠 버튼
-    ImageButton btnMyReview;  // 작성한 코멘트 버튼
+    Button btnMyContent; // 추천한 컨텐츠 버튼
+    Button btnMyReview;  // 작성한 코멘트 버튼
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -62,7 +62,7 @@ public class MypageActivity extends AppCompatActivity {
             });
 
             // 내가 추천한 컨텐츠 버튼 등록 및 리스너 구현
-            btnMyContent = (ImageButton)findViewById(R.id.mypage_btn_content);
+            btnMyContent = (Button)findViewById(R.id.mypage_btn_content);
             btnMyContent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -72,7 +72,7 @@ public class MypageActivity extends AppCompatActivity {
             });
 
             // 내가 작성한 코멘트 버튼 등록 및 리스너 구현
-            btnMyReview = (ImageButton)findViewById(R.id.mypage_btn_comment);
+            btnMyReview = (Button)findViewById(R.id.mypage_btn_comment);
             btnMyReview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
