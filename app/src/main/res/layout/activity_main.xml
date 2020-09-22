@@ -46,31 +46,12 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ViewFlipper
-                    android:id="@+id/main_viewFlipper"
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
                     android:layout_width="400dp"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp">
-
-                    <ImageView
-                        android:id="@+id/main_movie1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/main_view_movie1" />
-
-                    <ImageView
-                        android:id="@+id/main_movie2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/main_view_movie2" />
-
-                    <ImageView
-                        android:id="@+id/main_movie3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/main_view_movie3" />
-                </ViewFlipper>
+                    android:layout_margin="10dp"/>
 
                 <TabHost
                     android:id="@+id/tabHost1"

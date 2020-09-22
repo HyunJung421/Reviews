@@ -2,9 +2,11 @@ package com.example.reviews;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TabHost;
@@ -12,8 +14,19 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 // 메인페이지 java 파일
 public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private ViewPagerAdapter pagerAdapter;
+
+    int currentPage = 0;
+    Timer timer;
+    final long DELAY_MS = 500;
+    final long PERIOD_MS = 3000;
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -25,6 +38,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        viewPager = findViewById(R.id.viewPager);
+        pagerAdapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(pagerAdapter);
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            @Override
+            public void run() {
+                if(currentPage == 2) {
+                    currentPage = 0;
+                }
+                viewPager.setCurrentItem(currentPage++, true);
+            }
+        };
+
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, DELAY_MS, PERIOD_MS);
+
+        // 탭호스트 구현
         TabHost tabHost1 = (TabHost)findViewById(R.id.tabHost1);
         tabHost1.setup();
 
