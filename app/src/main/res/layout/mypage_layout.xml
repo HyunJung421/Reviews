@@ -39,7 +39,8 @@
                 android:background="#ffffff"
                 android:text="로그아웃"
                 android:textColor="#A1A0A0"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="?android:attr/borderlessButtonStyle"/>
         </LinearLayout>
         // 수평선
         <View

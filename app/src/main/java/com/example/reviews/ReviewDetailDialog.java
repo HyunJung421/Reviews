@@ -7,19 +7,16 @@ import android.content.Context;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-// 영화 내용 더보기 다이얼로그 java 파일
-public class MoviePlotDialog extends Dialog {
+// 마이페이지 -> 작성한코멘트 목록 -> 작성한코멘트 상세페이지 java 파일
+public class ReviewDetailDialog extends Dialog {
 
     // 창닫기 버튼
-    private ImageButton plot_back;
-    TextView mTitle;
-    TextView mPlot;
+    private ImageButton review_back;
 
-    public MoviePlotDialog(@NonNull Context context) {
+    public ReviewDetailDialog(@NonNull Context context) {
         super(context);
-        setContentView(R.layout.movie_plot);
+        setContentView(R.layout.mypage_review_detail);
 
         // 다이얼로그의 너비와 높이 설정
         WindowManager.LayoutParams params = new WindowManager.LayoutParams();
@@ -28,12 +25,10 @@ public class MoviePlotDialog extends Dialog {
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         this.getWindow().setAttributes(params);
 
-        mTitle = (TextView)findViewById(R.id.movie_plot_title);
-        mPlot = (TextView)findViewById(R.id.movie_plot_plot);
+        review_back = (ImageButton)findViewById(R.id.window_close_btn);
 
-        plot_back = (ImageButton)findViewById(R.id.window_close_btn);
         // 창닫기 버튼 클릭시
-        plot_back.setOnClickListener(new View.OnClickListener() {
+        review_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 다이얼로그 창 닫기

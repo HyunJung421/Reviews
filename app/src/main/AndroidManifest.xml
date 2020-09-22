@@ -32,7 +32,6 @@
         <activity android:name=".MypageActivity"/>
         <activity android:name=".MypageBeforeLogin"/>
         <activity android:name=".MyReviewActivity"/>
-        <activity android:name=".MyReviewDetailActivity"/>
         <activity android:name=".ReviewWriteActivity"/>
         <activity android:name=".ReviewOrderActivity"/>
         <activity android:name=".MovieInfoActivity"/>

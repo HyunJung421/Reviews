@@ -9,22 +9,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="703dp"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         // java파일 : MyReviewDetailActivity
         // 영화 정보
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
+
             // 영화 제목
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:text="극한직업"
                 android:textColor="#000000"
                 android:textSize="21dp"
@@ -32,53 +34,63 @@
 
             // 상영년도 〮 상영시간 〮 국가 〮 장르
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
                 android:orientation="horizontal"
-                android:layout_marginLeft="15dp"
-                android:layout_gravity="center_vertical">
-
+                android:layout_marginLeft="88dp"
+                android:gravity="center_vertical">
                 <TextView
                     android:id="@+id/movie_info_year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019"
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" | "
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:id="@+id/movie_info_running_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="111"
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="분 | "
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:id="@+id/movie_info_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="한국"
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" | "
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
                 <TextView
                     android:id="@+id/movie_info_genre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="코미디"
-                    android:textSize="18dp" />
+                    android:textSize="16dp" />
             </LinearLayout>
-        </LinearLayout>
+
+            // 창 닫기 버튼
+            <ImageButton
+                android:id="@+id/window_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/x_button"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
 
         // 수평선
         <View
@@ -89,7 +101,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="655dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
@@ -121,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:drawableLeft="@drawable/star_left_image_customise"
-                    android:layout_marginLeft="210dp"
+                    android:layout_marginLeft="170dp"
                     android:gravity="center_vertical"
                     android:text=" 4.0"
                     android:textColor="#000000"
@@ -157,7 +169,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="25dp"
                     android:text="사진첨부"
                     android:textColor="#000000"
                     android:textStyle="bold"
@@ -206,6 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
                 android:paddingLeft="15dp"
                 android:orientation="horizontal">
                 // 추천 수
@@ -219,33 +232,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="220dp"
+                    android:layout_marginLeft="180dp"
                     android:text="2020년 08월 10일"
                     android:textColor="#000000"/>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
-    // 하단바
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#333333"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/underbar_home"
-            android:src="@drawable/underbar_home"
-            style="@style/under_bar"/>
-
-        <ImageButton
-            android:id="@+id/underbar_social"
-            android:src="@drawable/underbar_social"
-            style="@style/under_bar"/>
-
-        <ImageButton
-            android:id="@+id/underbar_mypage"
-            android:src="@drawable/underbar_mypage"
-            style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>

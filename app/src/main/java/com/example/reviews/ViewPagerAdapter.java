@@ -9,12 +9,17 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import java.util.ArrayList;
+
 public class ViewPagerAdapter extends PagerAdapter {
+
     private Context context = null;
+    ArrayList<Integer> data;
 
     // context를 전달받아 context에 저장하는 생성자 추가
-    public ViewPagerAdapter(Context context) {
+    public ViewPagerAdapter(Context context, ArrayList<Integer> data) {
         this.context = context;
+        this.data = data;
     }
 
     @NonNull
@@ -22,20 +27,21 @@ public class ViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         // position 값을 받아 주어진 위치에 페이지를 생성한다.
 
-        View view = null;
+        // LayoutInflater를 통해 "/res/layout/page.xml"을 뷰로 생성
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.page, container, false);
 
-        if(context != null) {
-            // LayoutInflater를 통해 "/res/layout/page.xml"을 뷰로 생성
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.page, container, false);
+        ImageView imageView = view.findViewById(R.id.main_movie);
+        imageView.setImageResource(data.get(position));
 
-            ImageView imageView = view.findViewById(R.id.main_movie);
-        }
 
         // 뷰페이저에 추가
         container.addView(view);
 
+        // 여기서 리턴한 View 객체가 아래 isViewFromObject()메소드에 전달됨
         return view;
+
+
     }
 
     @Override
@@ -47,8 +53,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     @Override
     public int getCount() {
         // 사용가능한 뷰의 개수를 return 한다.
-        // 전체 페이지 수는 3개로 고정한다.
-        return 3;
+        return data.size();
     }
 
     @Override
