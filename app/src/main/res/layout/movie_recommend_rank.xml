@@ -85,13 +85,14 @@
                     style="@style/movie_title"/>
                 <TextView
                     android:id="@+id/movie_info_title2"
-                    android:text="2 나의 첫번째 슈퍼스타"
+                    android:text="2 나의 첫번째\n 슈퍼스타"
                     style="@style/movie_title"/>
                 <TextView
                     android:id="@+id/movie_info_title3"
                     android:text="3 온워드"
                     style="@style/movie_title"/>
             </LinearLayout>
+
             // 영화에 대한 추천
             <LinearLayout
                 android:layout_width="match_parent"
