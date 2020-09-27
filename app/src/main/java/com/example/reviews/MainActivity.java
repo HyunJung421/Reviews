@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.Toast;
@@ -31,11 +33,15 @@ public class MainActivity extends AppCompatActivity {
     final long DELAY_MS = 3000;   // 타이머 시작 후 해당 시간에 작동(초기 웨이팅 타입)
     final long PERIOD_MS = 3000;  // 4초 주기로 작동
 
+    // 돋보기 버튼
+    Button btnsearchmag;
+
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
     ImageButton btnMypage;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +75,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }, DELAY_MS, PERIOD_MS);
 
+        // 돋보기 구현
+        btnsearchmag = (Button)findViewById(R.id.search_magnifier);
+        btnsearchmag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+
         // 탭호스트 구현
         TabHost tabHost1 = (TabHost)findViewById(R.id.tabHost1);
         tabHost1.setup();
@@ -90,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         ts3.setContent(R.id.content3);
         ts3.setIndicator("영화신작");
         tabHost1.addTab(ts3);
-
 
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
