@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     // 검색돋보기
     ImageView btnsearchmag;
+
+    // 영화사이트 버튼
+    ImageButton maincgv;
+    ImageButton mainmega;
+    ImageButton mainlotte;
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -103,6 +109,34 @@ public class MainActivity extends AppCompatActivity {
         ts3.setContent(R.id.content3);
         ts3.setIndicator("영화신작");
         tabHost1.addTab(ts3);
+
+        // 영화사이트
+        maincgv = (ImageButton)findViewById(R.id.main_btn_cgv);
+        maincgv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cgv.co.kr/ticket/"));
+                startActivity(intent);
+            }
+        });
+
+        mainmega = (ImageButton)findViewById(R.id.main_btn_mega);
+        mainmega.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.megabox.co.kr/booking"));
+                startActivity(intent);
+            }
+        });
+
+        mainlotte = (ImageButton)findViewById(R.id.main_btn_lotte);
+        mainlotte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lottecinema.co.kr/NLCHS/Ticketing"));
+                startActivity(intent);
+            }
+        });
 
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
