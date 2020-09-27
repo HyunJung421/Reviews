@@ -9,13 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.Toast;
-
 import com.google.android.material.tabs.TabLayout;
-
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,15 +31,14 @@ public class MainActivity extends AppCompatActivity {
     final long DELAY_MS = 3000;   // 타이머 시작 후 해당 시간에 작동(초기 웨이팅 타입)
     final long PERIOD_MS = 3000;  // 4초 주기로 작동
 
-    // 돋보기 버튼
-    Button btnsearchmag;
+    // 검색돋보기
+    ImageView btnsearchmag;
 
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
     ImageButton btnMypage;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }, DELAY_MS, PERIOD_MS);
 
         // 돋보기 구현
-        btnsearchmag = (Button)findViewById(R.id.search_magnifier);
+        btnsearchmag = (ImageView) findViewById(R.id.search_magnifier);
         btnsearchmag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
-
 
         // 탭호스트 구현
         TabHost tabHost1 = (TabHost)findViewById(R.id.tabHost1);

@@ -22,7 +22,7 @@
                 android:hint="Search" />
             //검색클릭
             <ImageView
-                android:id="@+id/search_magnifier"
+                android:id="@+id/search_magnifier1"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
