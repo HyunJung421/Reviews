@@ -3,13 +3,13 @@ package com.example.reviews;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     // 검색돋보기
     ImageView btnsearchmag;
+
+    // 더보기 버튼
+    Button btnmore1;
+    Button btnmore2;
+    Button btnmore3;
 
     // 영화사이트 버튼
     ImageButton maincgv;
@@ -88,6 +93,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 더보기 버튼 구현
+        btnmore1 = (Button)findViewById(R.id.more1);
+        btnmore1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieRatingRankActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnmore2 = (Button)findViewById(R.id.more2);
+        btnmore2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieRecommendRankActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnmore3 = (Button)findViewById(R.id.more3);
+        btnmore3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieNewListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         // 탭호스트 구현
         TabHost tabHost1 = (TabHost)findViewById(R.id.tabHost1);
         tabHost1.setup();
@@ -109,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         ts3.setContent(R.id.content3);
         ts3.setIndicator("영화신작");
         tabHost1.addTab(ts3);
+
 
         // 영화사이트
         maincgv = (ImageButton)findViewById(R.id.main_btn_cgv);
