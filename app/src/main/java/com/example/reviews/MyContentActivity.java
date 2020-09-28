@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,9 @@ public class MyContentActivity extends AppCompatActivity {
 
     // 영화 포스터
     ImageView poster;
+
+    // 작성한 코멘트 버튼
+    TextView myreview;
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -32,6 +36,15 @@ public class MyContentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        myreview = (TextView)findViewById(R.id.my_reviews);
+        myreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyReviewActivity.class);
                 startActivity(intent);
             }
         });

@@ -110,7 +110,7 @@
                 <Button
                     android:id="@+id/mypage_btn_taste"
                     android:layout_width="380dp"
-                    android:layout_height="220dp"
+                    android:layout_height="240dp"
                     android:layout_marginTop="15dp"
                     android:layout_gravity="center"
                     android:background="@drawable/mypage_button"

@@ -212,15 +212,8 @@
                             android:text="공쥬현정"
                             android:textColor="#000000"
                             android:textSize="15dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="170dp"
-                            android:drawableLeft="@drawable/clip_left_image_customise"
-                            android:gravity="center_vertical"
-                            android:text=" 작성한 코멘트"
-                            android:textSize="12dp"/>
                     </LinearLayout>
+
                     // 추천한 컨텐츠 정보
                     <LinearLayout
                         android:layout_width="match_parent"

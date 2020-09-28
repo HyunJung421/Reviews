@@ -3,6 +3,7 @@ package com.example.reviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,6 +13,9 @@ import android.widget.Toast;
 public class SocialActivity extends AppCompatActivity {
 
     ImageButton socialMovie1; // 최신 업데이트 첫번째 영화
+    ImageButton socialMovie2;
+    ImageButton socialMovie3;
+
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
@@ -31,6 +35,25 @@ public class SocialActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
+        socialMovie2 = (ImageButton)findViewById(R.id.social_movie2);
+        socialMovie2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        socialMovie3 = (ImageButton)findViewById(R.id.social_movie3);
+        socialMovie3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);
