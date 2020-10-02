@@ -7,12 +7,16 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 // 소셜페이지 java 파일
 public class SocialActivity extends AppCompatActivity {
+    // 추천 영화 제목
+    TextView movieTitle1;
 
-    ImageButton socialMovie1; // 최신 업데이트 첫번째 영화
+    // 추천 영화 포스터
+    ImageButton socialMovie1;
     ImageButton socialMovie2;
     ImageButton socialMovie3;
 
@@ -26,12 +30,17 @@ public class SocialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.social_layout);
 
-        // 최신 업데이트 첫번째 영화 포스터 등록 및 리스너 구현
+        // 추천 영화 제목
+        movieTitle1 = (TextView)findViewById(R.id.movie_info_title1);
+        final String title1 = movieTitle1.getText().toString(); // 첫번째 영화 제목
+
+        // 추천 첫번째 영화 포스터 등록 및 리스너 구현
         socialMovie1 = (ImageButton)findViewById(R.id.social_movie1);
         socialMovie1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title1); // 영화 제목 전달
                 startActivity(intent); // 액티비티 띄우기
             }
         });
