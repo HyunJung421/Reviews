@@ -99,7 +99,7 @@
 
                                     <ImageButton
                                         android:id="@+id/movie_rating1"
-                                        android:src="@drawable/movie_grade1"
+                                        android:src="@drawable/social_movie1"
                                         style="@style/movie_poster"/>
 
                                     <ImageButton
@@ -158,7 +158,7 @@
 
                                     <ImageButton
                                         android:id="@+id/movie_recommend1"
-                                        android:src="@drawable/movie_grade1"
+                                        android:src="@drawable/social_movie1"
                                         style="@style/movie_poster"/>
 
                                     <ImageButton
@@ -215,17 +215,17 @@
                                     android:orientation="horizontal">
                                     <ImageButton
                                         android:id="@+id/movie_new1"
-                                        android:src="@drawable/social_movie1"
+                                        android:src="@drawable/movie_newlist1"
                                         style="@style/movie_poster" />
 
                                     <ImageButton
                                         android:id="@+id/movie_new2"
-                                        android:src="@drawable/social_movie2"
+                                        android:src="@drawable/movie_newlist2"
                                         style="@style/movie_poster"/>
 
                                     <ImageButton
                                         android:id="@+id/movie_new3"
-                                        android:src="@drawable/social_movie3"
+                                        android:src="@drawable/movie_newlist3"
                                         style="@style/movie_poster"/>
                                 </LinearLayout>
 
