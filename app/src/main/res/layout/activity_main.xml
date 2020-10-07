@@ -122,7 +122,7 @@
 
                                     <TextView
                                         android:id="@+id/movie_rating_title1"
-                                        android:text="강철비2"
+                                        android:text="극한직업"
                                         style="@style/movie_title"/>
 
                                     <TextView
@@ -180,7 +180,7 @@
                                     android:orientation="horizontal">
                                     <TextView
                                         android:id="@+id/movie_recommend_title1"
-                                        android:text="강철비2"
+                                        android:text="극한직업"
                                         style="@style/movie_title" />
 
                                     <TextView
@@ -237,17 +237,17 @@
                                     android:orientation="horizontal">
                                     <TextView
                                         android:id="@+id/movie_newlist_title1"
-                                        android:text="극한직업"
+                                        android:text="국제수사"
                                         style="@style/movie_title" />
 
                                     <TextView
                                         android:id="@+id/movie_newlist_title2"
-                                        android:text="나의 첫번째\n슈퍼스타"
+                                        android:text="인셉션"
                                         style="@style/movie_title" />
 
                                     <TextView
                                         android:id="@+id/movie_newlist_title3"
-                                        android:text="온워드:\n단 하루의 기적"
+                                        android:text="남매의 여름밤"
                                         style="@style/movie_title" />
                                 </LinearLayout>
                             </LinearLayout>
