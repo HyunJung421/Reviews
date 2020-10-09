@@ -105,6 +105,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
     }
 }
 
