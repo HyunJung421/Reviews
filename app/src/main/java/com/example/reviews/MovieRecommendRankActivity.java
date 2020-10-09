@@ -11,6 +11,11 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
 
     ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3, rocommedMovie4, rocommedMovie5, rocommedMovie6; //영화 포스터
 
+    // 하단바 버튼
+    ImageButton btnHome;
+    ImageButton btnSocial;
+    ImageButton btnMypage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +72,37 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+
+        // 하단바 underbar_home 버튼 등록 및 리스너 구현
+        btnHome = (ImageButton)findViewById(R.id.underbar_home);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+        // 하단바 underbar_social 버튼 등록 및 리스너 구현
+        btnSocial = (ImageButton)findViewById(R.id.underbar_social);
+        btnSocial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SocialActivity.class);
+                startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+        // 하단바 underbar_mypage 버튼 등록 및 리스너 구현
+        btnMypage = (ImageButton)findViewById(R.id.underbar_mypage);
+        btnMypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
