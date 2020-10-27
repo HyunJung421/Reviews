@@ -3,12 +3,14 @@ package com.example.reviews;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,24 +28,33 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.util.Date;
 
 // 리뷰작성페이지 java 파일
 public class ReviewWriteActivity extends AppCompatActivity {
     Bitmap bitmap;
 
+    // 영화 정보관련
     ImageView moviePoster; // 영화 포스터
     TextView movieTitle;  // 영화 제목
     TextView movieYear;  // 영화 연도
     TextView movieRunTime;  // 영화 상영시간
     TextView movieCountry;  // 영화 나라
     TextView movieGenre;  // 영화 장르
+
+    EditText reviewContent;  // 리뷰 작성 내용
     Button btnWriteOk;   // 작성완료 버튼
+    Button btnPhotoAttach;  // 사진 첨부 버튼
 
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
     ImageButton btnMypage;
+
+    private AlertDialog dialog;
+    int mID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +82,8 @@ public class ReviewWriteActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     boolean success = jsonObject.getBoolean("success");
                     if (success) { // 영화 정보를 불러온 경우
+                        mID = jsonObject.getInt("m_ID");
+
                         String mTitle = jsonObject.getString("m_Title");
                         movieTitle.setText(mTitle);
 
@@ -100,6 +113,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
             }
         };
         ReviewWriteRequest reviewWriteRequest = new ReviewWriteRequest(title, responseListener);
@@ -107,14 +121,76 @@ public class ReviewWriteActivity extends AppCompatActivity {
         queue.add(reviewWriteRequest);
 
 
+        btnPhotoAttach = (Button)findViewById(R.id.review_write_btn_add);
+        btnPhotoAttach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        // 로그인한 사용자 id(=전역변수 user) 가져오기
+        GlobalVariable user = (GlobalVariable) getApplication();
+        final String userID = user.getData();
+
+        // 리뷰 작성 내용
+        reviewContent = (EditText)findViewById(R.id.review_write_input);
+
 
         // 작성완료 버튼 등록 및 리스너 구현
         btnWriteOk = (Button)findViewById(R.id.review_write_btn_ok);
         btnWriteOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
+                // 리뷰 작성 내용 확인
+                if(reviewContent.getText().toString().equals("")){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ReviewWriteActivity.this);
+                    dialog = builder.setMessage("리뷰를 작성하세요.")
+                            .setPositiveButton("확인", null)
+                            .create();
+                    dialog.show();
+                    reviewContent.requestFocus();
+                }
+                else {
+                    // 리뷰 내용 가져오기
+                    final String revContent = reviewContent.getText().toString();
+                    // 현재 시간 가져오기
+                    long now = System.currentTimeMillis();
+                    // Date 생성하기
+                    Date date = new Date(now);
+                    // 가져오고 싶은 형식을 가져오기
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy년MM월dd일");
+                    final String revDate = sdf.format(date);
+
+                    // 첨부사진
+                    final String revPhoto = "";
+
+                    // 리뷰 DB에 저장하기
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+                                if (success) { // 리뷰저장에 성공한 경우
+                                    Toast.makeText(getApplicationContext(), "리뷰 저장에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                                    intent.putExtra("title", title);
+                                    startActivity(intent);
+                                } else { // 리뷰저장에 실패한 경우
+                                    Toast.makeText(getApplicationContext(), "리뷰 저장에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    // 서버로 Volley를 이용해서 요청을 함
+                    ReviewSaveRequest reviewSaveRequest = new ReviewSaveRequest(mID, userID, revDate, revContent, revPhoto, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(ReviewWriteActivity.this);
+                    queue.add(reviewSaveRequest);
+                }
             }
         });
 
