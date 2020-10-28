@@ -175,20 +175,13 @@
                         android:gravity="left|center_vertical" />
 
                     //영화 포스터
-                    <HorizontalScrollView
-                        android:id="@+id/review_write_photo"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/review_write_attach_list"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <ImageView
-                                style="@style/image_attach"
-                                android:src="@drawable/social_movie1" />
-                        </LinearLayout>
-                    </HorizontalScrollView>
+                        android:orientation="horizontal"
+                        android:scrollbars="horizontal"
+                        android:layout_marginBottom="10dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

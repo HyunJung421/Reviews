@@ -2,13 +2,19 @@ package com.example.reviews;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
+import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -30,6 +36,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
 
 // 리뷰작성페이지 java 파일
@@ -48,12 +55,20 @@ public class ReviewWriteActivity extends AppCompatActivity {
     Button btnWriteOk;   // 작성완료 버튼
     Button btnPhotoAttach;  // 사진 첨부 버튼
 
+    // 사진첨부 RecyclerView 가로형
+    private RecyclerView listview;
+    private MyAdapter adapter;
+
+    final int PICTURE_REQUEST_CODE = 100;
+
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
     ImageButton btnMypage;
 
     private AlertDialog dialog;
+
+    // 영화 고유번호
     int mID;
 
     @Override
@@ -100,7 +115,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                         movieGenre.setText(mGenre);
 
                         String url = jsonObject.getString("m_Poster");
-                        imageToBitmap(url); // 영화 포스터 지정
+                        urlImageToBitmap(url); // 영화 포스터 지정
 
                     } else { // 영화 정보 불러오기 실패한 경우
                         AlertDialog.Builder builder = new AlertDialog.Builder(ReviewWriteActivity.this);
@@ -121,11 +136,16 @@ public class ReviewWriteActivity extends AppCompatActivity {
         queue.add(reviewWriteRequest);
 
 
+        // 사진첨부하기 버튼 등록 및 리스너 구현
         btnPhotoAttach = (Button)findViewById(R.id.review_write_btn_add);
         btnPhotoAttach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                // 사진을 여러개 선택할 수 있도록 함
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICTURE_REQUEST_CODE);
             }
         });
 
@@ -135,7 +155,6 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
         // 리뷰 작성 내용
         reviewContent = (EditText)findViewById(R.id.review_write_input);
-
 
         // 작성완료 버튼 등록 및 리스너 구현
         btnWriteOk = (Button)findViewById(R.id.review_write_btn_ok);
@@ -226,7 +245,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
     }
 
     // DB에 저장된 영화 포스터 url로 이미지 지정하기
-    void imageToBitmap(String url) {
+    void urlImageToBitmap(String url) {
         final String murl = url;
 
         // 안드로이드에서 네트워크와 관련된 작업을 할 때,
@@ -261,10 +280,82 @@ public class ReviewWriteActivity extends AppCompatActivity {
             mThread.join();
 
             // 작업 Thread에서 이미지를 불러오는 작업을 완료한 뒤
-            // ui 작업을 할 수 있는 메인 Thread에서 ImageView에 이미지 지정정
+            // ui 작업을 할 수 있는 메인 Thread에서 ImageView에 이미지 지정
             moviePoster.setImageBitmap(bitmap);
        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICTURE_REQUEST_CODE) {
+            Log.i("result", String.valueOf(resultCode));
+
+            if (resultCode == RESULT_OK) {
+                // 첨부사진을 보여줄 ListView
+                listview = findViewById(R.id.review_write_attach_list);
+                LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+                listview.setLayoutManager(layoutManager);
+
+                // uri형 배열리스트
+                ArrayList<Uri> itemList = new ArrayList<>();
+
+                // 다중 선택을 지원하지 않는 기기에서는 getClipData()가 없음 => getData()로 접근해야 함
+                if(data.getClipData() == null){
+                    // 다중 선택을 지원하지 않기 때문에 한개씩 선택가능
+                    Uri uri = data.getData();
+                    Log.i("1.simgle choice", String.valueOf(uri));
+                    itemList.add(uri);
+                }
+                else { // 다중 선택을 지원하는 기기
+                    ClipData clipData = data.getClipData();
+                    Log.i("clipdata", String.valueOf(clipData.getItemCount()));
+
+                    if(clipData.getItemCount() > 5) {
+                        Toast.makeText(ReviewWriteActivity.this, "사진은 5장까지 선택 가능합니다.", Toast.LENGTH_LONG).show();
+                    }
+                    else if(clipData.getItemCount()==1){ // 다중 선택에서 하나만 선택했을 경우
+                        Uri urione = clipData.getItemAt(0).getUri();
+                        Log.i("2.clipdata one choice", String.valueOf(urione));
+                        itemList.add(urione);
+                    }
+                    else if(clipData.getItemCount() > 1 && clipData.getItemCount() < 6) { // 다중 선택한 경우
+                        for(int i=0; i < clipData.getItemCount(); i++) {
+                            Uri uris = clipData.getItemAt(i).getUri();
+                            Log.i("3.clipdata multi choice", String.valueOf(uris));
+                            itemList.add(uris);
+                        }
+                    }
+                    else {
+                        Toast.makeText(ReviewWriteActivity.this, "사진 선택을 취소하였습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                adapter = new MyAdapter(this, itemList, onClickItem);
+                listview.setAdapter(adapter);
+            }
+        }
+    }
+    // 사진첨부
+    /*private void attach() {
+        listview = findViewById(R.id.review_write_attach_list);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        listview.setLayoutManager(layoutManager);
+
+        ArrayList<Uri> itemList = new ArrayList<>();
+        itemList.add();
+
+        adapter = new MyAdapter(this, itemList, onClickItem);
+        listview.setAdapter(adapter);
+    }*/
+
+    private View.OnClickListener onClickItem = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String str = (String) v.getTag();
+            Toast.makeText(ReviewWriteActivity.this, str, Toast.LENGTH_SHORT).show();
+        }
+    };
 }
