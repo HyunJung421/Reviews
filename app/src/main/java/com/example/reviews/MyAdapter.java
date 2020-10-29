@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+// 첨부된 사진 RecyclerView의 ViewHolder를 위한 java 파일
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<Uri> itemList;
     private Context context;

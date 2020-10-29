@@ -27,7 +27,7 @@ public class MovieNewListActivity extends AppCompatActivity {
         setContentView(R.layout.movie_new_list);
 
         // 다이얼로그 객체
-        plotDialog = new MoviePlotDialog(MovieNewListActivity.this);
+        //plotDialog = new MoviePlotDialog(MovieNewListActivity.this);
 
         // 첫번째 영화 포스터 등록 및 리스너 구현
         newMovie1 = (ImageButton) findViewById(R.id.movie_newlist1);

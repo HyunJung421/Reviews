@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -35,7 +34,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -70,6 +68,8 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
     // 영화 고유번호
     int mID;
+    // 사진 uri
+    ArrayList<String> array;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,9 +131,9 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
             }
         };
-        ReviewWriteRequest reviewWriteRequest = new ReviewWriteRequest(title, responseListener);
+        MovieInfoRequest movieInfoRequest = new MovieInfoRequest(title, responseListener);
         RequestQueue queue = Volley.newRequestQueue(ReviewWriteActivity.this);
-        queue.add(reviewWriteRequest);
+        queue.add(movieInfoRequest);
 
 
         // 사진첨부하기 버튼 등록 및 리스너 구현
@@ -146,6 +146,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.setType("image/*");
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICTURE_REQUEST_CODE);
+                // onActivityResult(int requestCode, int resultCode, Intent data)가 호출됨
             }
         });
 
@@ -287,6 +288,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
         }
     }
 
+    // 사진첨부기능
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -301,6 +303,8 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
                 // uri형 배열리스트
                 ArrayList<Uri> itemList = new ArrayList<>();
+                // db 저장용 uri 배열리스트
+                array  = new ArrayList<>();
 
                 // 다중 선택을 지원하지 않는 기기에서는 getClipData()가 없음 => getData()로 접근해야 함
                 if(data.getClipData() == null){
@@ -308,6 +312,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                     Uri uri = data.getData();
                     Log.i("1.simgle choice", String.valueOf(uri));
                     itemList.add(uri);
+                    array.add(String.valueOf(uri));
                 }
                 else { // 다중 선택을 지원하는 기기
                     ClipData clipData = data.getClipData();
@@ -320,12 +325,14 @@ public class ReviewWriteActivity extends AppCompatActivity {
                         Uri urione = clipData.getItemAt(0).getUri();
                         Log.i("2.clipdata one choice", String.valueOf(urione));
                         itemList.add(urione);
+                        array.add(String.valueOf(urione));
                     }
                     else if(clipData.getItemCount() > 1 && clipData.getItemCount() < 6) { // 다중 선택한 경우
                         for(int i=0; i < clipData.getItemCount(); i++) {
                             Uri uris = clipData.getItemAt(i).getUri();
                             Log.i("3.clipdata multi choice", String.valueOf(uris));
                             itemList.add(uris);
+                            array.add(String.valueOf(uris));
                         }
                     }
                     else {
@@ -338,19 +345,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
             }
         }
     }
-    // 사진첨부
-    /*private void attach() {
-        listview = findViewById(R.id.review_write_attach_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        listview.setLayoutManager(layoutManager);
-
-        ArrayList<Uri> itemList = new ArrayList<>();
-        itemList.add();
-
-        adapter = new MyAdapter(this, itemList, onClickItem);
-        listview.setAdapter(adapter);
-    }*/
-
+    
     private View.OnClickListener onClickItem = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 // 리뷰 작성 페이지에 영화정보를 불러오기 위한 java 파일
-public class ReviewWriteRequest extends StringRequest {
+public class MovieInfoRequest extends StringRequest {
     // 서버 URL 설정 (PHP 파일 연동)
     final static private String URL = "http://3.34.44.58/LoadMovieInfo.php";
     private Map<String, String> map;
 
-    public ReviewWriteRequest(String m_Title, Response.Listener<String> listener) {
+    public MovieInfoRequest(String m_Title, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();

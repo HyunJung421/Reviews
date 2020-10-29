@@ -1,6 +1,7 @@
 package com.example.reviews;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,6 +9,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 // 영화 내용 더보기 다이얼로그 java 파일
 public class MoviePlotDialog extends Dialog {
@@ -17,7 +25,7 @@ public class MoviePlotDialog extends Dialog {
     TextView mTitle;
     TextView mPlot;
 
-    public MoviePlotDialog(@NonNull Context context) {
+    public MoviePlotDialog(@NonNull Context context, String title, String plot) {
         super(context);
         setContentView(R.layout.movie_plot);
 
@@ -29,7 +37,9 @@ public class MoviePlotDialog extends Dialog {
         this.getWindow().setAttributes(params);
 
         mTitle = (TextView)findViewById(R.id.movie_plot_title);
+        mTitle.setText(title);
         mPlot = (TextView)findViewById(R.id.movie_plot_plot);
+        mPlot.setText(plot);
 
         plot_back = (ImageButton)findViewById(R.id.window_close_btn);
         // 창닫기 버튼 클릭시

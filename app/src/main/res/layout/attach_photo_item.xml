@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 첨부되는 사진 하나의 디자인 -->
 <ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/item_imageview"

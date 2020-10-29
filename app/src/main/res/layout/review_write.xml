@@ -174,7 +174,7 @@
                         android:drawablePadding="18dip"
                         android:gravity="left|center_vertical" />
 
-                    //영화 포스터
+                    // 사진 첨부 이미지
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/review_write_attach_list"
                         android:layout_width="match_parent"
@@ -187,21 +187,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        //작성완료 버튼
-                        <Button
-                            android:id="@+id/review_write_btn_cancel"
-                            android:layout_width="180dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="10dp"
-                            android:background="@drawable/btn_blue_round"
-                            android:text="취소"
-                            android:textSize="23dp" />
 
                         //작성완료 버튼
                         <Button
                             android:id="@+id/review_write_btn_ok"
-                            android:layout_width="180dp"
+                            android:layout_width="372dp"
                             android:layout_height="50dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/btn_blue_round"
