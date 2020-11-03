@@ -37,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
+        // 로딩화면 연결
+        Intent intent = new Intent(this, LoadingActivity.class);
+        startActivity(intent);
+
         // 자동로그인을 위한 editor
         final SharedPreferences loginInfo = getSharedPreferences("user", 0); // "user"라는 파일 생성
         final SharedPreferences.Editor editor = loginInfo.edit(); // Editor 연결
