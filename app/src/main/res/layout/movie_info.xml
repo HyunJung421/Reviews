@@ -434,17 +434,17 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:src="@drawable/underbar_home"
+            android:src="@drawable/underbar_home2"
             style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_social"
-            android:src="@drawable/underbar_social"
+            android:src="@drawable/underbar_social2"
             style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:src="@drawable/underbar_mypage"
+            android:src="@drawable/underbar_mypage2"
             style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>

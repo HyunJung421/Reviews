@@ -11,6 +11,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginTop="270dp"
-        android:src="@drawable/app_icon" />
+        android:src="@drawable/app_logo" />
 
 </LinearLayout>
