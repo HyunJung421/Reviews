@@ -54,8 +54,8 @@
         // 프로필, UserName
         <ImageView
             android:id="@+id/mypage_user_icon"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
+            android:layout_width="170dp"
+            android:layout_height="110dp"
             android:layout_gravity="center"
             android:src="@drawable/mypage_user_icon" />
 
@@ -67,7 +67,7 @@
             android:gravity="center_horizontal"
             android:text="공쥬현정"
             android:textAlignment="center"
-            android:textSize="21dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"/>
 
@@ -84,7 +84,7 @@
                 <Button
                     android:id="@+id/mypage_btn_content"
                     android:layout_width="380dp"
-                    android:layout_height="80dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="center"
                     android:background="@drawable/mypage_button"
                     android:text="추천한 컨텐츠"
@@ -97,7 +97,7 @@
                 <Button
                     android:id="@+id/mypage_btn_comment"
                     android:layout_width="380dp"
-                    android:layout_height="80dp"
+                    android:layout_height="75dp"
                     android:layout_marginTop="15dp"
                     android:layout_gravity="center"
                     android:background="@drawable/mypage_button"
@@ -110,7 +110,7 @@
                 <Button
                     android:id="@+id/mypage_btn_taste"
                     android:layout_width="380dp"
-                    android:layout_height="240dp"
+                    android:layout_height="230dp"
                     android:layout_marginTop="15dp"
                     android:layout_gravity="center"
                     android:background="@drawable/mypage_button"
@@ -132,17 +132,17 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:src="@drawable/underbar_home"
+            android:src="@drawable/underbar_home2"
             style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_social"
-            android:src="@drawable/underbar_social"
+            android:src="@drawable/underbar_social2"
             style="@style/under_bar"/>
 
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:src="@drawable/underbar_mypage"
+            android:src="@drawable/underbar_mypage2"
             style="@style/under_bar"/>
     </LinearLayout>
 </LinearLayout>
