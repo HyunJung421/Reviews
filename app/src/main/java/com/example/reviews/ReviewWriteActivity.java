@@ -68,6 +68,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
     // 영화 고유번호
     int mID;
+
     // 사진 uri
     ArrayList<String> array;
 
@@ -142,6 +143,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
                 // 사진을 여러개 선택할 수 있도록 함
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.setType("image/*");
@@ -206,6 +208,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                             }
                         }
                     };
+
                     // 서버로 Volley를 이용해서 요청을 함
                     ReviewSaveRequest reviewSaveRequest = new ReviewSaveRequest(mID, userID, revDate, revContent, revPhoto, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(ReviewWriteActivity.this);

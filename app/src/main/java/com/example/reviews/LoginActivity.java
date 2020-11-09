@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // 자동로그인 여부 확인
         if(loginInfo.contains("id") && loginInfo.contains("pw")) {  // 자동로그인일 경우
+
             // EditText에 현재 입력되어 있는 값을 get(가져온다)해온다.
             String id = loginInfo.getString("id", "");
             String pw = loginInfo.getString("pw", "");
@@ -57,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         boolean success = jsonObject.getBoolean("success");
+
                         if (success) { // 로그인에 성공한 경우
                             String userID = jsonObject.getString("userID");
                             String userPass = jsonObject.getString("userPassword");
@@ -70,6 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                             intent.putExtra("userID", userID);
                             intent.putExtra("userPass", userPass);
                             startActivity(intent);
+
                         } else { // 로그인에 실패한 경우
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             dialog = builder.setMessage("아이디나 비밀번호가 일치하지 않습니다.")
@@ -87,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
             RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
             queue.add(loginRequest);
         }
+
         else {  // 자동로그인이 아닐 경우
             login_input_id = (EditText)findViewById(R.id.login_input_id);
             login_input_pw = (EditText)findViewById(R.id.login_input_pw);
@@ -97,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     // EditText에 현재 입력되어 있는 값을 get(가져온다)해온다.
                     final String id = login_input_id.getText().toString();
                     final String pw = login_input_pw.getText().toString();
@@ -135,6 +140,7 @@ public class LoginActivity extends AppCompatActivity {
                                         intent.putExtra("userID", userID);
                                         intent.putExtra("userPass", userPass);
                                         startActivity(intent);
+
                                     } else { // 로그인에 실패한 경우
                                         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                         dialog = builder.setMessage("아이디나 비밀번호가 일치하지 않습니다.")

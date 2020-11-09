@@ -48,6 +48,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
         auth_number_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 이름, 휴대폰 번호 데이터
                 final String name = login_input_name.getText().toString();
                 final String phone = login_input_phone.getText().toString();
@@ -102,6 +103,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
         auth_number_again_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 이름, 휴대폰 번호 데이터
                 String name = login_input_name.getText().toString();
                 String phone = login_input_phone.getText().toString();
@@ -157,6 +159,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
 
     // 인증번호 보내는 메소드
     public void sendAuthNumber(String name, String phone, String authNumber, String sms) {
+
         // 인증번호 전송
         PendingIntent sentIntent = PendingIntent.getBroadcast(LoginIdFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
 
@@ -166,6 +169,7 @@ public class LoginIdFindActivity extends AppCompatActivity {
             public void onReceive(Context context, Intent intent) {
                 switch(getResultCode()){
                     case Activity.RESULT_OK:
+
                         // 전송 성공
                         AlertDialog.Builder builder = new AlertDialog.Builder(LoginIdFindActivity.this);
                         dialog = builder.setMessage("인증번호가 발송되었습니다.\n문자가 안올 경우 휴대폰 번호를 다시 확인해주세요.\n")

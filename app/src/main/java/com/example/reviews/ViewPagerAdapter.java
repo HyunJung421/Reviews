@@ -34,13 +34,11 @@ public class ViewPagerAdapter extends PagerAdapter {
         ImageView imageView = view.findViewById(R.id.main_movie);
         imageView.setImageResource(data.get(position));
 
-
         // 뷰페이저에 추가
         container.addView(view);
 
-        // 여기서 리턴한 View 객체가 아래 isViewFromObject()메소드에 전달됨
+        // 여기서 리턴한 View 객체가 아래 isViewFromObject() 메소드에 전달됨
         return view;
-
 
     }
 

@@ -100,6 +100,7 @@ public class JoinActivity extends AppCompatActivity {
         join_btn_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 아이디 중복 확인
                 if(!id_validate) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -109,6 +110,7 @@ public class JoinActivity extends AppCompatActivity {
                     dialog.show();
                     join_input_id.requestFocus();
                 }
+
                 // 비밀번호 입력 확인
                 else if(join_input_pw.getText().toString().equals("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -118,6 +120,7 @@ public class JoinActivity extends AppCompatActivity {
                     dialog.show();
                     join_input_pw.requestFocus();
                 }
+
                 // 비밀번호 일치 확인
                 else if(!join_input_pw_submit.getText().toString().equals(join_input_pw.getText().toString())) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -127,6 +130,7 @@ public class JoinActivity extends AppCompatActivity {
                     dialog.show();
                     join_input_pw_submit.requestFocus();
                 }
+
                 // 이름 입력 확인
                 else if(join_input_name.getText().toString().equals("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -136,6 +140,7 @@ public class JoinActivity extends AppCompatActivity {
                     dialog.show();
                     join_input_name.requestFocus();
                 }
+
                 // 휴대전화 번호 입력 확인
                 else if(join_input_phone.getText().toString().equals("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -145,6 +150,7 @@ public class JoinActivity extends AppCompatActivity {
                     dialog.show();
                     join_input_phone.requestFocus();
                 }
+
                 // 회원 등록
                 else{
                     // EditText에 현재 입력되어 있는 값을 get(가져온다)해온다.

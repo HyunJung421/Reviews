@@ -180,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_rating2 = (ImageView)findViewById(R.id.movie_rating2);
         movie_rating2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_rating3 = (ImageView)findViewById(R.id.movie_rating3);
         movie_rating3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -222,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_recommend2 = (ImageView)findViewById(R.id.movie_recommend2);
         movie_recommend2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_recommend3 = (ImageView)findViewById(R.id.movie_recommend3);
         movie_recommend3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_new2 = (ImageView)findViewById(R.id.movie_new2);
         movie_new2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -273,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         movie_new3 = (ImageView)findViewById(R.id.movie_new3);
         movie_new3.setOnClickListener(new View.OnClickListener() {
             @Override

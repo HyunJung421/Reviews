@@ -31,6 +31,7 @@ public class ReviewDetailDialog extends Dialog {
         review_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 다이얼로그 창 닫기
                 dismiss();
             }

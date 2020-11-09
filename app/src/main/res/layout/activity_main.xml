@@ -84,6 +84,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
+
                                 // 더보기 버튼
                                 <Button
                                     android:id="@+id/more1"
@@ -143,6 +144,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
+
                                 // 더보기 버튼
                                 <Button
                                     android:id="@+id/more2"
@@ -201,6 +203,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
+
                                 // 더보기 버튼
                                 <Button
                                     android:id="@+id/more3"
@@ -213,6 +216,7 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:orientation="horizontal">
+
                                     <ImageButton
                                         android:id="@+id/movie_new1"
                                         android:src="@drawable/movie_newlist1"

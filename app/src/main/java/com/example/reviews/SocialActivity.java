@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 // 소셜페이지 java 파일
 public class SocialActivity extends AppCompatActivity {
+
     // 추천 영화 제목
     TextView movieTitle1;
 
@@ -33,8 +34,10 @@ public class SocialActivity extends AppCompatActivity {
         // 추천 영화 제목
         movieTitle1 = (TextView)findViewById(R.id.movie_info_title1);
         final String title1 = movieTitle1.getText().toString(); // 첫번째 영화 제목
+
         movieTitle1 = (TextView)findViewById(R.id.movie_info_title2);
         final String title2 = movieTitle1.getText().toString(); // 두번째 영화 제목
+
         movieTitle1 = (TextView)findViewById(R.id.movie_info_title3);
         final String title3 = movieTitle1.getText().toString(); // 세번째 영화 제목
 

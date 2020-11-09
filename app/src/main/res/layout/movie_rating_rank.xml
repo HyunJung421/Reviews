@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="703dp"
         android:orientation="vertical" >
+
         // 영화 평점 순위
         <TextView
             android:layout_width="match_parent"
@@ -56,6 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/social_movie1"
                     android:src="@drawable/social_movie1"
@@ -91,6 +93,7 @@
                     android:text="3 온워드"
                     style="@style/movie_title"/>
             </LinearLayout>
+
             // 영화에 대한 평점
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,11 +104,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
                     android:layout_marginLeft="35dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="평점 ★"/>
+
                     <TextView
                         android:id="@+id/number_rating1"
                         android:layout_width="wrap_content"
@@ -118,17 +123,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
                     android:layout_marginLeft="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="평점 ★"/>
+
                     <TextView
                         android:id="@+id/number_rating2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.4" />
+
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -138,6 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="평점 ★"/>
+
                     <TextView
                         android:id="@+id/number_rating3"
                         android:layout_width="wrap_content"
@@ -146,6 +156,7 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         // 수평선
         <View
             android:layout_marginTop="5dp"
@@ -166,6 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
+
                     //영화 포스터
                     <ImageButton
                         android:id="@+id/movie_grade1"
@@ -178,6 +190,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_gravity="center">
+
                         //영화 이름
                         <TextView
                             android:id="@+id/movie_info_title4"
@@ -186,16 +199,19 @@
                             android:textSize="18dp"
                             android:layout_width="209dp"
                             android:gravity="fill"/>
+
                         // 영화 평점
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:text="평점 ★"/>
+
                             <TextView
                                 android:id="@+id/number_rating4"
                                 android:layout_width="wrap_content"
@@ -204,6 +220,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
                 // 수평선
                 <View
                     android:layout_marginTop="5dp"
@@ -220,6 +237,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             android:id="@+id/movie_grade2"
@@ -232,6 +250,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_gravity="center">
+
                             //영화 이름
                             <TextView
                                 android:id="@+id/movie_info_title5"
@@ -240,15 +259,18 @@
                                 android:text="5 다만 악에서 구하소서"
                                 android:textSize="18dp"
                                 android:gravity="fill"/>
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:text="평점 ★"/>
+
                                 <TextView
                                     android:id="@+id/number_rating5"
                                     android:layout_width="wrap_content"
@@ -258,6 +280,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
                 // 수평선
                 <View
                     android:layout_marginTop="5dp"
@@ -270,10 +293,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             android:id="@+id/movie_grade3"
@@ -281,11 +306,13 @@
                             android:layout_width="109dp"
                             android:layout_height="127dp"
                             android:src="@drawable/movie_grade3"/>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_gravity="center">
+
                             //영화 이름
                             <TextView
                                 android:id="@+id/movie_info_title6"
@@ -294,16 +321,19 @@
                                 android:text="6 오케이 마담"
                                 android:textSize="18dp"
                                 android:gravity="fill"/>
+
                             // 영화 평점
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:text="평점 ★"/>
+
                                 <TextView
                                     android:id="@+id/number_rating6"
                                     android:layout_width="wrap_content"

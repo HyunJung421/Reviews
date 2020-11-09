@@ -56,6 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
+
                     //영화 포스터
                     <ImageButton
                         android:id="@+id/movie_newlist1"
@@ -81,6 +82,7 @@
                             android:textSize="23dp"
                             android:textColor="#000000"
                             android:textStyle="bold"/>
+
                         // 상영년도 〮 상영시간 〮 국가 〮 장르
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -93,33 +95,39 @@
                                 android:layout_height="wrap_content"
                                 android:text="2020"
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_running_time1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="106"
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="분 | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_country1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="한국"
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_genre1"
                                 android:layout_width="wrap_content"
@@ -133,13 +141,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="감독 "
                                 android:textSize="15dp"
-                                android:textColor="#000000"
-                                />
+                                android:textColor="#000000" />
+
                             <TextView
                                 android:id="@+id/movie_info_director1"
                                 android:layout_width="wrap_content"
@@ -147,6 +156,7 @@
                                 android:text="김봉한"
                                 android:textSize="15dp"/>
                         </LinearLayout>
+
                         // 평점
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -157,8 +167,8 @@
                                 android:layout_height="match_parent"
                                 android:text="평점 "
                                 android:textSize="15dp"
-                                android:textColor="#000000"
-                                />
+                                android:textColor="#000000" />
+
                             <TextView
                                 android:id="@+id/movie_info_rating1"
                                 android:layout_width="wrap_content"
@@ -184,6 +194,7 @@
                                 android:text="내용 "
                                 android:textSize="15dp"
                                 android:textColor="#000000" />
+
                             <TextView
                                 android:id="@+id/movie_info_plot1"
                                 android:layout_width="190dp"
@@ -224,6 +235,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             android:id="@+id/movie_newlist2"
@@ -249,6 +261,7 @@
                                 android:textSize="23dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             // 상영년도 〮 상영시간 〮 국가 〮 장르
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -306,8 +319,8 @@
                                     android:layout_height="match_parent"
                                     android:text="감독 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:id="@+id/movie_info_director2"
                                     android:layout_width="wrap_content"
@@ -315,6 +328,7 @@
                                     android:text="크리스토퍼 놀란"
                                     android:textSize="15dp"/>
                             </LinearLayout>
+
                             // 평점
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -352,6 +366,7 @@
                                     android:text="내용 "
                                     android:textSize="15dp"
                                     android:textColor="#000000" />
+
                                 <TextView
                                     android:id="@+id/movie_info_plot2"
                                     android:layout_width="190dp"
@@ -384,14 +399,17 @@
                         android:layout_marginTop="5dp"
                         android:background="#D3D3D3"
                         android:layout_marginBottom="7dp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical" >
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal" >
+
                             //영화 포스터
                             <ImageButton
                                 android:id="@+id/movie_newlist3"
@@ -417,6 +435,7 @@
                                     android:textSize="23dp"
                                     android:textColor="#000000"
                                     android:textStyle="bold"/>
+
                                 // 상영년도 〮 상영시간 〮 국가 〮 장르
                                 <LinearLayout
                                     android:layout_width="wrap_content"
@@ -429,33 +448,39 @@
                                         android:layout_height="wrap_content"
                                         android:text="2020"
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text=" | "
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:id="@+id/movie_info_running_time3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="104"
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="분 | "
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:id="@+id/movie_info_country3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="한국"
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text=" | "
                                         android:textSize="15dp" />
+
                                     <TextView
                                         android:id="@+id/movie_info_genre3"
                                         android:layout_width="wrap_content"
@@ -469,13 +494,13 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:text="감독 "
                                         android:textSize="15dp"
-                                        android:textColor="#000000"
-                                        />
+                                        android:textColor="#000000" />
 
                                     <TextView
                                         android:id="@+id/movie_info_director3"
@@ -484,6 +509,7 @@
                                         android:text="윤단비"
                                         android:textSize="15dp" />
                                 </LinearLayout>
+
                                 // 평점
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -494,8 +520,8 @@
                                         android:layout_height="match_parent"
                                         android:text="평점 "
                                         android:textSize="15dp"
-                                        android:textColor="#000000"
-                                        />
+                                        android:textColor="#000000" />
+
                                     <TextView
                                         android:id="@+id/movie_info_rating3"
                                         android:layout_width="wrap_content"
@@ -515,12 +541,14 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
+
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:text="내용 "
                                         android:textSize="15dp"
                                         android:textColor="#000000" />
+
                                     <TextView
                                         android:id="@+id/movie_info_plot3"
                                         android:layout_width="190dp"
@@ -561,6 +589,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" >
+
                                 //영화 포스터
                                 <ImageButton
                                     android:id="@+id/movie_newlist4"
@@ -586,6 +615,7 @@
                                         android:textSize="23dp"
                                         android:textColor="#000000"
                                         android:textStyle="bold"/>
+
                                     // 상영년도 〮 상영시간 〮 국가 〮 장르
                                     <LinearLayout
                                         android:layout_width="wrap_content"
@@ -598,33 +628,39 @@
                                             android:layout_height="wrap_content"
                                             android:text="2020"
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text=" | "
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:id="@+id/movie_info_running_time4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="104"
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="분 | "
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:id="@+id/movie_info_country4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="영국"
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text=" | "
                                             android:textSize="15dp" />
+
                                         <TextView
                                             android:id="@+id/movie_info_genre4"
                                             android:layout_width="wrap_content"
@@ -638,13 +674,14 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:text="감독 "
                                             android:textSize="15dp"
-                                            android:textColor="#000000"
-                                            />
+                                            android:textColor="#000000" />
+
                                         <TextView
                                             android:id="@+id/movie_info_director4"
                                             android:layout_width="wrap_content"
@@ -652,17 +689,20 @@
                                             android:text="마크 먼든"
                                             android:textSize="15dp"/>
                                     </LinearLayout>
+
                                     // 평점
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:text="평점 "
                                             android:textSize="15dp"
                                             android:textColor="#000000" />
+
                                         <TextView
                                             android:id="@+id/movie_info_rating4"
                                             android:layout_width="wrap_content"
@@ -682,12 +722,14 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:text="내용 "
                                             android:textSize="15dp"
                                             android:textColor="#000000" />
+
                                         <TextView
                                             android:id="@+id/movie_info_plot4"
                                             android:layout_width="190dp"
@@ -739,5 +781,6 @@
             android:id="@+id/underbar_mypage"
             android:src="@drawable/underbar_mypage2"
             style="@style/under_bar"/>
+
     </LinearLayout>
 </LinearLayout>

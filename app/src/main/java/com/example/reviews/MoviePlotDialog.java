@@ -42,10 +42,12 @@ public class MoviePlotDialog extends Dialog {
         mPlot.setText(plot);
 
         plot_back = (ImageButton)findViewById(R.id.window_close_btn);
+
         // 창닫기 버튼 클릭시
         plot_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 다이얼로그 창 닫기
                 dismiss();
             }

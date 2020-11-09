@@ -224,6 +224,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         mThread.start();  // 작업 Thread 실행
 
         try {
+
             // 메인 Thread는 별도의 작업을 완료할 때까지 대기한다.
             // join() 호출하여 별도의 작업 Thread가 종료될 때까지 메인 Thread가 기다린다.
             // join() 메소드는 InterruptedException을 발생시킨다.

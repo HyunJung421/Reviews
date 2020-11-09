@@ -32,6 +32,7 @@
                 android:layout_centerInParent="true"
                 android:background="#D3D3D3" />
         </LinearLayout>
+
         // 로그인 하기 전 user 아이콘
         <ImageView
             android:id="@+id/mypage_before_login_user_icon"
@@ -62,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 // 아이디 표시(회원님의 아이디는)
                 <TextView
                     android:layout_width="wrap_content"

@@ -30,6 +30,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // TOP2 영화포스터에 대한 리스너 구현
         rocommedMovie2 = (ImageButton)findViewById(R.id.social_movie2);
         rocommedMovie2.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // TOP3 영화포스터에 대한 리스너 구현
         rocommedMovie3 = (ImageButton)findViewById(R.id.social_movie3);
         rocommedMovie3.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +50,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // TOP4 영화포스터에 대한 리스너 구현
         rocommedMovie4 = (ImageButton)findViewById(R.id.movie_grade1);
         rocommedMovie4.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +60,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // TOP5 영화포스터에 대한 리스너 구현
         rocommedMovie5 = (ImageButton)findViewById(R.id.movie_grade2);
         rocommedMovie5.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +70,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // TOP6 영화포스터에 대한 리스너 구현
         rocommedMovie6 = (ImageButton)findViewById(R.id.movie_grade3);
         rocommedMovie6.setOnClickListener(new View.OnClickListener() {

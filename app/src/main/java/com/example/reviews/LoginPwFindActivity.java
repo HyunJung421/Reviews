@@ -49,6 +49,7 @@ public class LoginPwFindActivity extends AppCompatActivity {
         auth_number_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 아이디, 이름, 휴대폰 번호 데이터
                 final String id = login_input_id.getText().toString();
                 final String name = login_input_name.getText().toString();
@@ -107,6 +108,7 @@ public class LoginPwFindActivity extends AppCompatActivity {
         auth_number_again_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // 이름, 휴대폰 번호 데이터
                 String id = login_input_id.getText().toString();
                 String name = login_input_name.getText().toString();
@@ -163,6 +165,7 @@ public class LoginPwFindActivity extends AppCompatActivity {
 
     // 인증번호 보내는 메소드
     public void sendAuthNumber(String name, String phone, String authNumber, String sms) {
+
         // 인증번호 전송
         PendingIntent sentIntent = PendingIntent.getBroadcast(LoginPwFindActivity.this, 0, new Intent("SMS_SENT_ACTION"), 0);
 
@@ -180,6 +183,7 @@ public class LoginPwFindActivity extends AppCompatActivity {
                         dialog.show();
                         break;
                     case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
+
                         // 전송 실패
                         Toast.makeText(LoginPwFindActivity.this, "전송 실패", Toast.LENGTH_SHORT).show();
                         break;
@@ -189,6 +193,7 @@ public class LoginPwFindActivity extends AppCompatActivity {
 
         SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(phone, null, sms, sentIntent, null);
+
         /*
           destinationAddress : 받는사람의 Phone Number. String형식임
           scAddress :  null 입력 (구글API : is the service center address or null to use the current default SMSC)

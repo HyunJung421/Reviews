@@ -38,6 +38,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // 첫번째 영화 더보기 클릭 리스너 구현
         movie_plot_more1 = (Button) findViewById(R.id.movie_info_btn_plot_more1);
         movie_plot_more1.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +47,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 plotDialog.show();
             }
         });
+
         // 두번째 영화 포스터 등록 및 리스너 구현
         newMovie2 = (ImageButton) findViewById(R.id.movie_newlist2);
         newMovie2.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +57,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // 두번째 영화 더보기 클릭 리스너 구현
         movie_plot_more2 = (Button) findViewById(R.id.movie_info_btn_plot_more2);
         movie_plot_more2.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +66,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 plotDialog.show();
             }
         });
+
         // 세번째 영화 포스터 등록 및 리스너 구현
         newMovie3 = (ImageButton) findViewById(R.id.movie_newlist3);
         newMovie3.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +76,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // 세번째 영화 더보기 클릭 리스너 구현
         movie_plot_more3 = (Button) findViewById(R.id.movie_info_btn_plot_more3);
         movie_plot_more3.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +85,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 plotDialog.show();
             }
         });
+
         // 네번째 영화 포스터 등록 및 리스너 구현
         newMovie4 = (ImageButton) findViewById(R.id.movie_newlist4);
         newMovie4.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +95,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                 startActivity(intent); // 액티비티 띄우기
             }
         });
+
         // 네번째 영화 더보기 클릭 리스너 구현
         movie_plot_more4 = (Button) findViewById(R.id.movie_info_btn_plot_more4);
         movie_plot_more4.setOnClickListener(new View.OnClickListener() {
