@@ -50,11 +50,13 @@
                 <LinearLayout
                     android:id="@+id/my_content1"
                     style="@style/mypage_content_layout">
+
                     // 내 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         // 내 이미지
                         <ImageView
                             style="?android:attr/borderlessButtonStyle"
@@ -62,6 +64,7 @@
                             android:layout_height="50dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/person_image" />
+
                         // 내 이름
                         <TextView
                             android:layout_width="wrap_content"
@@ -126,33 +129,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2019"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="111"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="한국"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre1"
                                     android:layout_width="wrap_content"
@@ -192,11 +201,13 @@
                 //컨텐츠2
                 <LinearLayout
                     style="@style/mypage_content_layout">
+
                     // 내 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         // 내 이미지
                         <ImageView
                             style="?android:attr/borderlessButtonStyle"
@@ -204,6 +215,7 @@
                             android:layout_height="50dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/person_image" />
+
                         // 내 이름
                         <TextView
                             android:layout_width="wrap_content"
@@ -219,6 +231,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         //영화 포스터
                         <ImageView
                             android:layout_width="100dp"
@@ -242,6 +255,7 @@
                                 android:textColor="#000000"
                                 android:textSize="18dp"
                                 android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -263,33 +277,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2018"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time7"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="149"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country7"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="미국"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre7"
                                     android:layout_width="wrap_content"
@@ -329,11 +349,13 @@
                 //컨텐츠3
                 <LinearLayout
                     style="@style/mypage_content_layout">
+
                     // 내 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         // 내 이미지
                         <ImageView
                             style="?android:attr/borderlessButtonStyle"
@@ -341,6 +363,7 @@
                             android:layout_height="50dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/person_image" />
+
                         // 내 이름
                         <TextView
                             android:layout_width="wrap_content"
@@ -350,11 +373,13 @@
                             android:textColor="#000000"
                             android:textSize="15dp" />
                     </LinearLayout>
+
                     // 추천한 컨텐츠 정보
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         //영화 포스터
                         <ImageView
                             android:layout_width="100dp"
@@ -399,33 +424,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2019"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time8"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="181"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country8"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="미국"
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="13dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre8"
                                     android:layout_width="wrap_content"

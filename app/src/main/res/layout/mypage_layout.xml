@@ -42,6 +42,7 @@
                 android:textStyle="bold"
                 style="?android:attr/borderlessButtonStyle"/>
         </LinearLayout>
+
         // 수평선
         <View
             android:layout_marginTop="10dp"
@@ -80,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="15dp">
+
                 // 추천한 컨텐츠
                 <Button
                     android:id="@+id/mypage_btn_content"

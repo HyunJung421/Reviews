@@ -37,6 +37,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="628dp"
@@ -50,6 +51,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="10dp">
+
                     // 영화 포스터
                     <LinearLayout
                         android:layout_width="130dp"
@@ -69,6 +71,7 @@
                         android:orientation="vertical"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp">
+
                         //영화이름
                         <TextView
                             android:id="@+id/movie_info_title"
@@ -142,8 +145,8 @@
                     android:gravity="center"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp">
-                    //리뷰 입력창
 
+                    //리뷰 입력창
                     <EditText
                         android:id="@+id/review_write_input"
                         android:layout_width="match_parent"

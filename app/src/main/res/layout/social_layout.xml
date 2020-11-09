@@ -15,8 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            // 소셜
 
+            // 소셜
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,12 +43,13 @@
             android:orientation="vertical"
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                // 최신 업데이트 박스
 
+                // 최신 업데이트 박스
                 <TextView
                     android:id="@+id/update_box"
                     android:layout_width="match_parent"
@@ -59,9 +60,6 @@
                     android:textColor="#000000"
                     android:textSize="18dp"
                     android:textStyle="bold" />
-
-                // 최신 업데이트 더보기 버튼
-
             </LinearLayout>
 
             // 영화 포스터
@@ -70,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/social_movie1"
                     android:src="@drawable/social_movie1"
@@ -96,10 +95,12 @@
                     android:id="@+id/movie_info_title1"
                     android:text="극한직업"
                     style="@style/movie_title"/>
+
                 <TextView
                     android:id="@+id/movie_info_title2"
                     android:text="나의 첫번째\n슈퍼스타"
                     style="@style/movie_title"/>
+
                 <TextView
                     android:id="@+id/movie_info_title3"
                     android:text="온워드:\n단 하루의 기적"
@@ -142,6 +143,7 @@
                     android:src="@drawable/person_image"
                     android:scaleType="centerCrop"
                     style="?android:attr/borderlessButtonStyle" />
+
                 <ImageButton
                     android:id="@+id/social_reviewer2"
                     android:layout_width="90dp"
@@ -150,6 +152,7 @@
                     android:src="@drawable/person_image"
                     android:scaleType="centerCrop"
                     style="?android:attr/borderlessButtonStyle" />
+
                 <ImageButton
                     android:id="@+id/social_reviewer3"
                     android:layout_width="90dp"
@@ -158,6 +161,7 @@
                     android:src="@drawable/person_image"
                     android:scaleType="centerCrop"
                     style="?android:attr/borderlessButtonStyle" />
+
                 <ImageButton
                     android:id="@+id/social_reviewer4"
                     android:layout_width="90dp"
@@ -183,6 +187,7 @@
                     android:text="공쥬현정"
                     android:textSize="15dp"
                     android:textColor="#000000"/>
+
                 <TextView
                     android:id="@+id/social_reviewer_name2"
                     android:layout_width="90dp"
@@ -192,6 +197,7 @@
                     android:text="깜찍유림"
                     android:textSize="15dp"
                     android:textColor="#000000"/>
+
                 <TextView
                     android:id="@+id/social_reviewer_name3"
                     android:layout_width="90dp"
@@ -201,6 +207,7 @@
                     android:text="왕자은빈"
                     android:textSize="15dp"
                     android:textColor="#000000"/>
+
                 <TextView
                     android:id="@+id/social_reviewer_name4"
                     android:layout_width="90dp"

@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             //검색창
             <Button
                 android:id="@+id/search_button"
@@ -43,15 +44,18 @@
             android:layout_width="match_parent"
             android:layout_height="593dp"
             android:layout_marginTop="18dp" >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
+
                 <LinearLayout
                     android:id="@+id/search_movie1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
+
                     //영화 포스터
                     <ImageButton
                         style="@style/movie_poster"
@@ -75,6 +79,7 @@
                             android:textSize="23dp"
                             android:textColor="#000000"
                             android:textStyle="bold"/>
+
                         // 상영년도 〮 상영시간 〮 국가 〮 장르
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -87,22 +92,26 @@
                                 android:layout_height="wrap_content"
                                 android:text="2012"
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_running_time5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="142"
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="분 | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_country5"
                                 android:layout_width="wrap_content"
@@ -114,6 +123,7 @@
                                 android:layout_height="wrap_content"
                                 android:text=" | "
                                 android:textSize="15dp" />
+
                             <TextView
                                 android:id="@+id/movie_info_genre5"
                                 android:layout_width="wrap_content"
@@ -127,31 +137,34 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="감독 "
                                 android:textSize="15dp"
-                                android:textColor="#000000"
-                                />
+                                android:textColor="#000000" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="조스 웨던"
                                 android:textSize="15dp"/>
                         </LinearLayout>
+
                         // 평점
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="평점 "
                                 android:textSize="15dp"
-                                android:textColor="#000000"
-                                />
+                                android:textColor="#000000" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -169,15 +182,18 @@
                     android:layout_height="2dp"
                     android:layout_centerInParent="true"
                     android:background="#D3D3D3" />
+
                 <LinearLayout
                     android:id="@+id/search_movie2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             style="@style/movie_poster"
@@ -201,6 +217,7 @@
                                 android:textSize="23dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -208,6 +225,7 @@
                                 android:textSize="20dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             // 상영년도 〮 상영시간 〮 국가 〮 장르
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -220,33 +238,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2015"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="136"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="미국"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre6"
                                     android:layout_width="wrap_content"
@@ -260,31 +284,34 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="감독 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="조스 웨던"
                                     android:textSize="15dp"/>
                             </LinearLayout>
+
                             // 평점
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="평점 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
@@ -303,15 +330,18 @@
                     android:layout_height="2dp"
                     android:layout_centerInParent="true"
                     android:background="#D3D3D3" />
+
                 <LinearLayout
                     android:id="@+id/search_movie3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             style="@style/movie_poster"
@@ -335,6 +365,7 @@
                                 android:textSize="23dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -342,6 +373,7 @@
                                 android:textSize="20dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             // 상영년도 〮 상영시간 〮 국가 〮 장르
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -354,33 +386,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2018"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time7"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="129"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country7"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="미국"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre7"
                                     android:layout_width="wrap_content"
@@ -394,31 +432,34 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="감독 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="조스 웨던"
                                     android:textSize="15dp"/>
                             </LinearLayout>
+
                             // 평점
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="평점 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
@@ -437,15 +478,18 @@
                     android:layout_height="2dp"
                     android:layout_centerInParent="true"
                     android:background="#D3D3D3" />
+
                 <LinearLayout
                     android:id="@+id/search_movie4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
+
                         //영화 포스터
                         <ImageButton
                             style="@style/movie_poster"
@@ -469,6 +513,7 @@
                                 android:textSize="23dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -476,6 +521,7 @@
                                 android:textSize="20dp"
                                 android:textColor="#000000"
                                 android:textStyle="bold"/>
+
                             // 상영년도 〮 상영시간 〮 국가 〮 장르
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -488,33 +534,39 @@
                                     android:layout_height="wrap_content"
                                     android:text="2019"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_running_time8"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="137"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="분 | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_country8"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="미국"
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" | "
                                     android:textSize="15dp" />
+
                                 <TextView
                                     android:id="@+id/movie_info_genre8"
                                     android:layout_width="wrap_content"
@@ -528,31 +580,34 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="감독 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="조스 웨던"
                                     android:textSize="15dp"/>
                             </LinearLayout>
+
                             // 평점
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:text="평점 "
                                     android:textSize="15dp"
-                                    android:textColor="#000000"
-                                    />
+                                    android:textColor="#000000" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"

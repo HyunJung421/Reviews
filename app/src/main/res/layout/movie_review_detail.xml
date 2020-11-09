@@ -49,6 +49,7 @@
                         android:layout_height="59dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/person_image" />
+
                     // 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -57,6 +58,7 @@
                         android:text="새콤달콤"
                         android:textColor="#000000"
                         android:textSize="17dp" />
+
                     // 평점
                     <TextView
                         android:layout_width="63dp"
@@ -66,6 +68,7 @@
                         android:gravity="center"
                         android:text="4.0"
                         android:textSize="18dp" />
+
                     // 추천수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,6 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal" />
+
                 //영화제목
                 <TextView
                     android:layout_width="match_parent"
@@ -96,6 +100,7 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
+
                 // 상영년도 〮상영시간 〮 국가 〮 장르
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -108,33 +113,39 @@
                         android:layout_height="wrap_content"
                         android:text="2019"
                         android:textSize="13dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" | "
                         android:textSize="13dp" />
+
                     <TextView
                         android:id="@+id/movie_info_running_time1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="111"
                         android:textSize="13dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="분 | "
                         android:textSize="13dp" />
+
                     <TextView
                         android:id="@+id/movie_info_country1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="한국"
                         android:textSize="13dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" | "
                         android:textSize="13dp" />
+
                     <TextView
                         android:id="@+id/movie_info_genre1"
                         android:layout_width="wrap_content"
@@ -147,18 +158,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     // 첨부사진1
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/mypage_user_icon" />
+
                     // 첨부사진2
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/social_movie2" />
+
                     // 첨부사진3
                     <ImageView
                         android:layout_width="100dp"
@@ -166,6 +180,7 @@
                         android:layout_marginTop="10dp"
                         android:src="@drawable/social_movie3" />
                 </LinearLayout>
+
                 // 내용
                 <TextView
                     android:layout_width="match_parent"

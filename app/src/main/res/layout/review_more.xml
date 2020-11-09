@@ -75,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     // 작성자 이미지
                     <ImageView
                         android:id="@+id/reviewer_image1"
@@ -83,6 +84,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -91,6 +93,7 @@
                         android:text="물물물"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -113,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -122,6 +126,7 @@
                         android:text="진짜 뻥안치고 ㅈㄴ 웃겼다"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
@@ -145,6 +150,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -153,6 +159,7 @@
                         android:text="유i인"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,6 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -184,6 +192,7 @@
                         android:text="류승룡 드디어 심폐소생술 성공!"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
@@ -199,6 +208,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     // 작성자 이미지
                     <ImageView
                         android:id="@+id/reviewer_image3"
@@ -207,6 +217,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -215,6 +226,7 @@
                         android:text="깜찍유림"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -237,6 +249,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -246,6 +259,7 @@
                         android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
@@ -255,11 +269,13 @@
                         android:layout_centerInParent="true"
                         android:background="#90CAF9" />
                 </LinearLayout>
+
                 // REVIEW 작성자 정보4
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     // 작성자 이미지
                     <ImageView
                         android:id="@+id/reviewer_image4"
@@ -268,6 +284,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -276,6 +293,7 @@
                         android:text="현정공듀"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -298,6 +316,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -307,6 +326,7 @@
                         android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
@@ -316,11 +336,13 @@
                         android:layout_centerInParent="true"
                         android:background="#90CAF9" />
                 </LinearLayout>
+
                 // REVIEW 작성자 정보5
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     // 작성자 이미지
                     <ImageView
                         android:id="@+id/reviewer_image5"
@@ -329,6 +351,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -337,6 +360,7 @@
                         android:text="빈빈"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -359,6 +383,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -368,6 +393,7 @@
                         android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
@@ -383,6 +409,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     // 작성자 이미지
                     <ImageView
                         android:id="@+id/reviewer_image6"
@@ -391,6 +418,7 @@
                         android:src="@drawable/person_image"
                         android:scaleType="centerCrop"
                         style="?android:attr/borderlessButtonStyle" />
+
                     // 작성자 이름
                     <TextView
                         android:layout_width="wrap_content"
@@ -399,6 +427,7 @@
                         android:text="Park신"
                         android:textSize="18dp"
                         android:textColor="#000000"/>
+
                     // 추천 수
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -421,6 +450,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     // 리뷰 내용
                     <TextView
                         android:layout_width="match_parent"
@@ -430,6 +460,7 @@
                         android:text="너무 재밌어요~!"
                         android:textSize="16dp"
                         android:textColor="#000000" />
+
                     // 수평선
                     <View
                         android:layout_marginTop="10dp"
