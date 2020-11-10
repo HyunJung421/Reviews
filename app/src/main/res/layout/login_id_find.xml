@@ -56,14 +56,14 @@
                 android:id="@+id/login_input_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="name"
+                android:hint="NAME"
                 android:textSize="20dp"/>
 
             <EditText
                 android:id="@+id/login_input_phone"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="phone number"
+                android:hint="PHONE NUMBER"
                 android:textSize="20dp"/>
 
             // 인증번호 전송
