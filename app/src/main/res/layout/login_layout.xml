@@ -12,14 +12,12 @@
 
     // java파일 : LoginActivity
     // Reviews 로고
-    <TextView
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:gravity="center"
-        android:text="REVIEWS"
-        android:textAlignment="center"
-        android:textSize="40dp"
-        android:textColor="#000000" />
+        android:src="@drawable/reviews_logo" />
 
     // Reviews 아이콘
     <ImageView
