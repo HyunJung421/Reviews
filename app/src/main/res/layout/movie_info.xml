@@ -425,26 +425,40 @@
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
 
+    // 수평선
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#D3D3D3" />
     // 하단바
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="68dp"
         android:background="#333333"
         android:gravity="center">
 
         <ImageButton
             android:id="@+id/underbar_home"
             android:src="@drawable/underbar_home2"
-            style="@style/under_bar"/>
-
+            style="@style/under_bar" />
+        // 수직선
+        <View
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#D3D3D3"/>
         <ImageButton
             android:id="@+id/underbar_social"
             android:src="@drawable/underbar_social2"
-            style="@style/under_bar"/>
-
+            style="@style/under_bar" />
+        // 수직선
+        <View
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#D3D3D3"/>
         <ImageButton
             android:id="@+id/underbar_mypage"
             android:src="@drawable/underbar_mypage2"
-            style="@style/under_bar"/>
+            style="@style/under_bar" />
     </LinearLayout>
 </LinearLayout>
