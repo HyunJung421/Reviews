@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:drawableLeft="@drawable/star_left_image_customise"
-                    android:layout_marginLeft="170dp"
+                    android:layout_marginLeft="200dp"
                     android:gravity="center_vertical"
                     android:text=" 4.0"
                     android:textColor="#000000"
@@ -253,7 +253,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="180dp"
+                    android:layout_marginLeft="220dp"
                     android:text="2020년 08월 10일"
                     android:textColor="#000000"/>
             </LinearLayout>

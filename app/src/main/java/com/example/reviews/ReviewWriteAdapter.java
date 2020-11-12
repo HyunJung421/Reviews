@@ -1,7 +1,6 @@
 package com.example.reviews;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,17 +10,15 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 // 첨부된 사진 RecyclerView의 ViewHolder를 위한 java 파일
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class ReviewWriteAdapter extends RecyclerView.Adapter<ReviewWriteAdapter.ViewHolder> {
     private ArrayList<Uri> itemList;
     private Context context;
     private View.OnClickListener onClickItem;
 
-    public MyAdapter(Context context, ArrayList<Uri> itemList, View.OnClickListener onclickItem) {
+    public ReviewWriteAdapter(Context context, ArrayList<Uri> itemList, View.OnClickListener onclickItem) {
         this.context = context;
         this.itemList = itemList;
         this.onClickItem = onclickItem;
@@ -51,7 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     // ViewHolder에 데이터를 바인딩(할당) 해주는 함수
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ReviewWriteAdapter.ViewHolder holder, int position) {
         Uri item = itemList.get(position);
 
         holder.imageView.setImageURI(item);

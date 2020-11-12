@@ -55,7 +55,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
     // 사진첨부 RecyclerView 가로형
     private RecyclerView listview;
-    private MyAdapter adapter;
+    private ReviewWriteAdapter adapter;
 
     final int PICTURE_REQUEST_CODE = 100;
 
@@ -343,7 +343,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                     }
                 }
 
-                adapter = new MyAdapter(this, itemList, onClickItem);
+                adapter = new ReviewWriteAdapter(this, itemList, onClickItem);
                 listview.setAdapter(adapter);
             }
         }
@@ -356,4 +356,16 @@ public class ReviewWriteActivity extends AppCompatActivity {
             Toast.makeText(ReviewWriteActivity.this, str, Toast.LENGTH_SHORT).show();
         }
     };
+
+    /*public static void verifyStoragePermissions(Activity activity) {
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if(permission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSTION_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }*/
 }
