@@ -1,24 +1,21 @@
 package com.example.reviews;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -27,17 +24,20 @@ import java.util.ArrayList;
 public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHolder> {
     private ArrayList<ArrayList<String>> itemList;
     private Context context;
-    Bitmap bitmap;
+    private Bitmap bitmap;
+    private ReviewDetailDialog reviewDialog;  // 리뷰글 다이얼로그 클래스
 
     public MyReviewAdapter(Context context, ArrayList<ArrayList<String>> itemList) {
         this.context = context;
         this.itemList = itemList;
+        reviewDialog = new ReviewDetailDialog(context);
     }
 
     // ViewHolder 클래스
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         LinearLayout layout;
+        ImageView user_image;
         TextView user_nick;       // 사용자 이름
         ImageView movie_poster;   // 영화 포스터
         TextView movie_title;     // 영화 제목
@@ -48,10 +48,18 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
         TextView movie_recommend; // 영화 추천수
         TextView review_content;  // 리뷰내용
 
+
         public ViewHolder(View itemView){
             super(itemView);
 
             layout = itemView.findViewById(R.id.my_review1);
+            layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    reviewDialog.show();
+                }
+            });
+            user_image = itemView.findViewById(R.id.user_image);
             user_nick = itemView.findViewById(R.id.user_id);
             movie_poster = itemView.findViewById(R.id.movie_poster);
             movie_title = itemView.findViewById(R.id.movie_title);
@@ -79,10 +87,20 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull MyReviewAdapter.ViewHolder holder, int position) {
         ArrayList<String> items = itemList.get(position);
+        Bitmap image = urlImageToBitmap(items.get(1)); // 영화포스터 경로 Bitmap형식으로 변환
+        final String title = items.get(2);  // 영화 제목
 
         holder.user_nick.setText(items.get(0));
-        holder.movie_poster.setImageBitmap(urlImageToBitmap(items.get(1)));
-        holder.movie_title.setText(items.get(2));
+        holder.movie_poster.setImageBitmap(image);
+        holder.movie_poster.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MovieInfoActivity.class);
+                intent.putExtra("title", title); // 영화 제목 전달
+                context.startActivity(intent);
+            }
+        });
+        holder.movie_title.setText(title);
         holder.movie_year.setText(items.get(3));
         holder.movie_running.setText(items.get(4));
         holder.movie_country.setText(items.get(5));
@@ -98,7 +116,7 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
     }
 
     // DB에 저장된 영화 포스터 url로 이미지 지정하기
-    Bitmap urlImageToBitmap(String url) {
+    public Bitmap urlImageToBitmap(String url) {
         final String murl = url;
 
         // 안드로이드에서 네트워크와 관련된 작업을 할 때,

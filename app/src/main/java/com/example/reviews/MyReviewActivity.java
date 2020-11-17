@@ -29,20 +29,18 @@ import java.util.ArrayList;
 public class MyReviewActivity extends AppCompatActivity {
 
     String userID; // 로그인한 사용자
+
     // DB 값
     ArrayList<ArrayList<String>> arrayList;
     ArrayList<String> array;
+
     // 작성한 코멘트 RecyclerView
     private RecyclerView recyclerView;
     private MyReviewAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     // 작성한코멘트의 리뷰글
     LinearLayout layReview;
-
-    // 영화 포스터
-    ImageView poster;
-
-    private ReviewDetailDialog reviewDialog;  // 리뷰글 다이얼로그 클래스
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -60,8 +58,10 @@ public class MyReviewActivity extends AppCompatActivity {
 
         // mypage_review.xml의 RecyclerView 위젯
         recyclerView = (RecyclerView) findViewById(R.id.mypage_review_list);
+        recyclerView.setHasFixedSize(true);
+
         // LinearLayoutManager 사용
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         arrayList = new ArrayList<>();
@@ -78,7 +78,7 @@ public class MyReviewActivity extends AppCompatActivity {
                         JSONObject subJsonObject = jsonArray.getJSONObject(i);
 
                         array.add(userID);
-                        String poster = subJsonObject.getString("m_Title");
+                        String poster = subJsonObject.getString("m_Poster");
                         array.add(poster);
                         String title = subJsonObject.getString("m_Title");
                         array.add(title);
@@ -97,6 +97,10 @@ public class MyReviewActivity extends AppCompatActivity {
 
                         arrayList.add(array);
                     }
+
+                    adapter = new MyReviewAdapter(MyReviewActivity.this, arrayList);
+                    recyclerView.setAdapter(adapter);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -105,34 +109,6 @@ public class MyReviewActivity extends AppCompatActivity {
         MyReviewRequest myReviewRequest = new MyReviewRequest(userID, responseListener);
         RequestQueue queue = Volley.newRequestQueue(MyReviewActivity.this);
         queue.add(myReviewRequest);
-
-        adapter = new MyReviewAdapter(this, arrayList);
-        recyclerView.setAdapter(adapter);
-
-
-
-        // 다이얼로그 객체
-        reviewDialog = new ReviewDetailDialog(MyReviewActivity.this);
-        /*
-        // 리뷰 클릭시 리뷰 상세페이지로 넘어감
-        layReview = (LinearLayout) findViewById(R.id.my_review1);
-        layReview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                reviewDialog.show();
-            }
-        });
-
-        // 영화 포스터 클릭시 영화정보페이지로 넘어감
-        poster = (ImageView)findViewById(R.id.movie_poster);
-        poster.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent);
-            }
-        });
-         */
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);

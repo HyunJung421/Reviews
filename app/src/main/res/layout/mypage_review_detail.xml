@@ -25,6 +25,7 @@
 
             // 영화 제목
             <TextView
+                android:id="@+id/revdetail_movie_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="극한직업"
@@ -139,10 +140,11 @@
 
                 // 내가 부여한 평점
                 <TextView
+                    android:id="@+id/revdetail_movie_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:drawableLeft="@drawable/star_left_image_customise"
-                    android:layout_marginLeft="200dp"
+                    android:layout_marginLeft="170dp"
                     android:gravity="center_vertical"
                     android:text=" 4.0"
                     android:textColor="#000000"
@@ -253,7 +255,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="220dp"
+                    android:layout_marginLeft="190dp"
                     android:text="2020년 08월 10일"
                     android:textColor="#000000"/>
             </LinearLayout>
