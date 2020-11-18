@@ -30,7 +30,6 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
     public MyReviewAdapter(Context context, ArrayList<ArrayList<String>> itemList) {
         this.context = context;
         this.itemList = itemList;
-        reviewDialog = new ReviewDetailDialog(context);
     }
 
     // ViewHolder 클래스
@@ -53,9 +52,13 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
             super(itemView);
 
             layout = itemView.findViewById(R.id.my_review1);
-            layout.setOnClickListener(new View.OnClickListener() {
+            layout.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
+                    int pos = getAdapterPosition();  // 클릭 이벤트가 발생한 아이템 위치 알아내기
+                    ArrayList<String> items = itemList.get(pos);
+
+                    dialog(items);  // 다이얼로그 객체 생성 (하단에 메소드 정의되어 있음)
                     reviewDialog.show();
                 }
             });
@@ -154,5 +157,10 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    void dialog(ArrayList<String> items) {
+        // 다이얼로그 객체
+        reviewDialog = new ReviewDetailDialog(context, items);
     }
 }

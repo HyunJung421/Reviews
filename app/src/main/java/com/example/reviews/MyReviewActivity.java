@@ -77,23 +77,29 @@ public class MyReviewActivity extends AppCompatActivity {
                         array = new ArrayList<>();
                         JSONObject subJsonObject = jsonArray.getJSONObject(i);
 
-                        array.add(userID);
+                        array.add(userID);  // 사용자 아이디
                         String poster = subJsonObject.getString("m_Poster");
-                        array.add(poster);
+                        array.add(poster);  // 영화 포스터
                         String title = subJsonObject.getString("m_Title");
-                        array.add(title);
+                        array.add(title);  // 영화 제목
                         String year = subJsonObject.getString("m_Year");
-                        array.add(year);
+                        array.add(year);   // 영화 개봉연도
                         String running = subJsonObject.getString("m_RunningTime");
-                        array.add(running);
+                        array.add(running);  // 영화 시간
                         String country = subJsonObject.getString("m_Country");
-                        array.add(country);
+                        array.add(country);  // 영화 제작나라
                         String genre = subJsonObject.getString("m_Genre");
-                        array.add(genre);
+                        array.add(genre);  // 영화 장르
                         String count = subJsonObject.getString("m_Count");
-                        array.add(count);
+                        array.add(count);  // 영화 추천수
                         String revContent = subJsonObject.getString("revContent");
-                        array.add(revContent);
+                        array.add(revContent);  // 영화 리뷰글
+                        String rating = subJsonObject.getString("m_Rating");
+                        array.add(rating);  // 영화 평점
+                        String revDate = subJsonObject.getString("revDate");
+                        array.add(revDate);  // 리뷰글 작성일자
+                        String revPhoto = subJsonObject.getString("revPhoto");
+                        array.add(revPhoto);  // 리뷰글 첨부사진
 
                         arrayList.add(array);
                     }
