@@ -8,42 +8,37 @@
         android:layout_width="match_parent"
         android:layout_height="703dp"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:orientation="horizontal">
             //검색공간
             <EditText
+                android:id="@+id/search_field"
                 android:layout_width="340dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
                 android:hint="Search" />
+
             //검색클릭
             <ImageView
                 android:id="@+id/search_magnifier1"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
+                android:layout_width="64dp"
+                android:layout_height="37dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/main_icon_search" />
         </RelativeLayout>
 
-        <ScrollView
+        // 검색리스트
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_result_list"
             android:layout_width="match_parent"
-            android:layout_height="625dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp">
-            //검색기록
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="#999999"
-                android:dividerHeight="1dp">
-
-            </ListView>
-        </ScrollView>
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
     // 수평선
     <View
