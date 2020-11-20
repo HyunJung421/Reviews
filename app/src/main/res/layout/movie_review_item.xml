@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    // REVIEW 작성자 정보
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        // 작성자 이미지
+        <ImageView
+            android:id="@+id/movie_info_reviewer_image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/person_image"
+            android:scaleType="centerCrop"
+            style="?android:attr/borderlessButtonStyle" />
+        // 작성자 이름
+        <TextView
+            android:id="@+id/reviewer_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="물물물"
+            android:textSize="18dp"
+            android:textColor="#000000"/>
+        // 추천 수
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/reviewer_recommend"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawableLeft="@drawable/drawable_left_image_customise"
+                android:text="500"
+                android:textColor="#0000E1"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    // REVIEW 작성 내용
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        // 리뷰 내용
+        <TextView
+            android:id="@+id/reviewer_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="35dp"
+            android:text="진짜 뻥안치고 ㅈㄴ 웃겼다"
+            android:textSize="16dp"
+            android:textColor="#000000" />
+        // 수평선
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="407dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:background="#90CAF9" />
+    </LinearLayout>
+</LinearLayout>

@@ -14,7 +14,7 @@ public class ReviewSaveRequest extends StringRequest {
     final static private String URL = "http://3.34.44.58/RevWrite.php";
     private Map<String, String> map;
 
-    public ReviewSaveRequest(int m_ID, String userID, String revDate, String revContent, String revPhoto, Response.Listener<String> listener) {
+    public ReviewSaveRequest(int m_ID, String userID, String revDate, String revContent, String revPhoto, int revRecom, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
@@ -23,6 +23,7 @@ public class ReviewSaveRequest extends StringRequest {
         map.put("revDate", revDate);
         map.put("revContent", revContent);
         map.put("revPhoto", revPhoto);
+        map.put("revRecom", revPhoto+"");
     }
 
     @Override

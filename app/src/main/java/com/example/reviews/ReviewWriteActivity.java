@@ -186,6 +186,8 @@ public class ReviewWriteActivity extends AppCompatActivity {
 
                     // 첨부사진
                     final String revPhoto = "";
+                    // 리뷰추천수(형식상)
+                    final int revRecom = 0;
 
                     // 리뷰 DB에 저장하기
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -210,7 +212,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                     };
 
                     // 서버로 Volley를 이용해서 요청을 함
-                    ReviewSaveRequest reviewSaveRequest = new ReviewSaveRequest(mID, userID, revDate, revContent, revPhoto, responseListener);
+                    ReviewSaveRequest reviewSaveRequest = new ReviewSaveRequest(mID, userID, revDate, revContent, revPhoto, revRecom, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(ReviewWriteActivity.this);
                     queue.add(reviewSaveRequest);
                 }

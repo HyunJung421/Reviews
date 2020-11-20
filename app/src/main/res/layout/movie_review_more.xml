@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="703dp"
+        android:orientation="vertical" >
+
+        // java파일 : ReviewOrderActivity
+        // REVIEW 전체보기
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            // '극한직업' REVIEW 전체보기
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="극한직업"
+                android:textSize="28dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            // 수평선
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="#D3D3D3" />
+        </LinearLayout>
+
+        // 정렬방법 선택상자
+        <Spinner
+            android:id="@+id/order_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="603dp">
+
+            // REVIEW 목록 레이아웃
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                // 수평선
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="407dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="#90CAF9" />
+
+                // 리뷰 목록
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movie_review_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    // 수평선
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#D3D3D3" />
+    // 하단바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#333333"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/underbar_home"
+            android:src="@drawable/underbar_home2"
+            style="@style/under_bar" />
+        // 수직선
+        <View
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#D3D3D3"/>
+        <ImageButton
+            android:id="@+id/underbar_social"
+            android:src="@drawable/underbar_social2"
+            style="@style/under_bar" />
+        // 수직선
+        <View
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#D3D3D3"/>
+        <ImageButton
+            android:id="@+id/underbar_mypage"
+            android:src="@drawable/underbar_mypage2"
+            style="@style/under_bar" />
+    </LinearLayout>
+</LinearLayout>

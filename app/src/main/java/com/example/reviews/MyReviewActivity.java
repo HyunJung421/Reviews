@@ -1,6 +1,5 @@
 package com.example.reviews;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,11 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -22,7 +17,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 // 마이페이지 -> 작성한코멘트 목록 페이지 java 파일
@@ -30,7 +24,7 @@ public class MyReviewActivity extends AppCompatActivity {
 
     String userID; // 로그인한 사용자
 
-    // DB 값
+    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
     ArrayList<String> array;
 
@@ -38,9 +32,6 @@ public class MyReviewActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MyReviewAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-
-    // 작성한코멘트의 리뷰글
-    LinearLayout layReview;
 
     // 하단바 버튼
     ImageButton btnHome;
