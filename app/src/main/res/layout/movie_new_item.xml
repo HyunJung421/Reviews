@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/movie_new_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/movie_newlist_poster"
+            style="@style/movie_poster"
+            android:layout_width="109dp"
+            android:layout_height="127dp"
+            android:src="@drawable/social_movie2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center">
+
+            // 영화 제목
+            <TextView
+                android:id="@+id/movie_newlist_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="23dp"
+                android:text="나의 첫 번째 슈퍼스타"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            // 상영년도 〮 상영시간 〮 국가 〮 장르
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/movie_newlist_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="2020"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_running_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="113"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="분 | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="미국"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="코미디"/>
+            </LinearLayout>
+
+            // 감독
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="감독 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_director"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:text="니샤 가나트라" />
+            </LinearLayout>
+
+            // 평점
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="평점 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4.5"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" / 5.0"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            // 내용
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="내용 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/movie_newlist_plot"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:textSize="15dp"
+                    android:text="프로듀서를 꿈꾸는 매니저와 10년 전 히트곡으로 버티는 슈퍼스타.서로의 인생을 변화시킬 그들의 뮤직 프로젝트!"/>
+
+                <Button
+                    android:id="@+id/movie_newlist_btn_plot_more"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="더보기"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
+                // emulator로 실행했을 때 줄임표 표시가 보임.
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    // 수평선
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="#D3D3D3" />
+</LinearLayout>

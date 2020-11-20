@@ -62,9 +62,8 @@ public class MovieNewListActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
-        // DB에서 리뷰목록 가져오기
-        // m_Poster, m_Title, m_Year, m_Running, m_Country, m_Genre, m_Director, m_Rating, m_Plot 9개
 
+        // m_Poster, m_Title, m_Year, m_Running, m_Country, m_Genre, m_Director, m_Rating, m_Plot 9개
         // DB에 저장된 영화 정보 불러오기
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
@@ -90,7 +89,7 @@ public class MovieNewListActivity extends AppCompatActivity {
                         array.add(running);  // 영화 시간
 
                         String country = subJsonObject.getString("m_Country");
-                        array.add(country);  // 영화 제작나라
+                        array.add(country);  // 상영 국가
 
                         String genre = subJsonObject.getString("m_Genre");
                         array.add(genre);  // 영화 장르
