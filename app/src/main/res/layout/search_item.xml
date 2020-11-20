@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    // 수평선
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#D3D3D3" />
+
+    // 검색한 영화
+    <LinearLayout
+        android:id="@+id/search_movie1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal" >
+
+        //영화 포스터
+        <ImageButton
+            android:id="@+id/search_poster"
+            style="@style/movie_poster"
+            android:layout_width="109dp"
+            android:layout_height="127dp"
+            android:src="@drawable/movie_search1"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center">
+
+            // 영화 제목
+            <TextView
+                android:id="@+id/search_mName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="어벤져스"
+                android:textSize="23dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            // 상영년도 〮 상영시간 〮 국가 〮 장르
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/search_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2012"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/search_running_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="142"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="분 | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/search_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="미국"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/search_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="액션"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            // 감독
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="감독 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/search_director"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="조스 웨던"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            // 평점
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="평점 "
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/search_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3.5"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" / 5.0"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
