@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
@@ -10,14 +9,13 @@
         android:layout_height="703dp"
         android:orientation="vertical" >
 
-        //java파일 : MyReviewActivity
-        // 리뷰 코멘트
+        // 영화신작
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="작성한 코멘트"
+            android:text="영화 신작"
             android:textSize="28dp"
             android:textStyle="bold"/>
 
@@ -35,9 +33,21 @@
                 android:background="#D3D3D3" />
         </LinearLayout>
 
+        // NEW
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="NEW"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#90CAF9"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="7dp"/>
+
         // 리사이클러뷰
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mypage_review_list"
+            android:id="@+id/movie_new_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"

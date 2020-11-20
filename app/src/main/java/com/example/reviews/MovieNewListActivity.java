@@ -1,20 +1,46 @@
 package com.example.reviews;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 
 // 영화 신작 xml에 대한 java 파일
 public class MovieNewListActivity extends AppCompatActivity {
 
-    ImageButton newMovie1,newMovie2,newMovie3,newMovie4;
-    Button movie_plot_more1,movie_plot_more2,movie_plot_more3,movie_plot_more4;
-    private MoviePlotDialog plotDialog;  // 영화내용 다이얼로그 클래스
+    // DB 값
+    ArrayList<ArrayList<String>> arrayList;
+    ArrayList<String> array;
+
+    // 영화 신작 RecyclerView
+    private RecyclerView recyclerView;
+    private MovieNewListAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -24,87 +50,75 @@ public class MovieNewListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.movie_new_list);
+        setContentView(R.layout.movie_new_layout);
 
-        // 다이얼로그 객체
-        //plotDialog = new MoviePlotDialog(MovieNewListActivity.this);
+        // movie_new_layout.xml의 RecyclerView 위젯
+        recyclerView = (RecyclerView) findViewById(R.id.movie_new_list);
+        recyclerView.setHasFixedSize(true);
 
-        // 첫번째 영화 포스터 등록 및 리스너 구현
-        newMovie1 = (ImageButton) findViewById(R.id.movie_newlist1);
-        newMovie1.setOnClickListener(new View.OnClickListener() {
+        // LinearLayoutManager 사용
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        arrayList = new ArrayList<>();
+
+        // DB에서 리뷰목록 가져오기
+        // m_Poster, m_Title, m_Year, m_Running, m_Country, m_Genre, m_Director, m_Rating, m_Plot 9개
+
+        // DB에 저장된 영화 정보 불러오기
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+            public void onResponse(String result) {
+                try {
 
-        // 첫번째 영화 더보기 클릭 리스너 구현
-        movie_plot_more1 = (Button) findViewById(R.id.movie_info_btn_plot_more1);
-        movie_plot_more1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plotDialog.show();
-            }
-        });
+                    JSONArray jsonArray = new JSONArray(result);
 
-        // 두번째 영화 포스터 등록 및 리스너 구현
-        newMovie2 = (ImageButton) findViewById(R.id.movie_newlist2);
-        newMovie2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+                    for(int i=0; i<jsonArray.length(); i++) {
+                        array = new ArrayList<>();
+                        JSONObject subJsonObject = jsonArray.getJSONObject(i);
 
-        // 두번째 영화 더보기 클릭 리스너 구현
-        movie_plot_more2 = (Button) findViewById(R.id.movie_info_btn_plot_more2);
-        movie_plot_more2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plotDialog.show();
-            }
-        });
+                        String poster = subJsonObject.getString("m_Poster");
+                        array.add(poster);  // 영화 포스터
 
-        // 세번째 영화 포스터 등록 및 리스너 구현
-        newMovie3 = (ImageButton) findViewById(R.id.movie_newlist3);
-        newMovie3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+                        String title = subJsonObject.getString("m_Title");
+                        array.add(title);  // 영화 제목
 
-        // 세번째 영화 더보기 클릭 리스너 구현
-        movie_plot_more3 = (Button) findViewById(R.id.movie_info_btn_plot_more3);
-        movie_plot_more3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plotDialog.show();
-            }
-        });
+                        String year = subJsonObject.getString("m_Year");
+                        array.add(year);   // 영화 개봉연도
 
-        // 네번째 영화 포스터 등록 및 리스너 구현
-        newMovie4 = (ImageButton) findViewById(R.id.movie_newlist4);
-        newMovie4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+                        String running = subJsonObject.getString("m_RunningTime");
+                        array.add(running);  // 영화 시간
 
-        // 네번째 영화 더보기 클릭 리스너 구현
-        movie_plot_more4 = (Button) findViewById(R.id.movie_info_btn_plot_more4);
-        movie_plot_more4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plotDialog.show();
-            }
-        });
+                        String country = subJsonObject.getString("m_Country");
+                        array.add(country);  // 영화 제작나라
 
+                        String genre = subJsonObject.getString("m_Genre");
+                        array.add(genre);  // 영화 장르
+
+                        String director = subJsonObject.getString("m_Director");
+                        array.add(director);  // 영화 감독
+
+                        String rating = subJsonObject.getString("m_Rating");
+                        array.add(rating);  // 영화 평점
+
+                        String plot = subJsonObject.getString("m_Plot");
+                        array.add(plot);  // 영화 내용
+
+                        arrayList.add(array);
+                    }
+
+                    adapter = new MovieNewListAdapter(MovieNewListActivity.this, arrayList);
+                    recyclerView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        MovieNewListRequest movieNewListRequest = new MovieNewListRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MovieNewListActivity.this);
+        queue.add(movieNewListRequest);
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);

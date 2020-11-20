@@ -2,8 +2,6 @@ package com.example.reviews;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -33,20 +31,10 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 
 // 영화상세페이지 java 파일
 public class MovieInfoActivity extends AppCompatActivity {
     Bitmap bitmap;
-
-    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
-    ArrayList<ArrayList<String>> arrayList;
-    ArrayList<String> array;
-
-    // MovieInfo 페이지 리뷰목록 RecyclerView
-    private RecyclerView recyclerView;
-    private MovieReviewAdapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
 
     // 영화 정보
     ImageView mPoster;
@@ -79,34 +67,22 @@ public class MovieInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final String title = intent.getExtras().getString("title");
 
-        mPoster = (ImageView) findViewById(R.id.movie_info_poster);
-        mTitle = (TextView) findViewById(R.id.movie_info_title);
-        mYear = (TextView) findViewById(R.id.movie_info_year1);
-        mRunningTime = (TextView) findViewById(R.id.movie_info_running_time1);
-        mCountry = (TextView) findViewById(R.id.movie_info_country1);
-        mGenre = (TextView) findViewById(R.id.movie_info_genre1);
-        mDirector = (TextView) findViewById(R.id.movie_info_director1);
-        mRating = (TextView) findViewById(R.id.movie_info_rating1);
-        mPlot = (TextView) findViewById(R.id.movie_info_plot);
-
-        // movie_info.xml의 RecyclerView 위젯
-        recyclerView = (RecyclerView) findViewById(R.id.movie_review_list);
-        recyclerView.setHasFixedSize(true);
-
-        // LinearLayoutManager 사용
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        arrayList = new ArrayList<>();
+        mPoster = (ImageView)findViewById(R.id.movie_info_poster);
+        mTitle = (TextView)findViewById(R.id.movie_info_title);
+        mYear = (TextView)findViewById(R.id.movie_info_year1);
+        mRunningTime = (TextView)findViewById(R.id.movie_info_running_time1);
+        mCountry = (TextView)findViewById(R.id.movie_info_country1);
+        mGenre = (TextView)findViewById(R.id.movie_info_genre1);
+        mDirector = (TextView)findViewById(R.id.movie_info_director1);
+        mRating = (TextView)findViewById(R.id.movie_info_rating1);
+        mPlot = (TextView)findViewById(R.id.movie_info_plot);
 
         // DB에 저장된 영화 정보 불러오기
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
-            public void onResponse(String result) {
+            public void onResponse(String response) {
                 try {
-                    JSONArray jsonArray = new JSONArray(result);
-                    // 영화 정보 출력
-                    JSONObject jsonObject = jsonArray.getJSONObject(0);
+                    JSONObject jsonObject = new JSONObject(response);
                     boolean success = jsonObject.getBoolean("success");
                     if (success) { // 영화 정보를 불러온 경우
                         String moTitle = jsonObject.getString("m_Title");
@@ -144,28 +120,8 @@ public class MovieInfoActivity extends AppCompatActivity {
                                 .setPositiveButton("확인", null)
                                 .create();
                         dialog.show();
-
                         return;
                     }
-
-                    // 해당영화의 리뷰 4개만 출력
-                    for(int i=1; i<5; i++) {
-                        array = new ArrayList<>();
-                        JSONObject subJsonObject = jsonArray.getJSONObject(i);
-
-                        String userID = subJsonObject.getString("userID");
-                        array.add(userID);  // 사용자 아이디
-                        String revRecom = subJsonObject.getString("revRecom");
-                        array.add(revRecom);  // 리뷰글 추천수
-                        String revContent = subJsonObject.getString("revContent");
-                        array.add(revContent);  // 영화 리뷰글
-
-                        arrayList.add(array);
-                    }
-
-                    adapter = new MovieReviewAdapter(MovieInfoActivity.this, arrayList);
-                    recyclerView.setAdapter(adapter);
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -177,7 +133,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         queue.add(movieInfoRequest);
 
         // 내용 더보기 버튼 등록 및 리스너 구현
-        btnPlotMore = (Button) findViewById(R.id.movie_info_btn_plot_more);
+        btnPlotMore = (Button)findViewById(R.id.movie_info_btn_plot_more);
         btnPlotMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,13 +141,12 @@ public class MovieInfoActivity extends AppCompatActivity {
             }
         });
 
-        // 리뷰 더보기 버튼 등록 및 리스너 구현
+        // 더보기 버튼 등록 및 리스너 구현
         btnReviewMore = (Button)findViewById(R.id.movie_info_btn_review_more);
         btnReviewMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ReviewOrderActivity.class);
-                intent.putExtra("title", title);
                 startActivity(intent); // 액티비티 띄우기
 
             }
