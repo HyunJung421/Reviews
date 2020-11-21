@@ -56,6 +56,8 @@ public class MyReviewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         arrayList = new ArrayList<>();
+
+
         // DB에서 리뷰목록 가져오기
         // userID, m_poster, m_title, m_info(4개), 추천수, review_content
         Response.Listener<String> responseListener = new Response.Listener<String>() {

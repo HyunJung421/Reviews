@@ -34,6 +34,7 @@ public class MovieNewListAdapter extends RecyclerView.Adapter<MovieNewListAdapte
         this.itemList = itemList;
     }
 
+    // ViewHolder 클래스
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView movie_poster;   // 영화 포스터
@@ -58,7 +59,7 @@ public class MovieNewListAdapter extends RecyclerView.Adapter<MovieNewListAdapte
                     ArrayList<String> items = itemList.get(pos);
 
                     dialog(items);  // 다이얼로그 객체 생성 (하단에 메소드 정의되어 있음)
-                    moviePlotDialog.show();
+                    moviePlotDialog.show();     // 영화 리뷰 더보기 다이얼로그
                 }
             });
 
@@ -161,7 +162,8 @@ public class MovieNewListAdapter extends RecyclerView.Adapter<MovieNewListAdapte
     }
 
     void dialog(ArrayList<String> items) {
-        // 다이얼로그 객체
+        // MoviePlotDialog.java -> 매개변수 3개
+        // 다이얼로그 객체 (context, m_title, m_plot)
         moviePlotDialog = new MoviePlotDialog(context, items.get(1), items.get(8));
     }
 }

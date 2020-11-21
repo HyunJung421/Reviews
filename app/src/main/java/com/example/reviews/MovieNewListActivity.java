@@ -32,7 +32,7 @@ import java.util.ArrayList;
 // 영화 신작 xml에 대한 java 파일
 public class MovieNewListActivity extends AppCompatActivity {
 
-    // DB 값
+    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
     ArrayList<String> array;
 
@@ -51,6 +51,7 @@ public class MovieNewListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_new_layout);
+
 
         // movie_new_layout.xml의 RecyclerView 위젯
         recyclerView = (RecyclerView) findViewById(R.id.movie_new_list);

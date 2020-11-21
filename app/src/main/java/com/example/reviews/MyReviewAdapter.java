@@ -103,6 +103,7 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
                 context.startActivity(intent);
             }
         });
+
         holder.movie_title.setText(title);
         holder.movie_year.setText(items.get(3));
         holder.movie_running.setText(items.get(4));
