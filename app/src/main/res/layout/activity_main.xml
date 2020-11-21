@@ -241,17 +241,17 @@
                                     android:orientation="horizontal">
                                     <TextView
                                         android:id="@+id/movie_newlist_title1"
-                                        android:text="국제수사"
+                                        android:text="삼진그룹\n영어토익반"
                                         style="@style/movie_title" />
 
                                     <TextView
                                         android:id="@+id/movie_newlist_title2"
-                                        android:text="인셉션"
+                                        android:text="테넷"
                                         style="@style/movie_title" />
 
                                     <TextView
                                         android:id="@+id/movie_newlist_title3"
-                                        android:text="남매의 여름밤"
+                                        android:text="오케이 마담"
                                         style="@style/movie_title" />
                                 </LinearLayout>
                             </LinearLayout>
