@@ -65,6 +65,10 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (key.equals("")) {
+                    key = editSearch.getText().toString();
+                }
+
+                else {
                     // DB에서 저장된 영화목록 가져오기
                     // m_poster, m_title, m_info(4개), 평점
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -116,10 +120,6 @@ public class SearchActivity extends AppCompatActivity {
                     SearchRequest searchRequest = new SearchRequest(key, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(SearchActivity.this);
                     queue.add(searchRequest);
-                }
-
-                else {
-                    key = editSearch.getText().toString();
                 }
             }
         });
