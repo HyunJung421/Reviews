@@ -27,9 +27,11 @@
             <ImageButton
                 android:id="@+id/search_magnifier1"
                 android:layout_width="64dp"
-                android:layout_height="37dp"
+                android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/main_icon_search" />
         </RelativeLayout>
 

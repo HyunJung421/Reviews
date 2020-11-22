@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,8 @@ public class SearchActivity extends AppCompatActivity {
     // 검색돋보기
     ImageView btnsearchmag1;
     EditText editSearch;
+
+    private AlertDialog dialog;
 
     // 검색할 key
     String key;
@@ -68,6 +71,11 @@ public class SearchActivity extends AppCompatActivity {
             public void onClick(View v) {
                 key = editSearch.getText().toString();
                 if (key.equals("")) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(SearchActivity.this);
+                    dialog = builder.setMessage("영화정보를 입력하세요")
+                            .setPositiveButton("확인", null)
+                            .create();
+                    dialog.show();;
                     editSearch.requestFocus();
                 }
                 else {
