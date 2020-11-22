@@ -15,6 +15,8 @@ public class SocialActivity extends AppCompatActivity {
 
     // 추천 영화 제목
     TextView movieTitle1;
+    TextView movieTitle2;
+    TextView movieTitle3;
 
     // 추천 영화 포스터
     ImageButton socialMovie1;
@@ -35,11 +37,11 @@ public class SocialActivity extends AppCompatActivity {
         movieTitle1 = (TextView)findViewById(R.id.movie_info_title1);
         final String title1 = movieTitle1.getText().toString(); // 첫번째 영화 제목
 
-        movieTitle1 = (TextView)findViewById(R.id.movie_info_title2);
-        final String title2 = movieTitle1.getText().toString(); // 두번째 영화 제목
+        movieTitle2 = (TextView)findViewById(R.id.movie_info_title2);
+        final String title2 = movieTitle2.getText().toString(); // 두번째 영화 제목
 
-        movieTitle1 = (TextView)findViewById(R.id.movie_info_title3);
-        final String title3 = movieTitle1.getText().toString(); // 세번째 영화 제목
+        movieTitle3 = (TextView)findViewById(R.id.movie_info_title3);
+        final String title3 = movieTitle3.getText().toString(); // 세번째 영화 제목
 
         // 추천 첫번째 영화 포스터 등록 및 리스너 구현
         socialMovie1 = (ImageButton)findViewById(R.id.social_movie1);

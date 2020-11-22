@@ -28,7 +28,7 @@
                     android:id="@+id/movie_info_poster"
                     android:layout_width="150dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/social_movie1"
+                    android:src="@drawable/btn_gray_round"
                     android:scaleType="fitXY"/>
             </LinearLayout>
 
@@ -44,7 +44,7 @@
                     android:id="@+id/movie_info_title"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="극한직업"
+                    android:text=""
                     android:textSize="23dp"
                     android:textColor="#000000"
                     android:textStyle="bold"/>
@@ -59,7 +59,7 @@
                         android:id="@+id/movie_info_year1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2019"
+                        android:text=""
                         android:textSize="15dp" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                         android:id="@+id/movie_info_running_time1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="111"
+                        android:text=""
                         android:textSize="15dp" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                         android:id="@+id/movie_info_country1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="한국"
+                        android:text=""
                         android:textSize="15dp" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
                         android:id="@+id/movie_info_genre1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="코미디"
+                        android:text=""
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -112,7 +112,7 @@
                         android:id="@+id/movie_info_director1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="이병헌"
+                        android:text=""
                         android:textSize="15dp"/>
                 </LinearLayout>
 
@@ -131,7 +131,7 @@
                         android:id="@+id/movie_info_rating1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="4.5"
+                        android:text=""
                         android:textSize="15dp" />
 
                     <TextView
@@ -159,7 +159,7 @@
                         android:layout_height="match_parent"
                         android:maxLines="4"
                         android:ellipsize="end"
-                        android:text="불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반! 더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 번죄조직의 국내 마약 밀반임"
+                        android:text=""
                         android:textSize="15dp"/>
                     // ellipsize는 maxLines을 넘는 글을 줄임표로 표시하는 속성임.
                     // emulator로 실행했을 때 줄임표 표시가 보임.

@@ -154,138 +154,170 @@ public class MainActivity extends AppCompatActivity {
 
 
         // 탭호스트 구현
-        TabHost tabHost1 = (TabHost)findViewById(R.id.tabHost1);
-        tabHost1.setup();
+        final TabHost tabHost = (TabHost)findViewById(R.id.tabHost1);
+        tabHost.setup();
 
         // 첫번째 탭
-        TabHost.TabSpec ts1 = tabHost1.newTabSpec("movie_rating_ranking");
+        TabHost.TabSpec ts1 = tabHost.newTabSpec("movie_rating_ranking");
         ts1.setContent(R.id.content1);
         ts1.setIndicator("영화평점순위");
-        tabHost1.addTab(ts1);
+        tabHost.addTab(ts1);
+
+        // 두번째 탭
+        TabHost.TabSpec ts2 = tabHost.newTabSpec("movie_recommend_ranking");
+        ts2.setContent(R.id.content2);
+        ts2.setIndicator("영화추천순위");
+        tabHost.addTab(ts2);
+
+        // 세번째 탭
+        TabHost.TabSpec ts3 = tabHost.newTabSpec("movie_new_ranking");
+        ts3.setContent(R.id.content3);
+        ts3.setIndicator("영화신작");
+        tabHost.addTab(ts3);
 
         // 평점순위영화 제목
         movieRatingTitle1 = (TextView)findViewById(R.id.movie_rating_title1);
-        final String titleR1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
         movieRatingTitle2 = (TextView)findViewById(R.id.movie_rating_title2);
-        final String titleR2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
         movieRatingTitle3 = (TextView)findViewById(R.id.movie_rating_title3);
-        final String titleR3 = movieRatingTitle3.getText().toString(); // 세번째 영화 제목
-
-        movie_rating1 = (ImageView)findViewById(R.id.movie_rating1);
-        movie_rating1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleR1); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        movie_rating2 = (ImageView)findViewById(R.id.movie_rating2);
-        movie_rating2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleR2); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        movie_rating3 = (ImageView)findViewById(R.id.movie_rating3);
-        movie_rating3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleR3); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        // 두번째 탭
-        TabHost.TabSpec ts2 = tabHost1.newTabSpec("movie_recommend_ranking");
-        ts2.setContent(R.id.content2);
-        ts2.setIndicator("영화추천순위");
-        tabHost1.addTab(ts2);
 
         // 추천순위영화 제목
         movieRecTitle1 = (TextView)findViewById(R.id.movie_recommend_title1);
-        final String titleRec1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
         movieRecTitle2 = (TextView)findViewById(R.id.movie_recommend_title2);
-        final String titleRec2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
         movieRecTitle3 = (TextView)findViewById(R.id.movie_recommend_title3);
-        final String titleRec3 = movieRatingTitle3.getText().toString(); // 세번째 영화 제목
-
-        movie_recommend1 = (ImageView)findViewById(R.id.movie_recommend1);
-        movie_recommend1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleRec1); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        movie_recommend2 = (ImageView)findViewById(R.id.movie_recommend2);
-        movie_recommend2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleRec2); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        movie_recommend3 = (ImageView)findViewById(R.id.movie_recommend3);
-        movie_recommend3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleRec3); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
-
-        // 세번째 탭
-        TabHost.TabSpec ts3 = tabHost1.newTabSpec("movie_new_ranking");
-        ts3.setContent(R.id.content3);
-        ts3.setIndicator("영화신작");
-        tabHost1.addTab(ts3);
 
         // 신작영화 제목
         movieNewTitle1 = (TextView)findViewById(R.id.movie_newlist_title1);
-        final String titleNew1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
         movieNewTitle2 = (TextView)findViewById(R.id.movie_newlist_title2);
-        final String titleNew2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
         movieNewTitle3 = (TextView)findViewById(R.id.movie_newlist_title3);
-        final String titleNew3 = movieRatingTitle3.getText().toString(); // 세번째 영화 제목
 
-        movie_new1 = (ImageView)findViewById(R.id.movie_new1);
-        movie_new1.setOnClickListener(new View.OnClickListener() {
+        // 탭이 변경될 때 발생하는 이벤트
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleNew1); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
+            public void onTabChanged(String tabId) {
+                if(tabId=="movie_rating_ranking"){
+                    // 평점순위영화 제목
+                    movieRatingTitle1.setText("극한직업"); // 첫번째 영화 제목 셋팅
+                    final String titleR1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
 
-        movie_new2 = (ImageView)findViewById(R.id.movie_new2);
-        movie_new2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleNew2); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
+                    movieRatingTitle2.setText("나의 첫번째 슈퍼스타"); // 두번째 영화 제목 셋팅
+                    final String titleR2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
 
-        movie_new3 = (ImageView)findViewById(R.id.movie_new3);
-        movie_new3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", titleNew3); // 영화 제목 전달
-                startActivity(intent);
+                    movieRatingTitle3.setText("온워드:단 하루의 기적"); // 세번째 영화 제목 셋팅
+                    final String titleR3 = movieRatingTitle3.getText().toString(); // 세번째 영화 제목
+
+                    movie_rating1 = (ImageView)findViewById(R.id.movie_rating1);
+                    movie_rating1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleR1); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_rating2 = (ImageView)findViewById(R.id.movie_rating2);
+                    movie_rating2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleR2); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_rating3 = (ImageView)findViewById(R.id.movie_rating3);
+                    movie_rating3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleR3); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+                }
+                else if(tabId=="movie_recommend_ranking"){
+                    // 추천순위영화 제목
+                    movieRatingTitle1.setText("극한직업"); // 첫번째 영화 제목 셋팅
+                    final String titleRec1 = movieNewTitle1.getText().toString(); // 첫번째 영화 제목
+
+                    movieRatingTitle2.setText("나의 첫번째 슈퍼스타"); // 두번째 영화 제목 셋팅
+                    final String titleRec2 = movieNewTitle1.getText().toString(); // 두번째 영화 제목
+
+                    movieRatingTitle3.setText("온워드:단 하루의 기적"); // 세번째 영화 제목 셋팅
+                    final String titleRec3 = movieNewTitle1.getText().toString(); // 세번째 영화 제목
+
+                    movie_recommend1 = (ImageView)findViewById(R.id.movie_recommend1);
+                    movie_recommend1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleRec1); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_recommend2 = (ImageView)findViewById(R.id.movie_recommend2);
+                    movie_recommend2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleRec2); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_recommend3 = (ImageView)findViewById(R.id.movie_recommend3);
+                    movie_recommend3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleRec3); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+                }
+                else {
+                    // 신작영화 제목
+                    movieRatingTitle1.setText("삼진그룹 영어토익반"); // 첫번째 영화 제목 셋팅
+                    final String titleNew1 = movieNewTitle1.getText().toString(); // 첫번째 영화 제목
+
+                    movieRatingTitle2.setText("테넷"); // 두번째 영화 제목 셋팅
+                    final String titleNew2 = movieNewTitle2.getText().toString(); // 두번째 영화 제목
+
+                    movieRatingTitle3.setText("오케이 마담"); // 세번째 영화 제목 셋팅
+                    final String titleNew3 = movieNewTitle3.getText().toString(); // 세번째 영화 제목
+
+                    movie_new1 = (ImageView)findViewById(R.id.movie_new1);
+                    movie_new1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleNew1); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_new2 = (ImageView)findViewById(R.id.movie_new2);
+                    movie_new2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleNew2); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+
+                    movie_new3 = (ImageView)findViewById(R.id.movie_new3);
+                    movie_new3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                            intent.putExtra("title", titleNew3); // 영화 제목 전달
+                            startActivity(intent);
+                        }
+                    });
+                }
+
             }
         });
 

@@ -25,6 +25,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -93,9 +94,11 @@ public class ReviewWriteActivity extends AppCompatActivity {
         // DB에 저장된 영화 정보 불러오기
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String result) {
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = new JSONArray(result);
+                    // 영화 정보 출력
+                    JSONObject jsonObject = jsonArray.getJSONObject(0);
                     boolean success = jsonObject.getBoolean("success");
                     if (success) { // 영화 정보를 불러온 경우
                         mID = jsonObject.getInt("m_ID");
