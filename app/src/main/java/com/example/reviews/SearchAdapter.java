@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,12 +20,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class SearchAdater extends RecyclerView.Adapter<SearchAdater.ViewHolder> {
+public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
     private ArrayList<ArrayList<String>> itemList;
     private Context context;
     private Bitmap bitmap;
 
-    public SearchAdater(Context context, ArrayList<ArrayList<String>> itemList) {
+    public SearchAdapter(Context context, ArrayList<ArrayList<String>> itemList) {
         this.context = context;
         this.itemList = itemList;
     }
@@ -62,18 +61,18 @@ public class SearchAdater extends RecyclerView.Adapter<SearchAdater.ViewHolder> 
     // ViewHolder가 생성되는 함수
     // ViewHolder란 View 객체를 기억하고 있을 객체
     @Override
-    public SearchAdater.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.search_item, parent, false);
-        SearchAdater.ViewHolder viewHolder = new SearchAdater.ViewHolder(view);
+        SearchAdapter.ViewHolder viewHolder = new SearchAdapter.ViewHolder(view);
         return viewHolder;
     }
 
     // ViewHolder에 데이터를 바인딩(할당) 해주는 함수
     @Override
-    public void onBindViewHolder(@NonNull SearchAdater.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, int position) {
         ArrayList<String> items = itemList.get(position);
-        Bitmap image = urlImageToBitmap(items.get(1)); // 영화포스터 경로 Bitmap형식으로 변환
-        final String title = items.get(2);  // 영화 제목
+        Bitmap image = urlImageToBitmap(items.get(0)); // 영화포스터 경로 Bitmap형식으로 변환
+        final String title = items.get(1);  // 영화 제목
 
         holder.movie_poster.setImageBitmap(image);
         holder.movie_poster.setOnClickListener(new View.OnClickListener() {
@@ -85,12 +84,12 @@ public class SearchAdater extends RecyclerView.Adapter<SearchAdater.ViewHolder> 
             }
         });
         holder.movie_title.setText(title);
-        holder.movie_year.setText(items.get(3));
-        holder.movie_running.setText(items.get(4));
-        holder.movie_country.setText(items.get(5));
-        holder.movie_genre.setText(items.get(6));
-        holder.movie_director.setText(items.get(7));
-        holder.movie_rating.setText(items.get(8));
+        holder.movie_year.setText(items.get(2));
+        holder.movie_running.setText(items.get(3));
+        holder.movie_country.setText(items.get(4));
+        holder.movie_genre.setText(items.get(5));
+        holder.movie_director.setText(items.get(6));
+        holder.movie_rating.setText(items.get(7));
     }
 
     // 화면에 뿌려질 데이터의 전체 길이를 리턴
