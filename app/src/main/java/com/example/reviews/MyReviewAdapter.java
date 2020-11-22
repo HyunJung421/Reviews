@@ -74,7 +74,6 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
             review_content = itemView.findViewById(R.id.review_content);
 
         }
-
     }
 
     // ViewHolder가 생성되는 함수

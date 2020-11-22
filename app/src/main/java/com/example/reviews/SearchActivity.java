@@ -49,6 +49,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_layout);
 
+        editSearch = (EditText)findViewById(R.id.search_field);
         // search_layout.xml의 RecyclerView 위젯
         recyclerView = (RecyclerView) findViewById(R.id.search_result_list);
         recyclerView.setHasFixedSize(true);
@@ -59,18 +60,20 @@ public class SearchActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
+
         // 돋보기 구현
         btnsearchmag1 = (ImageView)findViewById(R.id.search_magnifier1);
         btnsearchmag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                key = editSearch.getText().toString();
                 if (key.equals("")) {
-                    key = editSearch.getText().toString();
+                    editSearch.requestFocus();
                 }
-
                 else {
+                    key = editSearch.getText().toString();
+
                     // DB에서 저장된 영화목록 가져오기
-                    // m_poster, m_title, m_info(4개), 평점
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
                         public void onResponse(String result) {

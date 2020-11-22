@@ -40,16 +40,6 @@ public class MyContentActivity extends AppCompatActivity {
             }
         });
 
-        myreview = (TextView)findViewById(R.id.my_reviews);
-        myreview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MyReviewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
