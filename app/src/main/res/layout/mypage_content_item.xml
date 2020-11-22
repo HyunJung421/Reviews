@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 추천한 코멘트 리스트뷰 아이템 디자인 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_review1"
+    style="@style/mypage_content_layout">
+
+    // 내 정보
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        // 내 이미지
+        <ImageView
+            android:id="@+id/user_image"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/person_image" />
+
+        // 내 이름
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="공주현정"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    // 추천한 컨텐츠 정보
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        //영화 포스터
+        <ImageView
+            android:id="@+id/movie_content_poster"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/social_movie1" />
+
+        // 영화 정보
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center" >
+
+            // 영화 제목
+            <TextView
+                android:id="@+id/movie_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="극한직업"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            // 상영년도 〮상영시간 〮 국가 〮 장르
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp" >
+
+                <TextView
+                    android:id="@+id/movie_content_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/movie_content_running_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="분 | "
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/movie_content_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한국"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/movie_content_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="코미디"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                // 평점
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/star_left_image_customise"
+                    android:text=" 4.5"
+                    android:textSize="13dp" />
+
+                // 추천 수
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:text=" 9,857"
+                    android:textColor="#7C7979"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -64,10 +64,8 @@ public class SearchActivity extends AppCompatActivity {
         btnsearchmag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
-
                 if (key.equals("")) {
-                    // DB에서 리뷰목록 가져오기
+                    // DB에서 저장된 영화목록 가져오기
                     // m_poster, m_title, m_info(4개), 평점
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
