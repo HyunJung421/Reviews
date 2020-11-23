@@ -24,6 +24,14 @@ import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity {
 
+    //뒤로가기 버튼 클릭시 메인화면으로
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent); // 액티비티 띄우기
+    }
+
     // 검색돋보기
     ImageView btnsearchmag1;
     EditText editSearch;
@@ -118,7 +126,6 @@ public class SearchActivity extends AppCompatActivity {
 
                                     arrayList.add(array);
                                 }
-
                                 adapter = new SearchAdapter(SearchActivity.this, arrayList);
                                 recyclerView.setAdapter(adapter);
 
