@@ -38,9 +38,9 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:drawableLeft="@drawable/drawable_left_image_customise"
+                android:drawableLeft="@drawable/unlike_left_image_customise"
                 android:text="500"
-                android:textColor="#0000E1"
+                android:textColor="#999999"
                 android:textSize="13dp" />
         </LinearLayout>
     </LinearLayout>

@@ -69,9 +69,6 @@ public class SearchActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        arrayList = new ArrayList<>();
-
-
         // 돋보기 구현
         btnsearchmag1 = (ImageView)findViewById(R.id.search_magnifier1);
         btnsearchmag1.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +94,7 @@ public class SearchActivity extends AppCompatActivity {
                                 JSONArray jsonArray = new JSONArray(result);
 
                                 for (int i = 0; i < jsonArray.length(); i++) {
+                                    arrayList = new ArrayList<>();
                                     array = new ArrayList<>();
                                     JSONObject subJsonObject = jsonArray.getJSONObject(i);
 

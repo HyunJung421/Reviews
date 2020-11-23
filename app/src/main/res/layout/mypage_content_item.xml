@@ -26,12 +26,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="공주현정"
+            android:text="깜찍유림"
             android:textColor="#000000"
             android:textSize="15dp" />
     </LinearLayout>
 
-    // 추천한 컨텐츠 정보
+    // 내가 작성한 리뷰
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
 
         //영화 포스터
         <ImageView
-            android:id="@+id/movie_content_poster"
+            android:id="@+id/movie_poster"
             android:layout_width="100dp"
             android:layout_height="130dp"
             android:scaleType="fitXY"
@@ -55,7 +55,7 @@
 
             // 영화 제목
             <TextView
-                android:id="@+id/movie_content_title"
+                android:id="@+id/movie_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="극한직업"
@@ -63,7 +63,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
-            // 상영년도 〮상영시간 〮 국가 〮 장르
+            // 상영년도 〮 상영시간 〮 국가 〮 장르
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 android:layout_marginTop="3dp" >
 
                 <TextView
-                    android:id="@+id/movie_content_year"
+                    android:id="@+id/movie_year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019"
@@ -84,7 +84,7 @@
                     android:textSize="13dp" />
 
                 <TextView
-                    android:id="@+id/movie_content_running_time"
+                    android:id="@+id/movie_running_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="111"
@@ -97,7 +97,7 @@
                     android:textSize="13dp" />
 
                 <TextView
-                    android:id="@+id/movie_content_country"
+                    android:id="@+id/movie_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="한국"
@@ -110,37 +110,34 @@
                     android:textSize="13dp" />
 
                 <TextView
-                    android:id="@+id/movie_content_genre"
+                    android:id="@+id/movie_genre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="코미디"
                     android:textSize="13dp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            // 추천 수
+            <TextView
+                android:id="@+id/movie_recommend"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/unlike_left_image_customise"
+                android:text=" 17"
+                android:textColor="#7C7979"
+                android:textSize="13dp"
+                android:textStyle="bold" />
 
-                // 평점
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:drawableLeft="@drawable/star_left_image_customise"
-                    android:text=" 4.5"
-                    android:textSize="13dp" />
-
-                // 추천 수
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
-                    android:text=" 9,857"
-                    android:textColor="#7C7979"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            // 내용
+            <TextView
+                android:id="@+id/review_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                android:textColor="#000000"
+                android:textSize="14dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

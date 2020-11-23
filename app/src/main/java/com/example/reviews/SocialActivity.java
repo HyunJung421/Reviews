@@ -33,7 +33,9 @@ public class SocialActivity extends AppCompatActivity {
     ImageButton btnSocial;
     ImageButton btnMypage;
 
+    // 좋아요 여부 저장
     boolean likeStste = false;
+    // 좋아요 증가치
     int likeCount = 1;
 
     @Override
@@ -118,104 +120,73 @@ public class SocialActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (likeStste) {
-                    decrLikeCount();
+                    decrLikeCount(social_recommendation1);
                 } else {
-                    incrLikeCount();
+                    incrLikeCount(social_recommendation1);
                 }
                 likeStste = !likeStste;
             }
-            private void incrLikeCount() {
-                likeCount++;
-                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation1.setCompoundDrawables(img, null, null, null);
-                social_recommendation1.setTextColor(Color.parseColor("#0000E1"));
-            }
-            public void decrLikeCount() {
-                likeCount--;
-                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation1.setCompoundDrawables(img, null, null, null);
-                social_recommendation1.setTextColor(Color.parseColor("#999999"));
-            }
         });
+
         social_recommendation2 = (TextView)findViewById(R.id.social_recommendation2);
         social_recommendation2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (likeStste) {
-                    decrLikeCount();
+                    decrLikeCount(social_recommendation2);
                 } else {
-                    incrLikeCount();
+                    incrLikeCount(social_recommendation2);
                 }
                 likeStste = !likeStste;
             }
-            private void incrLikeCount() {
-                likeCount++;
-                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation2.setCompoundDrawables(img, null, null, null);
-                social_recommendation2.setTextColor(Color.parseColor("#0000E1"));
-            }
-            public void decrLikeCount() {
-                likeCount--;
-                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation2.setCompoundDrawables(img, null, null, null);
-                social_recommendation2.setTextColor(Color.parseColor("#999999"));
-            }
         });
+
         social_recommendation3 = (TextView)findViewById(R.id.social_recommendation3);
         social_recommendation3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (likeStste) {
-                    decrLikeCount();
+                    decrLikeCount(social_recommendation3);
                 } else {
-                    incrLikeCount();
+                    incrLikeCount(social_recommendation3);
                 }
                 likeStste = !likeStste;
             }
-            private void incrLikeCount() {
-                likeCount++;
-                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation3.setCompoundDrawables(img, null, null, null);
-                social_recommendation3.setTextColor(Color.parseColor("#0000E1"));
-            }
-            public void decrLikeCount() {
-                likeCount--;
-                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation3.setCompoundDrawables(img, null, null, null);
-                social_recommendation3.setTextColor(Color.parseColor("#999999"));
-            }
         });
+
         social_recommendation4 = (TextView)findViewById(R.id.social_recommendation4);
         social_recommendation4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (likeStste) {
-                    decrLikeCount();
+                    decrLikeCount(social_recommendation4);
                 } else {
-                    incrLikeCount();
+                    incrLikeCount(social_recommendation4);
                 }
                 likeStste = !likeStste;
             }
-            private void incrLikeCount() {
-                likeCount++;
-                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation4.setCompoundDrawables(img, null, null, null);
-                social_recommendation4.setTextColor(Color.parseColor("#0000E1"));
-            }
-            public void decrLikeCount() {
-                likeCount--;
-                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
-                img.setBounds(0,0,60,60);
-                social_recommendation4.setCompoundDrawables(img, null, null, null);
-                social_recommendation4.setTextColor(Color.parseColor("#999999"));
-            }
         });
+    }
+
+    // 좋아요 +1 메소드
+    private void incrLikeCount(TextView recomm) {
+        likeCount++;
+        // 파란따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 파란색으로 변경
+        recomm.setTextColor(Color.parseColor("#0000E1"));
+    }
+
+    // 좋아요 -1 메소드
+    public void decrLikeCount(TextView recomm) {
+        likeCount--;
+        // 회색따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 회색으로 변경
+        recomm.setTextColor(Color.parseColor("#999999"));
     }
 }

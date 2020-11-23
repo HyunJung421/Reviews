@@ -148,7 +148,7 @@ public class MovieInfoActivity extends AppCompatActivity {
                     }
 
                     // 해당영화의 리뷰 4개만 출력
-                    for(int i=1; i <jsonArray.length(); i++){
+                    for(int i=1; i < 5; i++){
                         array = new ArrayList<>();
                         JSONObject subJsonObject = jsonArray.getJSONObject(i);
 
