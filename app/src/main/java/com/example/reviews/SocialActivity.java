@@ -33,6 +33,9 @@ public class SocialActivity extends AppCompatActivity {
     ImageButton btnSocial;
     ImageButton btnMypage;
 
+    boolean likeStste = false;
+    int likeCount = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,40 +117,112 @@ public class SocialActivity extends AppCompatActivity {
         social_recommendation1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (likeStste) {
+                    decrLikeCount();
+                } else {
+                    incrLikeCount();
+                }
+                likeStste = !likeStste;
+            }
+            private void incrLikeCount() {
+                likeCount++;
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation1.setCompoundDrawables(img, null, null, null);
+                social_recommendation1.setText(String.valueOf(likeCount));
                 social_recommendation1.setTextColor(Color.parseColor("#0000E1"));
+            }
+            public void decrLikeCount() {
+                likeCount--;
+                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation1.setCompoundDrawables(img, null, null, null);
+                social_recommendation1.setText(String.valueOf(likeCount));
+                social_recommendation1.setTextColor(Color.parseColor("#999999"));
             }
         });
         social_recommendation2 = (TextView)findViewById(R.id.social_recommendation2);
         social_recommendation2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (likeStste) {
+                    decrLikeCount();
+                } else {
+                    incrLikeCount();
+                }
+                likeStste = !likeStste;
+            }
+            private void incrLikeCount() {
+                likeCount++;
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation2.setCompoundDrawables(img, null, null, null);
+                social_recommendation2.setText(String.valueOf(likeCount));
                 social_recommendation2.setTextColor(Color.parseColor("#0000E1"));
+            }
+            public void decrLikeCount() {
+                likeCount--;
+                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation2.setCompoundDrawables(img, null, null, null);
+                social_recommendation2.setText(String.valueOf(likeCount));
+                social_recommendation2.setTextColor(Color.parseColor("#999999"));
             }
         });
         social_recommendation3 = (TextView)findViewById(R.id.social_recommendation3);
         social_recommendation3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (likeStste) {
+                    decrLikeCount();
+                } else {
+                    incrLikeCount();
+                }
+                likeStste = !likeStste;
+            }
+            private void incrLikeCount() {
+                likeCount++;
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation3.setCompoundDrawables(img, null, null, null);
+                social_recommendation3.setText(String.valueOf(likeCount));
                 social_recommendation3.setTextColor(Color.parseColor("#0000E1"));
+            }
+            public void decrLikeCount() {
+                likeCount--;
+                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation3.setCompoundDrawables(img, null, null, null);
+                social_recommendation3.setText(String.valueOf(likeCount));
+                social_recommendation3.setTextColor(Color.parseColor("#999999"));
             }
         });
         social_recommendation4 = (TextView)findViewById(R.id.social_recommendation4);
         social_recommendation4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (likeStste) {
+                    decrLikeCount();
+                } else {
+                    incrLikeCount();
+                }
+                likeStste = !likeStste;
+            }
+            private void incrLikeCount() {
+                likeCount++;
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation4.setCompoundDrawables(img, null, null, null);
+                social_recommendation4.setText(String.valueOf(likeCount));
                 social_recommendation4.setTextColor(Color.parseColor("#0000E1"));
+            }
+            public void decrLikeCount() {
+                likeCount--;
+                Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation4.setCompoundDrawables(img, null, null, null);
+                social_recommendation4.setText(String.valueOf(likeCount));
+                social_recommendation4.setTextColor(Color.parseColor("#999999"));
             }
         });
     }
