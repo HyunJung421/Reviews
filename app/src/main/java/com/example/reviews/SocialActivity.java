@@ -3,6 +3,8 @@ package com.example.reviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,9 @@ public class SocialActivity extends AppCompatActivity {
     TextView movieTitle1;
     TextView movieTitle2;
     TextView movieTitle3;
+
+    // 소셜인 추천수
+    TextView social_recommendation1,social_recommendation2,social_recommendation3,social_recommendation4;
 
     // 추천 영화 포스터
     ImageButton socialMovie1;
@@ -101,6 +106,48 @@ public class SocialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
                 startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+        // 소셜인 추천 버튼 등록 및 리스너 구현
+        social_recommendation1 = (TextView)findViewById(R.id.social_recommendation1);
+        social_recommendation1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation1.setCompoundDrawables(img, null, null, null);
+                social_recommendation1.setTextColor(Color.parseColor("#0000E1"));
+            }
+        });
+        social_recommendation2 = (TextView)findViewById(R.id.social_recommendation2);
+        social_recommendation2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation2.setCompoundDrawables(img, null, null, null);
+                social_recommendation2.setTextColor(Color.parseColor("#0000E1"));
+            }
+        });
+        social_recommendation3 = (TextView)findViewById(R.id.social_recommendation3);
+        social_recommendation3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation3.setCompoundDrawables(img, null, null, null);
+                social_recommendation3.setTextColor(Color.parseColor("#0000E1"));
+            }
+        });
+        social_recommendation4 = (TextView)findViewById(R.id.social_recommendation4);
+        social_recommendation4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+                img.setBounds(0,0,60,60);
+                social_recommendation4.setCompoundDrawables(img, null, null, null);
+                social_recommendation4.setTextColor(Color.parseColor("#0000E1"));
             }
         });
     }
