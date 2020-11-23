@@ -29,7 +29,7 @@
 
         <ImageButton
             android:id="@+id/underbar_home"
-            android:src="@drawable/underbar_home2"
+            android:src="@drawable/underbar_home"
             style="@style/under_bar" />
         // 수직선
         <View
@@ -38,7 +38,7 @@
             android:background="#D3D3D3"/>
         <ImageButton
             android:id="@+id/underbar_social"
-            android:src="@drawable/underbar_social2"
+            android:src="@drawable/underbar_social"
             style="@style/under_bar" />
         // 수직선
         <View
@@ -47,7 +47,7 @@
             android:background="#D3D3D3"/>
         <ImageButton
             android:id="@+id/underbar_mypage"
-            android:src="@drawable/underbar_mypage2"
+            android:src="@drawable/underbar_mypage"
             style="@style/under_bar" />
     </LinearLayout>
 </LinearLayout>
