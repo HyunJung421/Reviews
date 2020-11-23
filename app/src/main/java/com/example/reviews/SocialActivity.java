@@ -129,7 +129,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation1.setCompoundDrawables(img, null, null, null);
-                social_recommendation1.setText(String.valueOf(likeCount));
                 social_recommendation1.setTextColor(Color.parseColor("#0000E1"));
             }
             public void decrLikeCount() {
@@ -137,7 +136,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation1.setCompoundDrawables(img, null, null, null);
-                social_recommendation1.setText(String.valueOf(likeCount));
                 social_recommendation1.setTextColor(Color.parseColor("#999999"));
             }
         });
@@ -157,7 +155,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation2.setCompoundDrawables(img, null, null, null);
-                social_recommendation2.setText(String.valueOf(likeCount));
                 social_recommendation2.setTextColor(Color.parseColor("#0000E1"));
             }
             public void decrLikeCount() {
@@ -165,7 +162,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation2.setCompoundDrawables(img, null, null, null);
-                social_recommendation2.setText(String.valueOf(likeCount));
                 social_recommendation2.setTextColor(Color.parseColor("#999999"));
             }
         });
@@ -185,7 +181,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation3.setCompoundDrawables(img, null, null, null);
-                social_recommendation3.setText(String.valueOf(likeCount));
                 social_recommendation3.setTextColor(Color.parseColor("#0000E1"));
             }
             public void decrLikeCount() {
@@ -193,7 +188,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation3.setCompoundDrawables(img, null, null, null);
-                social_recommendation3.setText(String.valueOf(likeCount));
                 social_recommendation3.setTextColor(Color.parseColor("#999999"));
             }
         });
@@ -213,7 +207,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation4.setCompoundDrawables(img, null, null, null);
-                social_recommendation4.setText(String.valueOf(likeCount));
                 social_recommendation4.setTextColor(Color.parseColor("#0000E1"));
             }
             public void decrLikeCount() {
@@ -221,7 +214,6 @@ public class SocialActivity extends AppCompatActivity {
                 Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
                 img.setBounds(0,0,60,60);
                 social_recommendation4.setCompoundDrawables(img, null, null, null);
-                social_recommendation4.setText(String.valueOf(likeCount));
                 social_recommendation4.setTextColor(Color.parseColor("#999999"));
             }
         });
