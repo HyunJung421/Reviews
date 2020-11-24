@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class MovieNewListAdapter extends RecyclerView.Adapter<MovieNewListAdapter.ViewHolder> {
+
     private ArrayList<ArrayList<String>> itemList;
     private Context context;
     private Bitmap bitmap;

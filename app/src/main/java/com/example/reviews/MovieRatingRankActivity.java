@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,6 +32,11 @@ public class MovieRatingRankActivity extends AppCompatActivity {
     private MovieRatingRankAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    // 추천 영화 제목
+    TextView movieTitle1;
+    TextView movieTitle2;
+    TextView movieTitle3;
+
     // TOP3 영화 포스터
     ImageView ratingMovie1;
     ImageView ratingMovie2;
@@ -46,10 +52,15 @@ public class MovieRatingRankActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_rating_rank);
 
-        // 화면 이동 하면서 보낸 데이터 받기 -> 영화 제목
-        // 영화 제목으로 db에 저장된 영화 정보 불러오기 위해 사용
-        Intent intent = getIntent();
-        final String title = intent.getExtras().getString("title");
+        // TOP3 영화 제목
+        movieTitle1 = (TextView) findViewById(R.id.rating_title1);
+        final String title1 = movieTitle1.getText().toString(); // 첫번째 영화 제목
+
+        movieTitle2 = (TextView) findViewById(R.id.rating_title2);
+        final String title2 = movieTitle2.getText().toString(); // 두번째 영화 제목
+
+        movieTitle3 = (TextView) findViewById(R.id.rating_title3);
+        final String title3 = movieTitle3.getText().toString(); // 세번째 영화 제목
 
         // TOP1 영화포스터에 대한 리스너 구현
         ratingMovie1 = (ImageView) findViewById(R.id.movie_rating_title1);
@@ -57,7 +68,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title);
+                intent.putExtra("title", title1);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -68,7 +79,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title);
+                intent.putExtra("title", title2);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -79,7 +90,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title);
+                intent.putExtra("title", title3);
                 startActivity(intent); // 액티비티 띄우기
             }
         });

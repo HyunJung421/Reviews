@@ -16,7 +16,7 @@
             style="@style/movie_poster"
             android:layout_width="109dp"
             android:layout_height="127dp"
-            android:src="@drawable/social_movie2" />
+            android:src="@drawable/btn_gray_round" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                     android:id="@+id/movie_newlist_plot"
                     android:layout_width="190dp"
                     android:layout_height="match_parent"
-                    android:maxLines="4"
+                    android:maxLines="1"
                     android:ellipsize="end"
                     android:textSize="15dp"
                     android:text="프로듀서를 꿈꾸는 매니저와 10년 전 히트곡으로 버티는 슈퍼스타.서로의 인생을 변화시킬 그들의 뮤직 프로젝트!"/>

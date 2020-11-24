@@ -79,7 +79,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:textColor="#000000"
-                            android:textSize="27dp"
+                            android:textSize="24dp"
                             android:textStyle="bold" />
 
                         // 상영년도 〮 상영시간 〮 국가 〮 장르
@@ -93,46 +93,46 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" | "
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:id="@+id/movie_info_running_time1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="분 | "
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:id="@+id/movie_info_country1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" | "
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:id="@+id/movie_info_genre1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textSize="18dp" />
+                                android:textSize="16dp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

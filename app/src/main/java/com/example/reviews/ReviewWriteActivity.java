@@ -168,8 +168,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // 뒤로가기 방지
-                onBackPressed();
+
 
                 // 리뷰 작성 내용 확인
                 if(reviewContent.getText().toString().equals("")){
@@ -209,6 +208,9 @@ public class ReviewWriteActivity extends AppCompatActivity {
                                     Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
                                     intent.putExtra("title", title);
                                     startActivity(intent);
+                                    // 뒤로가기 방지
+                                    onBackPressed();
+
                                 } else { // 리뷰저장에 실패한 경우
                                     Toast.makeText(getApplicationContext(), "리뷰 저장에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                     return;
@@ -226,6 +228,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);
