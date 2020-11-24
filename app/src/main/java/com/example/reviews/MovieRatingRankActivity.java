@@ -28,7 +28,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
 
     // 영화 평점순 RecyclerView
     private RecyclerView recyclerView;
-    private MovieNewListAdapter adapter;
+    private MovieRatingRankAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
     // TOP3 영화 포스터
@@ -46,12 +46,18 @@ public class MovieRatingRankActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_rating_rank);
 
+        // 화면 이동 하면서 보낸 데이터 받기 -> 영화 제목
+        // 영화 제목으로 db에 저장된 영화 정보 불러오기 위해 사용
+        Intent intent = getIntent();
+        final String title = intent.getExtras().getString("title");
+
         // TOP1 영화포스터에 대한 리스너 구현
         ratingMovie1 = (ImageView) findViewById(R.id.movie_rating_title1);
         ratingMovie1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -62,6 +68,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -72,6 +79,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -112,7 +120,7 @@ public class MovieRatingRankActivity extends AppCompatActivity {
                         arrayList.add(array);
                     }
 
-                    adapter = new MovieNewListAdapter(MovieRatingRankActivity.this, arrayList);
+                    adapter = new MovieRatingRankAdapter(MovieRatingRankActivity.this, arrayList);
                     recyclerView.setAdapter(adapter);
 
                 } catch (JSONException e) {
