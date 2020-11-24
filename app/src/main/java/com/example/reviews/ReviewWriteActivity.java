@@ -167,6 +167,10 @@ public class ReviewWriteActivity extends AppCompatActivity {
         btnWriteOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // 뒤로가기 방지
+                onBackPressed();
+
                 // 리뷰 작성 내용 확인
                 if(reviewContent.getText().toString().equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(ReviewWriteActivity.this);
@@ -176,6 +180,7 @@ public class ReviewWriteActivity extends AppCompatActivity {
                     dialog.show();
                     reviewContent.requestFocus();
                 }
+
                 else {
                     // 리뷰 내용 가져오기
                     final String revContent = reviewContent.getText().toString();
