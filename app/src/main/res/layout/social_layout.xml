@@ -231,9 +231,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="45dp"
                     android:gravity="center"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
                     android:text="27"
-                    android:textColor="#999999"
+                    android:textColor="#0000E1"
                     android:textSize="13dp" />
 
                 <TextView
@@ -242,9 +242,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="45dp"
                     android:gravity="center"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
                     android:text="24"
-                    android:textColor="#999999"
+                    android:textColor="#0000E1"
                     android:textSize="13dp" />
 
                 <TextView
@@ -253,9 +253,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="45dp"
                     android:gravity="center"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
                     android:text="17"
-                    android:textColor="#999999"
+                    android:textColor="#0000E1"
                     android:textSize="13dp" />
 
                 <TextView
@@ -263,10 +263,10 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:drawableLeft="@drawable/drawable_left_image_customise"
                     android:text="15"
                     android:textSize="13dp"
-                    android:textColor="#999999"/>
+                    android:textColor="#0000E1"/>
             </LinearLayout>
 
             <LinearLayout
