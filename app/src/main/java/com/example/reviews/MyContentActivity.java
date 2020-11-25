@@ -9,16 +9,32 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 // 마이페이지 -> 추천한콘텐츠 목록 페이지 java 파일
 public class MyContentActivity extends AppCompatActivity {
-    LinearLayout myContent1;
 
-    // 영화 포스터
-    ImageView poster;
+    String userID; // 로그인한 사용자
 
-    // 작성한 코멘트 버튼
-    TextView myreview;
+    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
+    ArrayList<ArrayList<String>> arrayList;
+    ArrayList<String> array;
+
+    // 추천한 컨텐츠 RecyclerView
+    private RecyclerView recyclerView;
+    private MyContentAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -30,15 +46,62 @@ public class MyContentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_content);
 
-        // 영화 포스터 클릭시 영화정보페이지로 넘어감
-        poster = (ImageView)findViewById(R.id.movie_poster);
-        poster.setOnClickListener(new View.OnClickListener() {
+        // 사용자 로그인 여부에 따른 마이페이지 출력
+        GlobalVariable user = (GlobalVariable) getApplication();
+        userID = user.getData();
+
+        // mypage_review.xml의 RecyclerView 위젯
+        recyclerView = (RecyclerView) findViewById(R.id.mypage_content_list);
+        recyclerView.setHasFixedSize(true);
+
+        // LinearLayoutManager 사용
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        arrayList = new ArrayList<>();
+
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent);
+            public void onResponse(String result) {
+                try {
+                    JSONArray jsonArray = new JSONArray(result);
+
+                    for(int i=0; i<jsonArray.length(); i++) {
+                        array = new ArrayList<>();
+                        JSONObject subJsonObject = jsonArray.getJSONObject(i);
+
+                        array.add(userID);  // 사용자 아이디
+                        String poster = subJsonObject.getString("m_Poster");
+                        array.add(poster);  // 영화 포스터
+                        String title = subJsonObject.getString("m_Title");
+                        array.add(title);  // 영화 제목
+                        String year = subJsonObject.getString("m_Year");
+                        array.add(year);   // 영화 개봉연도
+                        String running = subJsonObject.getString("m_RunningTime");
+                        array.add(running);  // 영화 시간
+                        String country = subJsonObject.getString("m_Country");
+                        array.add(country);  // 영화 제작나라
+                        String genre = subJsonObject.getString("m_Genre");
+                        array.add(genre);  // 영화 장르
+                        String rating = subJsonObject.getString("m_Rating");
+                        array.add(rating);  // 영화 평점
+                        String count = subJsonObject.getString("m_Count");
+                        array.add(count);  // 영화 추천수
+
+                        arrayList.add(array);
+                    }
+
+                    adapter = new MyContentAdapter(MyContentActivity.this, arrayList);
+                    recyclerView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
-        });
+        };
+        MyContentRequest myContentRequest = new MyContentRequest(userID, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MyContentActivity.this);
+        queue.add(myContentRequest);
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);

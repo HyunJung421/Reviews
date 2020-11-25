@@ -5,21 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Network;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,7 +24,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,6 +36,9 @@ import java.util.ArrayList;
 public class MovieInfoActivity extends AppCompatActivity {
     Bitmap bitmap;
     boolean likeState = false;
+
+    // 영화 고유번호
+    int mID;
 
     // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
@@ -114,6 +112,8 @@ public class MovieInfoActivity extends AppCompatActivity {
                     JSONObject jsonObject = jsonArray.getJSONObject(0);
                     boolean success = jsonObject.getBoolean("success");
                     if (success) { // 영화 정보를 불러온 경우
+                        mID = jsonObject.getInt("m_ID");
+
                         String moTitle = jsonObject.getString("m_Title");
                         mTitle.setText(moTitle);
 
@@ -183,16 +183,76 @@ public class MovieInfoActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(MovieInfoActivity.this);
         queue.add(movieInfoRequest);
 
+        // 로그인한 사용자 id(=전역변수 user) 가져오기
+        GlobalVariable user = (GlobalVariable) getApplication();
+        final String userID = user.getData();
+
         // 추천 버튼 클릭 이벤트
         mRecomm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (likeState) {
                     decrLikeCount(mRecomm);
+
+                    int movie_count = Integer.parseInt(mRecomm.getText().toString()); // 현재 추천수
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                // 영화 추천수 갱신
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+                                if (success) { // 영화 추천수 갱신 성공
+                                } else { // 영화 추천수 갱신 실패
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoActivity.this);
+                                    AlertDialog dialog = builder.setMessage("영화 정보 업데이트 실패")
+                                            .setPositiveButton("확인", null)
+                                            .create();
+                                    dialog.show();
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    };
+                    MovieRecomDeleteRequest movieRecomDeleteRequest = new MovieRecomDeleteRequest(movie_count, mID, userID, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(MovieInfoActivity.this);
+                    queue.add(movieRecomDeleteRequest);
                 } else {
                     incrLikeCount(mRecomm);
+
+                    int movie_count = Integer.parseInt(mRecomm.getText().toString()); // 현재 추천수
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                // 영화 추천수 갱신
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+                                if (success) { // 영화 추천수 갱신 성공
+                                } else { // 영화 추천수 갱신 실패
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoActivity.this);
+                                    AlertDialog dialog = builder.setMessage("영화 정보 업데이트 실패")
+                                            .setPositiveButton("확인", null)
+                                            .create();
+                                    dialog.show();
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    };
+                    MovieRecomInsertRequest movieRecomInsertRequest = new MovieRecomInsertRequest(movie_count, mID, userID, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(MovieInfoActivity.this);
+                    queue.add(movieRecomInsertRequest);
                 }
                 likeState = !likeState;
+
+
             }
         });
 
