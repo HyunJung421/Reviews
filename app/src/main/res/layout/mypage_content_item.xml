@@ -60,7 +60,7 @@
                 android:layout_height="match_parent"
                 android:text="극한직업"
                 android:textColor="#000000"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             // 상영년도 〮 상영시간 〮 국가 〮 장르
@@ -75,59 +75,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019"
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" | "
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:id="@+id/movie_running_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="111"
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="분 | "
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:id="@+id/movie_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="한국"
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" | "
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
 
                 <TextView
                     android:id="@+id/movie_genre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="코미디"
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
             </LinearLayout>
-
-            // 평점
-            <TextView
-                android:id="@+id/movie_rating"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:drawableLeft="@drawable/star_left_image_customise"
-                android:gravity="center_vertical"
-                android:text=" 4.0"
-                android:textColor="#000000"
-                android:textSize="17dp" />
 
             // 추천 수
             <TextView
@@ -138,8 +126,18 @@
                 android:drawableLeft="@drawable/unlike_left_image_customise"
                 android:text=" 17"
                 android:textColor="#7C7979"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
+
+            // 내용
+            <TextView
+                android:id="@+id/review_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="지금까지 이런 영화는 없었다 이것은 영화인가 통닭광고인가"
+                android:textColor="#000000"
+                android:textSize="14dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

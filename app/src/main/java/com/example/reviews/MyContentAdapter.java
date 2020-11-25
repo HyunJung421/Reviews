@@ -14,8 +14,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -36,6 +34,7 @@ public class MyContentAdapter extends RecyclerView.Adapter<MyContentAdapter.View
     // ViewHolder 클래스
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView user_image;
         TextView user_nick;       // 사용자 이름
         ImageView movie_poster;   // 영화 포스터
         TextView movie_title;     // 영화 제목
@@ -43,13 +42,13 @@ public class MyContentAdapter extends RecyclerView.Adapter<MyContentAdapter.View
         TextView movie_running;   // 영화 시간
         TextView movie_country;   // 영화 제작나라
         TextView movie_genre;     // 영화 장르
-        TextView movie_rating;    // 영화 평점
         TextView movie_recommend; // 영화 추천수
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
+            user_image = itemView.findViewById(R.id.user_image);
             user_nick = itemView.findViewById(R.id.user_id);
             movie_poster = itemView.findViewById(R.id.movie_poster);
             movie_title = itemView.findViewById(R.id.movie_title);
@@ -57,7 +56,6 @@ public class MyContentAdapter extends RecyclerView.Adapter<MyContentAdapter.View
             movie_running = itemView.findViewById(R.id.movie_running_time);
             movie_country = itemView.findViewById(R.id.movie_country);
             movie_genre = itemView.findViewById(R.id.movie_genre);
-            movie_rating = itemView.findViewById(R.id.movie_rating);
             movie_recommend = itemView.findViewById(R.id.movie_recommend);
 
         }
@@ -95,8 +93,7 @@ public class MyContentAdapter extends RecyclerView.Adapter<MyContentAdapter.View
         holder.movie_running.setText(items.get(4));
         holder.movie_country.setText(items.get(5));
         holder.movie_genre.setText(items.get(6));
-        holder.movie_rating.setText(items.get(7));
-        holder.movie_recommend.setText(items.get(8));
+        holder.movie_recommend.setText(items.get(7));
 
     }
 
