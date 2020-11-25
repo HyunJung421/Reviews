@@ -93,8 +93,9 @@ public class SearchActivity extends AppCompatActivity {
                             try {
                                 JSONArray jsonArray = new JSONArray(result);
 
+                                arrayList = new ArrayList<>();
                                 for (int i = 0; i < jsonArray.length(); i++) {
-                                    arrayList = new ArrayList<>();
+
                                     array = new ArrayList<>();
                                     JSONObject subJsonObject = jsonArray.getJSONObject(i);
 

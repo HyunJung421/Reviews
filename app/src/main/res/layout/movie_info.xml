@@ -140,6 +140,26 @@
                         android:text=" / 5.0"
                         android:textSize="15dp" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="추천"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                    // 추천수
+                    <TextView
+                        android:id="@+id/movie_info_recommend"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/unlike_left_image_customise"
+                        android:text="0"
+                        android:textColor="#999999"
+                        android:textSize="13dp" />
+
                 </LinearLayout>
 
                 // 내용
@@ -174,7 +194,6 @@
                     android:textColor="#7F7F7F"
                     android:textStyle="bold"
                     style="?android:attr/borderlessButtonStyle"/>
-
 
             </LinearLayout>
         </LinearLayout>

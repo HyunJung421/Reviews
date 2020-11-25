@@ -9,6 +9,8 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Network;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -38,6 +40,7 @@ import java.util.ArrayList;
 // 영화상세페이지 java 파일
 public class MovieInfoActivity extends AppCompatActivity {
     Bitmap bitmap;
+    boolean likeState = false;
 
     // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
@@ -57,6 +60,7 @@ public class MovieInfoActivity extends AppCompatActivity {
     TextView mGenre;
     TextView mDirector;
     TextView mRating;
+    TextView mRecomm;
     TextView mPlot;
 
     Button btnPlotMore;    // 영화 내용 더보기 버튼
@@ -87,6 +91,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         mGenre = (TextView)findViewById(R.id.movie_info_genre1);
         mDirector = (TextView)findViewById(R.id.movie_info_director1);
         mRating = (TextView)findViewById(R.id.movie_info_rating1);
+        mRecomm = (TextView)findViewById(R.id.movie_info_recommend);
         mPlot = (TextView)findViewById(R.id.movie_info_plot);
 
         // movie_info.xml의 RecyclerView 위젯
@@ -129,6 +134,9 @@ public class MovieInfoActivity extends AppCompatActivity {
 
                         String moRating = jsonObject.getString("m_Rating");
                         mRating.setText(moRating);
+
+                        String moRecomm = jsonObject.getString("m_Count");
+                        mRecomm.setText(moRecomm);
 
                         String moPlot = jsonObject.getString("m_Plot");
                         // 다이얼로그 객체 생성
@@ -175,6 +183,19 @@ public class MovieInfoActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(MovieInfoActivity.this);
         queue.add(movieInfoRequest);
 
+        // 추천 버튼 클릭 이벤트
+        mRecomm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likeState) {
+                    decrLikeCount(mRecomm);
+                } else {
+                    incrLikeCount(mRecomm);
+                }
+                likeState = !likeState;
+            }
+        });
+
         // 내용 더보기 버튼 등록 및 리스너 구현
         btnPlotMore = (Button)findViewById(R.id.movie_info_btn_plot_more);
         btnPlotMore.setOnClickListener(new View.OnClickListener() {
@@ -192,7 +213,6 @@ public class MovieInfoActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ReviewOrderActivity.class);
                 intent.putExtra("title", title);
                 startActivity(intent); // 액티비티 띄우기
-
             }
         });
 
@@ -285,5 +305,29 @@ public class MovieInfoActivity extends AppCompatActivity {
     void dialog(String moTitle, String moPlot) {
         // 다이얼로그 객체
         plotDialog = new MoviePlotDialog(MovieInfoActivity.this, moTitle, moPlot);
+    }
+
+    // 좋아요 +1 메소드
+    private void incrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) + 1;
+        recomm.setText(String.valueOf(num));
+        // 파란따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 파란색으로 변경
+        recomm.setTextColor(Color.parseColor("#0000E1"));
+    }
+
+    // 좋아요 -1 메소드
+    public void decrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) - 1;
+        recomm.setText(String.valueOf(num));
+        // 회색따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 회색으로 변경
+        recomm.setTextColor(Color.parseColor("#999999"));
     }
 }
