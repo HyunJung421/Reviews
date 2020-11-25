@@ -167,6 +167,10 @@ public class JoinActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(JoinActivity.this, LoginActivity.class);
                                     startActivity(intent);
+
+                                    // 뒤로가기 방지
+                                    onBackPressed();
+
                                 } else { // 회원등록에 실패한 경우
                                     Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                     return;

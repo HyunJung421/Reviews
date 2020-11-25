@@ -73,6 +73,9 @@ public class LoginActivity extends AppCompatActivity {
                             intent.putExtra("userPass", userPass);
                             startActivity(intent);
 
+                            // 뒤로가기 방지
+                            onBackPressed();
+
                         } else { // 로그인에 실패한 경우
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             dialog = builder.setMessage("아이디나 비밀번호가 일치하지 않습니다.")
