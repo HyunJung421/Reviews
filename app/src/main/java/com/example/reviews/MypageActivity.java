@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 // 마이페이지 java 파일
@@ -19,6 +20,8 @@ public class MypageActivity extends AppCompatActivity {
     Button btnLogout; // 로그아웃 버튼
     Button btnMyContent; // 추천한 컨텐츠 버튼
     Button btnMyReview;  // 작성한 코멘트 버튼
+
+    TextView username;  // 로그인 한 사용자 이름
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -33,12 +36,18 @@ public class MypageActivity extends AppCompatActivity {
         // 사용자 로그인 여부에 따른 마이페이지 출력
         GlobalVariable user = (GlobalVariable) getApplication();
         validate = user.getData();
+        final String userID = user.getData();
+
 
         if(validate == null) { // 전역변수에 로그인한 사용자 id 값이 비어있는 경우 mypage_before_login.xml 출력
             Intent intent = new Intent(getApplicationContext(), MypageBeforeLogin.class);
             startActivity(intent);
         }
         else { // 전역변수에 로그인한 사용자 id 값이 있는 경우 mypage_layout.xml 출력
+
+            // 로그인 한 사용자 이름 출력
+            username = (TextView)findViewById(R.id.mypage_user_name);
+            username.setText(userID);
 
             // 로그아웃 버튼 등록 및 리스너 구현
             btnLogout = (Button)findViewById(R.id.mypage_btn_logout);
