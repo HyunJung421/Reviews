@@ -6,10 +6,31 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MovieRecommendRankActivity extends AppCompatActivity {
 
-    ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3, rocommedMovie4, rocommedMovie5, rocommedMovie6; //영화 포스터
+    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
+    ArrayList<ArrayList<String>> arrayList;
+    ArrayList<String> array;
+
+    // 영화 평점순 RecyclerView
+    private RecyclerView recyclerView;
+    private MovieRecommendRankAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3; //영화 포스터
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -51,36 +72,54 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
             }
         });
 
-        // TOP4 영화포스터에 대한 리스너 구현
-        rocommedMovie4 = (ImageButton)findViewById(R.id.movie_grade1);
-        rocommedMovie4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+        // movie_recommend_rank.xml의 RecyclerView 위젯
+        recyclerView = (RecyclerView) findViewById(R.id.movie_recommend_list);
+        recyclerView.setHasFixedSize(true);
 
-        // TOP5 영화포스터에 대한 리스너 구현
-        rocommedMovie5 = (ImageButton)findViewById(R.id.movie_grade2);
-        rocommedMovie5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+        // LinearLayoutManager 사용
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
-        // TOP6 영화포스터에 대한 리스너 구현
-        rocommedMovie6 = (ImageButton)findViewById(R.id.movie_grade3);
-        rocommedMovie6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+        arrayList = new ArrayList<>();
 
+
+        // m_Poster, m_Title, m_Rating 3개
+        // DB에 저장된 영화 정보 불러오기
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String result) {
+                try {
+
+                    JSONArray jsonArray = new JSONArray(result);
+
+                    for(int i=0; i<jsonArray.length(); i++) {
+                        array = new ArrayList<>();
+                        JSONObject subJsonObject = jsonArray.getJSONObject(i);
+
+                        String poster = subJsonObject.getString("m_Poster");
+                        array.add(poster);  // 영화 포스터
+
+                        String title = subJsonObject.getString("m_Title");
+                        array.add(title);  // 영화 제목
+
+                        String reccomend = subJsonObject.getString("m_Count");
+                        array.add(reccomend);  // 영화 추천수
+
+                        arrayList.add(array);
+                    }
+
+                    adapter = new MovieRecommendRankAdapter(MovieRecommendRankActivity.this, arrayList);
+                    recyclerView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        MovieRecommendRankRequest movieRecommendRankRequest = new MovieRecommendRankRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MovieRecommendRankActivity.this);
+        queue.add(movieRecommendRankRequest);
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
         btnHome = (ImageButton)findViewById(R.id.underbar_home);

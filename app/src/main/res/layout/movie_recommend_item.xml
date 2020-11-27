@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    // 수평선
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#D3D3D3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            //영화 포스터
+            <ImageView
+                android:id="@+id/movie_recommend_poster"
+                style="@style/movie_poster"
+                android:layout_width="109dp"
+                android:layout_height="127dp"
+                android:src="@drawable/movie_rating1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/movie_recommend_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:text="1"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:gravity="fill"/>
+
+                    //영화 이름
+                    <TextView
+                        android:id="@+id/movie_recommend_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="타이타닉"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:gravity="fill"/>
+                </LinearLayout>
+
+                // 영화 평점
+                <TextView
+                    android:id="@+id/movie_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/unlike_left_image_customise"
+                    android:text="  9,857" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

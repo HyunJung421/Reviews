@@ -36,6 +36,7 @@ public class MovieRatingRankAdapter extends RecyclerView.Adapter<MovieRatingRank
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView movie_poster;   // 영화 포스터
+        TextView movie_rank;      // 영화 순위
         TextView movie_title;     // 영화 제목
         TextView movie_rating;    // 영화 평점
 
@@ -43,6 +44,7 @@ public class MovieRatingRankAdapter extends RecyclerView.Adapter<MovieRatingRank
             super(itemView);
 
             movie_poster = itemView.findViewById(R.id.movie_rating_poster);
+            movie_rank = itemView.findViewById(R.id.movie_rating_rank);
             movie_title = itemView.findViewById(R.id.movie_rating_title);
             movie_rating = itemView.findViewById(R.id.movie_rating_number);
 
@@ -75,6 +77,7 @@ public class MovieRatingRankAdapter extends RecyclerView.Adapter<MovieRatingRank
             }
         });
 
+        holder.movie_rank.setText(String.valueOf(position + 4));
         holder.movie_title.setText(title);
         holder.movie_rating.setText(items.get(2));
     }
