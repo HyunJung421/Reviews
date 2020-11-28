@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,7 +31,8 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
     private MovieRecommendRankAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3; //영화 포스터
+    ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3; // Top3 영화 포스터
+    TextView recomtitle1, recomtitle2, recomtitle3;      // Top3 영화 제목
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -42,12 +44,24 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_recommend_rank);
 
+        // TOP3 영화 제목
+        recomtitle1 = (TextView) findViewById(R.id.movie_recom_title1);
+        final String title1 = recomtitle1.getText().toString(); // 첫번째 영화 제목
+
+        recomtitle2 = (TextView) findViewById(R.id.movie_recom_title2);
+        final String title2 = recomtitle1.getText().toString(); // 두번째 영화 제목
+
+        recomtitle3 = (TextView) findViewById(R.id.movie_recom_title3);
+        final String title3 = recomtitle3.getText().toString(); // 세번째 영화 제목
+
+
         // TOP1 영화포스터에 대한 리스너 구현
         rocommedMovie1 = (ImageButton) findViewById(R.id.social_movie1);
         rocommedMovie1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title1);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -58,6 +72,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title2);
                 startActivity(intent); // 액티비티 띄우기
             }
         });
@@ -68,6 +83,7 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", title3);
                 startActivity(intent); // 액티비티 띄우기
             }
         });

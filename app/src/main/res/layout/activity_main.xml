@@ -182,7 +182,7 @@
                                     android:orientation="horizontal">
                                     <TextView
                                         android:id="@+id/movie_recommend_title1"
-                                        android:text="어벤져스:\n엔드게임"
+                                        android:text="도굴"
                                         style="@style/movie_title" />
 
                                     <TextView
@@ -192,7 +192,7 @@
 
                                     <TextView
                                         android:id="@+id/movie_recommend_title3"
-                                        android:text="어벤져스:\n인피니티 워"
+                                        android:text="그린 북"
                                         style="@style/movie_title" />
                                 </LinearLayout>
                             </LinearLayout>
