@@ -62,50 +62,22 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            // 영화 포스터
-            <LinearLayout
+            // 추천 영화
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/social_movie1"
-                    android:src="@drawable/social_movie1"
-                    style="@style/movie_poster" />
+                // 리사이클러뷰
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/social_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal" />
 
-                <ImageButton
-                    android:id="@+id/social_movie2"
-                    android:src="@drawable/social_movie2"
-                    style="@style/movie_poster" />
-
-                <ImageButton
-                    android:id="@+id/social_movie3"
-                    android:src="@drawable/social_movie3"
-                    style="@style/movie_poster"/>
-            </LinearLayout>
-
-            // 영화 포스터 제목
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/movie_info_title1"
-                    android:text="극한직업"
-                    style="@style/movie_title"/>
-
-                <TextView
-                    android:id="@+id/movie_info_title2"
-                    android:text="나의 첫번째\n슈퍼스타"
-                    style="@style/movie_title"/>
-
-                <TextView
-                    android:id="@+id/movie_info_title3"
-                    android:text="온워드:\n단 하루의 기적"
-                    style="@style/movie_title"/>
-            </LinearLayout>
+            </RelativeLayout>
 
             // 인기 Reviewer
             <LinearLayout

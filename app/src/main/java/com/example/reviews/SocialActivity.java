@@ -1,6 +1,8 @@
 package com.example.reviews;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,21 +11,31 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 // 소셜페이지 java 파일
 public class SocialActivity extends AppCompatActivity {
 
-    // 추천 영화 제목
-    TextView movieTitle1;
-    TextView movieTitle2;
-    TextView movieTitle3;
+    // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
+    ArrayList<ArrayList<String>> arrayList;
+    ArrayList<String> array;
 
-    // 추천 영화 포스터
-    ImageButton socialMovie1;
-    ImageButton socialMovie2;
-    ImageButton socialMovie3;
+    // 추천 영화 RecyclerView
+    private RecyclerView recyclerView;
+    private SocialAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -35,46 +47,50 @@ public class SocialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.social_layout);
 
-        // 추천 영화 제목
-        movieTitle1 = (TextView) findViewById(R.id.movie_info_title1);
-        final String title1 = movieTitle1.getText().toString(); // 첫번째 영화 제목
+        // social_layout.xml의 RecyclerView 위젯
+        recyclerView = (RecyclerView) findViewById(R.id.social_list);
+        recyclerView.setHasFixedSize(true);
 
-        movieTitle2 = (TextView) findViewById(R.id.movie_info_title2);
-        final String title2 = movieTitle2.getText().toString(); // 두번째 영화 제목
+        // LinearLayoutManager 사용 (가로 RecyclerView)
+        layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
 
-        movieTitle3 = (TextView) findViewById(R.id.movie_info_title3);
-        final String title3 = movieTitle3.getText().toString(); // 세번째 영화 제목
+        arrayList = new ArrayList<>();
 
-        // 추천 첫번째 영화 포스터 등록 및 리스너 구현
-        socialMovie1 = (ImageButton) findViewById(R.id.social_movie1);
-        socialMovie1.setOnClickListener(new View.OnClickListener() {
+        // m_Poster, m_Title 2개
+        // DB에 저장된 영화 정보 불러오기
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title1); // 영화 제목 전달
-                startActivity(intent); // 액티비티 띄우기
-            }
-        });
+            public void onResponse(String result) {
+                try {
 
-        socialMovie2 = (ImageButton) findViewById(R.id.social_movie2);
-        socialMovie2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title2); // 영화 제목 전달
-                startActivity(intent);
-            }
-        });
+                    JSONArray jsonArray = new JSONArray(result);
 
-        socialMovie3 = (ImageButton) findViewById(R.id.social_movie3);
-        socialMovie3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
-                intent.putExtra("title", title3); // 영화 제목 전달
-                startActivity(intent);
+                    for(int i=0; i<jsonArray.length(); i++) {
+                        array = new ArrayList<>();
+                        JSONObject subJsonObject = jsonArray.getJSONObject(i);
+
+                        String poster = subJsonObject.getString("m_Poster");
+                        array.add(poster);  // 영화 포스터
+
+                        String title = subJsonObject.getString("m_Title");
+                        array.add(title);  // 영화 제목
+
+                        arrayList.add(array);
+                    }
+
+                    adapter = new SocialAdapter(SocialActivity.this, arrayList);
+                    recyclerView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
-        });
+        };
+
+        SocialRequest socialRequest = new SocialRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(SocialActivity.this);
+        queue.add(socialRequest);
 
 
         // 하단바 underbar_home 버튼 등록 및 리스너 구현
