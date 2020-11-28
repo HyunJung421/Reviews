@@ -1,11 +1,14 @@
 package com.example.reviews;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +24,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MovieRecommendRankActivity extends AppCompatActivity {
+    boolean likeState1 = false;
+    boolean likeState2 = false;
+    boolean likeState3 = false;
+
+    // 영화 고유번호
+    int mID;
 
     // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
@@ -31,8 +40,9 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
     private MovieRecommendRankAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    ImageButton rocommedMovie1, rocommedMovie2, rocommedMovie3; // Top3 영화 포스터
+    ImageButton recommedMovie1, recommedMovie2, recommedMovie3; // Top3 영화 포스터
     TextView recomtitle1, recomtitle2, recomtitle3;      // Top3 영화 제목
+    TextView recomnum1, recomnum2, recomnum3;  // Top3 영화 추천수
 
     // 하단바 버튼
     ImageButton btnHome;
@@ -56,8 +66,8 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
 
 
         // TOP1 영화포스터에 대한 리스너 구현
-        rocommedMovie1 = (ImageButton) findViewById(R.id.social_movie1);
-        rocommedMovie1.setOnClickListener(new View.OnClickListener() {
+        recommedMovie1 = (ImageButton) findViewById(R.id.social_movie1);
+        recommedMovie1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
@@ -67,8 +77,8 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
         });
 
         // TOP2 영화포스터에 대한 리스너 구현
-        rocommedMovie2 = (ImageButton)findViewById(R.id.social_movie2);
-        rocommedMovie2.setOnClickListener(new View.OnClickListener() {
+        recommedMovie2 = (ImageButton)findViewById(R.id.social_movie2);
+        recommedMovie2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
@@ -78,13 +88,59 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
         });
 
         // TOP3 영화포스터에 대한 리스너 구현
-        rocommedMovie3 = (ImageButton)findViewById(R.id.social_movie3);
-        rocommedMovie3.setOnClickListener(new View.OnClickListener() {
+        recommedMovie3 = (ImageButton)findViewById(R.id.social_movie3);
+        recommedMovie3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
                 intent.putExtra("title", title3);
                 startActivity(intent); // 액티비티 띄우기
+            }
+        });
+
+        // 로그인한 사용자 id(=전역변수 user) 가져오기
+        final GlobalVariable user = (GlobalVariable) getApplication();
+        final String userID = user.getData();
+
+        // TOP1 영화제목에 대한 리스너 구현
+        recomnum1 = (TextView)findViewById(R.id.number_recommendation1);
+        recomnum1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likeState1) {
+                    decrLikeCount(recomnum1);
+                } else {
+                    incrLikeCount(recomnum1);
+                }
+                likeState1 = !likeState1;
+            }
+        });
+
+        // TOP2 영화제목에 대한 리스너 구현
+        recomnum2 = (TextView)findViewById(R.id.number_recommendation2);
+        recomnum2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likeState2) {
+                    decrLikeCount(recomnum2);
+                } else {
+                    incrLikeCount(recomnum2);
+                }
+                likeState2 = !likeState2;
+            }
+        });
+
+        // TOP3 영화제목에 대한 리스너 구현
+        recomnum3 = (TextView)findViewById(R.id.number_recommendation3);
+        recomnum3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likeState3) {
+                    decrLikeCount(recomnum3);
+                } else {
+                    incrLikeCount(recomnum3);
+                }
+                likeState3 = !likeState3;
             }
         });
 
@@ -132,7 +188,6 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
                 }
             }
         };
-
         MovieRecommendRankRequest movieRecommendRankRequest = new MovieRecommendRankRequest(responseListener);
         RequestQueue queue = Volley.newRequestQueue(MovieRecommendRankActivity.this);
         queue.add(movieRecommendRankRequest);
@@ -168,4 +223,88 @@ public class MovieRecommendRankActivity extends AppCompatActivity {
         });
 
     }
+
+    // 좋아요 +1 메소드
+    private void incrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) + 1;
+        recomm.setText(String.valueOf(num));
+        // 파란따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.drawable_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 파란색으로 변경
+        recomm.setTextColor(Color.parseColor("#0000E1"));
+    }
+
+    // 좋아요 -1 메소드
+    public void decrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) - 1;
+        recomm.setText(String.valueOf(num));
+        // 회색따봉으로 이미지 변경
+        Drawable img = getResources().getDrawable(R.drawable.unlike_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 회색으로 변경
+        recomm.setTextColor(Color.parseColor("#999999"));
+    }
+
+    // DB에 영화 추천수 +1
+    private void updateIncrCount(int movie_count, int mID, String userID){
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // 영화 추천수 갱신
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+                    if (success) { // 영화 추천수 갱신 성공
+                    } else { // 영화 추천수 갱신 실패
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MovieRecommendRankActivity.this);
+                        AlertDialog dialog = builder.setMessage("영화 정보 업데이트 실패")
+                                .setPositiveButton("확인", null)
+                                .create();
+                        dialog.show();
+                        return;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        MovieRecomInsertRequest movieRecomInsertRequest = new MovieRecomInsertRequest(movie_count, mID, userID, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MovieRecommendRankActivity.this);
+        queue.add(movieRecomInsertRequest);
+    }
+
+    // DB에 영화 추천수 -1
+    private void updateDecrCount(int movie_count, int mID, String userID){
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // 영화 추천수 갱신
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+                    if (success) { // 영화 추천수 갱신 성공
+                    } else { // 영화 추천수 갱신 실패
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MovieRecommendRankActivity.this);
+                        AlertDialog dialog = builder.setMessage("영화 정보 업데이트 실패")
+                                .setPositiveButton("확인", null)
+                                .create();
+                        dialog.show();
+                        return;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        MovieRecomDeleteRequest movieRecomDeleteRequest = new MovieRecomDeleteRequest(movie_count, mID, userID, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MovieRecommendRankActivity.this);
+        queue.add(movieRecomDeleteRequest);
+    }
+
+
 }

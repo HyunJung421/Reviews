@@ -79,20 +79,68 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/movie_recom_title1"
-                    android:text="도굴"
-                    style="@style/movie_title"/>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="3dp"
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                        android:text="1" />
+                    <TextView
+                        android:id="@+id/movie_recom_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="도굴"
+                        style="@style/movie_title"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/movie_recom_title2"
-                    android:text="타이타닉"
-                    style="@style/movie_title"/>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="3dp"
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                        android:text="2" />
+                    <TextView
+                        android:id="@+id/movie_recom_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="타이타닉"
+                        style="@style/movie_title"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/movie_recom_title3"
-                    android:text="그린 북"
-                    style="@style/movie_title"/>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="3dp"
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                        android:text="3" />
+                    <TextView
+                        android:id="@+id/movie_recom_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="그린 북"
+                        style="@style/movie_title"/>
+                </LinearLayout>
             </LinearLayout>
 
             // 영화에 대한 추천
@@ -105,56 +153,41 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
-                    android:layout_marginLeft="35dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/unlike_left_image_customise" />
+                    android:layout_marginLeft="37dp">
 
                     <TextView
                         android:id="@+id/number_recommendation1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  1722" />
+                        android:drawableLeft="@drawable/unlike_left_image_customise"
+                        android:text="1722" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
-                    android:layout_marginLeft="20dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/unlike_left_image_customise" />
+                    android:layout_marginLeft="30dp">
 
                     <TextView
                         android:id="@+id/number_recommendation2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  1699" />
+                        android:drawableLeft="@drawable/unlike_left_image_customise"
+                        android:text="1699" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="22dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/unlike_left_image_customise" />
+                    android:layout_marginLeft="35dp">
 
                     <TextView
                         android:id="@+id/number_recommendation3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="  1550" />
+                        android:drawableLeft="@drawable/unlike_left_image_customise"
+                        android:text="1550" />
                 </LinearLayout>
 
             </LinearLayout>

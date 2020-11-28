@@ -135,7 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:drawableLeft="@drawable/unlike_left_image_customise"
+                android:drawableLeft="@drawable/drawable_left_image_customise"
                 android:text=" 17"
                 android:textColor="#7C7979"
                 android:textSize="15dp"

@@ -40,6 +40,9 @@ public class MovieInfoActivity extends AppCompatActivity {
     // 영화 고유번호
     int mID;
 
+    // 영화 제목
+    String title;
+
     // DB 값 저장하여 Adapter와 연결하기 위한 ArrayList
     ArrayList<ArrayList<String>> arrayList;
     ArrayList<String> array;
@@ -79,7 +82,7 @@ public class MovieInfoActivity extends AppCompatActivity {
         // 화면 이동 하면서 보낸 데이터 받기 -> 영화 제목
         // 영화 제목으로 db에 저장된 영화 정보 불러오기 위해 사용
         Intent intent = getIntent();
-        final String title = intent.getExtras().getString("title");
+        title = intent.getExtras().getString("title");
 
         mPoster = (ImageView)findViewById(R.id.movie_info_poster);
         mTitle = (TextView)findViewById(R.id.movie_info_title);
@@ -116,6 +119,7 @@ public class MovieInfoActivity extends AppCompatActivity {
 
                         String moTitle = jsonObject.getString("m_Title");
                         mTitle.setText(moTitle);
+                        title = moTitle;
 
                         String moYear = jsonObject.getString("m_Year");
                         mYear.setText(moYear);

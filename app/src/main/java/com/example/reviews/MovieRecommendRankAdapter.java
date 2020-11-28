@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,7 @@ public class MovieRecommendRankAdapter extends RecyclerView.Adapter<MovieRecomme
     private ArrayList<ArrayList<String>> itemList;
     private Context context;
     private Bitmap bitmap;
+    boolean likeState = false;
 
     public MovieRecommendRankAdapter(Context context, ArrayList<ArrayList<String>> itemList) {
         this.context = context;
@@ -45,6 +48,17 @@ public class MovieRecommendRankAdapter extends RecyclerView.Adapter<MovieRecomme
             movie_rank = itemView.findViewById(R.id.movie_recommend_rank);
             movie_title = itemView.findViewById(R.id.movie_recommend_title);
             movie_recommend = itemView.findViewById(R.id.movie_recommend);
+            movie_recommend.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (likeState) {
+                        decrLikeCount(movie_recommend);
+                    } else {
+                        incrLikeCount(movie_recommend);
+                    }
+                    likeState = !likeState;
+                }
+            });
 
         }
     }
@@ -77,7 +91,7 @@ public class MovieRecommendRankAdapter extends RecyclerView.Adapter<MovieRecomme
 
         holder.movie_rank.setText(String.valueOf(position + 4));
         holder.movie_title.setText(title);
-        holder.movie_recommend.setText(" " + items.get(2));
+        holder.movie_recommend.setText(items.get(2));
     }
 
 
@@ -126,5 +140,29 @@ public class MovieRecommendRankAdapter extends RecyclerView.Adapter<MovieRecomme
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    // 좋아요 +1 메소드
+    private void incrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) + 1;
+        recomm.setText(String.valueOf(num));
+        // 파란따봉으로 이미지 변경
+        Drawable img = context.getResources().getDrawable(R.drawable.drawable_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 파란색으로 변경
+        recomm.setTextColor(Color.parseColor("#0000E1"));
+    }
+
+    // 좋아요 -1 메소드
+    public void decrLikeCount(TextView recomm) {
+        int num = Integer.parseInt(recomm.getText().toString()) - 1;
+        recomm.setText(String.valueOf(num));
+        // 회색따봉으로 이미지 변경
+        Drawable img = context.getResources().getDrawable(R.drawable.unlike_left_image_customise);
+        img.setBounds(0,0,60,60);
+        recomm.setCompoundDrawables(img, null, null, null);
+        // 좋아요 숫자 회색으로 변경
+        recomm.setTextColor(Color.parseColor("#999999"));
     }
 }
