@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -34,6 +35,8 @@ public class ReviewOrderActivity extends AppCompatActivity {
     private MovieReviewAdapter reviewAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    TextView reviewtitle;   // 영화 제목
+
     // 하단바 버튼
     ImageButton btnHome;
     ImageButton btnSocial;
@@ -48,6 +51,10 @@ public class ReviewOrderActivity extends AppCompatActivity {
         // 영화 제목으로 db에 저장된 데이터 불러오기 위해 사용
         Intent intent = getIntent();
         final String title = intent.getExtras().getString("title");
+
+        // 영화 별 이름으로 출력
+        reviewtitle = (TextView)findViewById(R.id.review_more_title);
+        reviewtitle.setText(title);
 
         // 추천순,최신순 스피너
         Spinner spinner = (Spinner) findViewById(R.id.order_spinner);

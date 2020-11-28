@@ -133,7 +133,7 @@
 
                                     <TextView
                                         android:id="@+id/movie_rating_title3"
-                                        android:text="Oceans 8"
+                                        android:text="오션스8"
                                         style="@style/movie_title" />
                                 </LinearLayout>
                             </LinearLayout>

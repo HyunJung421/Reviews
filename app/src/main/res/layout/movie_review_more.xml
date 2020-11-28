@@ -17,8 +17,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            // '극한직업' REVIEW 전체보기
+            // 각 영화별 REVIEW 전체보기
             <TextView
+                android:id="@+id/review_more_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

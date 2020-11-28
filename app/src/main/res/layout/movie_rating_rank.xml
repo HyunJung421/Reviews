@@ -90,7 +90,7 @@
                     style="@style/movie_title"/>
                 <TextView
                     android:id="@+id/rating_title3"
-                    android:text="Oceans 8"
+                    android:text="오션스8"
                     style="@style/movie_title"/>
             </LinearLayout>
 
