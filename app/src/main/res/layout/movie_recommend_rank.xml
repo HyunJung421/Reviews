@@ -64,8 +64,8 @@
 
                 <ImageButton
                     android:id="@+id/social_movie2"
-                    android:src="@drawable/movie_recom2"
-                    style="@style/movie_poster" />
+                    style="@style/movie_poster"
+                    android:src="@drawable/movie_recom2" />
 
                 <ImageButton
                     android:id="@+id/social_movie3"

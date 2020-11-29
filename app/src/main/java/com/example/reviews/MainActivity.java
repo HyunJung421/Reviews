@@ -190,12 +190,45 @@ public class MainActivity extends AppCompatActivity {
         movieNewTitle2 = (TextView)findViewById(R.id.movie_newlist_title2);
         movieNewTitle3 = (TextView)findViewById(R.id.movie_newlist_title3);
 
+        final String titleR1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
+        final String titleR2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
+        final String titleR3 = movieRatingTitle3.getText().toString(); // 세번째 영화 제목
+
+        movie_rating1 = (ImageView)findViewById(R.id.movie_rating1);
+        movie_rating1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", titleR1); // 영화 제목 전달
+                startActivity(intent);
+            }
+        });
+
+        movie_rating2 = (ImageView)findViewById(R.id.movie_rating2);
+        movie_rating2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", titleR2); // 영화 제목 전달
+                startActivity(intent);
+            }
+        });
+
+        movie_rating3 = (ImageView)findViewById(R.id.movie_rating3);
+        movie_rating3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieInfoActivity.class);
+                intent.putExtra("title", titleR3); // 영화 제목 전달
+                startActivity(intent);
+            }
+        });
+
         // 탭이 변경될 때 발생하는 이벤트
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
                 if(tabId=="movie_rating_ranking"){
-                    // 평점순위영화 제목
                     // 평점순위영화 제목
                     final String titleR1 = movieRatingTitle1.getText().toString(); // 첫번째 영화 제목
                     final String titleR2 = movieRatingTitle2.getText().toString(); // 두번째 영화 제목
